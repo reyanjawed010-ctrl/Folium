@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.sharecard
+package com.folium.core.designsystem.sharecard
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -49,11 +49,11 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
 import java.io.File
 import kotlin.math.abs
 import kotlin.math.max

@@ -1,4 +1,4 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import android.net.Uri
 

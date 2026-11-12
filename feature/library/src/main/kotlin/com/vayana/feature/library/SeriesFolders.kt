@@ -1,6 +1,6 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.Book
+import com.folium.core.database.model.Book
 
 internal sealed interface SeriesLibraryItem {
     data class Single(val book: Book) : SeriesLibraryItem

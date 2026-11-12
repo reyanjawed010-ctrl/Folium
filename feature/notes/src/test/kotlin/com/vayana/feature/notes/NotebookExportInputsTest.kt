@@ -1,7 +1,7 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
-import com.vayana.core.database.model.*
-import com.vayana.core.common.Hashing
+import com.folium.core.database.model.*
+import com.folium.core.common.Hashing
 import kotlin.test.*
 
 class NotebookExportInputsTest {

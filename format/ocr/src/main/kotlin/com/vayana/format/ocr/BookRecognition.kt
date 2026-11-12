@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 import android.app.ActivityManager
 import android.content.Context

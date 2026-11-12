@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 import org.json.JSONArray
 import org.json.JSONObject

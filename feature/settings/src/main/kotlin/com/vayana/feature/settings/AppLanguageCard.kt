@@ -1,4 +1,4 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,12 +27,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import com.vayana.core.common.AppLanguage
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.common.AppLanguage
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /**
  * The app's language: the phone's, or one Vayana is translated into, picked from a dropdown so the list can grow.

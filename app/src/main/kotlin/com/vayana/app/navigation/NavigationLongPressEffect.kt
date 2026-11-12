@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction

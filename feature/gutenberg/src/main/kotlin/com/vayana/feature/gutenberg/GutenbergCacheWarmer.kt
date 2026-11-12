@@ -1,8 +1,8 @@
-package com.vayana.feature.gutenberg
+package com.folium.feature.gutenberg
 
 import android.util.Log
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.runCatchingCancellable
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.runCatchingCancellable
 import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject
 import javax.inject.Singleton

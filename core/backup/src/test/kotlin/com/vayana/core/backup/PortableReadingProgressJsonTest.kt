@@ -1,6 +1,6 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
-import com.vayana.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.PhysicalBookOwnership
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith

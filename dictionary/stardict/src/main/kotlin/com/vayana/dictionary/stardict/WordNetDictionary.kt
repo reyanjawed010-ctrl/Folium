@@ -1,10 +1,10 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.inflectionStems
-import com.vayana.dictionary.api.lookupForms
-import com.vayana.dictionary.api.DictionarySense
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.inflectionStems
+import com.folium.dictionary.api.lookupForms
+import com.folium.dictionary.api.DictionarySense
+import com.folium.dictionary.api.PartOfSpeech
 import java.io.File
 import java.io.RandomAccessFile
 import java.nio.ByteBuffer

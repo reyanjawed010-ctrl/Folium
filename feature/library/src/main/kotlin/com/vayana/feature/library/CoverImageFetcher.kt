@@ -1,8 +1,8 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.graphics.BitmapFactory
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.runCatchingCancellable
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.runCatchingCancellable
 import java.net.HttpURLConnection
 import java.net.Inet4Address
 import java.net.Inet6Address

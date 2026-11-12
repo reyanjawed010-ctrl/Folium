@@ -1,10 +1,10 @@
-package com.vayana.feature.reminders
+package com.folium.feature.reminders
 
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.borrowedReadingPlan
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.borrowedReadingPlan
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId

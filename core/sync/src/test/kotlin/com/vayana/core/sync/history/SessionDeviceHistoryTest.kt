@@ -1,7 +1,7 @@
-package com.vayana.core.sync.history
+package com.folium.core.sync.history
 
-import com.vayana.core.sync.asset.GitHubSnapshotCommit
-import com.vayana.core.sync.asset.parseSnapshotHistoryPage
+import com.folium.core.sync.asset.GitHubSnapshotCommit
+import com.folium.core.sync.asset.parseSnapshotHistoryPage
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlinx.coroutines.test.runTest

@@ -1,8 +1,8 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.annotation.StringRes
-import com.vayana.core.database.model.VocabularyCard
-import com.vayana.core.resources.R
+import com.folium.core.database.model.VocabularyCard
+import com.folium.core.resources.R
 
 enum class VocabularyExportFormat(@param:StringRes val labelRes: Int, val fileName: String, val mimeType: String) {
     ANKI_CSV(R.string.vocabulary_export_anki, "vayana-vocabulary.csv", "text/csv"),

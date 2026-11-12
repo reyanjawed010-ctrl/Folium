@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.sharecard
+package com.folium.core.designsystem.sharecard
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -6,11 +6,11 @@ import androidx.compose.ui.graphics.layer.GraphicsLayer
 import kotlin.math.roundToInt
 import android.os.Build
 import androidx.compose.ui.res.painterResource
-import com.vayana.core.designsystem.theme.ColorSchemes
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.LocalDarkVariant
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.LocalDynamicColor
+import com.folium.core.designsystem.theme.ColorSchemes
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.LocalDarkVariant
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.LocalDynamicColor
 import androidx.compose.foundation.background
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -64,20 +64,20 @@ import androidx.compose.ui.graphics.layer.drawLayer
 import androidx.compose.ui.graphics.rememberGraphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.window.Dialog
-import com.vayana.core.common.ShareImageFormat
+import com.folium.core.common.ShareImageFormat
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.resources.R
-import com.vayana.core.common.shareBitmap
+import com.folium.core.resources.R
+import com.folium.core.common.shareBitmap
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.ShareCardTypography
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.ShareCardTypography
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
 import kotlinx.coroutines.launch
 
 /**

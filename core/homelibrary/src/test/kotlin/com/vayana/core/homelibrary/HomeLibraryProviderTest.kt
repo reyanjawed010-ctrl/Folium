@@ -1,4 +1,4 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import android.content.ContentProvider
 import android.content.ContentValues
@@ -9,7 +9,7 @@ import android.database.MatrixCursor
 import android.net.Uri
 import android.os.Looper
 import android.os.ParcelFileDescriptor
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import java.io.File
 import java.io.FileNotFoundException
 import kotlin.test.Test

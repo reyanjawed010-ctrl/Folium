@@ -1,4 +1,4 @@
-package com.vayana.format.pdf
+package com.folium.format.pdf
 
 import java.io.File
 import java.io.RandomAccessFile

@@ -1,14 +1,14 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.appwidget.AppWidgetProvider
 import android.view.View
 import android.widget.RemoteViews
 import androidx.annotation.DrawableRes
-import com.vayana.app.R
-import com.vayana.core.datastore.settings.WidgetChartDaysMin
-import com.vayana.core.datastore.settings.WidgetChartStyle
-import com.vayana.core.datastore.settings.WidgetCornerRadiusMatchLauncher
-import com.vayana.core.datastore.settings.WidgetProgressStyle
+import com.folium.app.R
+import com.folium.core.datastore.settings.WidgetChartDaysMin
+import com.folium.core.datastore.settings.WidgetChartStyle
+import com.folium.core.datastore.settings.WidgetCornerRadiusMatchLauncher
+import com.folium.core.datastore.settings.WidgetProgressStyle
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

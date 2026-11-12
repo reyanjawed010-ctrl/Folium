@@ -1,7 +1,7 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
-import com.vayana.core.database.entity.LegacyWriterOrigin
-import com.vayana.core.database.model.WordLookupStat
+import com.folium.core.database.entity.LegacyWriterOrigin
+import com.folium.core.database.model.WordLookupStat
 import kotlinx.coroutines.flow.Flow
 
 data class CloudWordLookupCounter(

@@ -1,8 +1,8 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
 import android.content.Context
 import android.net.Uri
-import com.vayana.core.common.Hashing
+import com.folium.core.common.Hashing
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.util.UUID

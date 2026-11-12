@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 /**
  * How long the reader really takes, against the engine's fixed estimate. Every forward step they read adds the time it

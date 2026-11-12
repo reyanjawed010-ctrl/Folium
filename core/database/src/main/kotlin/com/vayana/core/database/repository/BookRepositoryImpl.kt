@@ -1,23 +1,23 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.BookNotebookFields
-import com.vayana.core.database.dao.ReadingSessionDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.BookAliasEntity
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.search.ftsSearchMatch
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.BookSource
-import com.vayana.core.database.model.OfflinePages
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.model.normalizeBorrowReturnAt
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.BookNotebookFields
+import com.folium.core.database.dao.ReadingSessionDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.BookAliasEntity
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.search.ftsSearchMatch
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.BookSource
+import com.folium.core.database.model.OfflinePages
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.normalizeBorrowReturnAt
 import java.util.UUID
 import kotlin.math.roundToInt
 import javax.inject.Inject
@@ -26,10 +26,10 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.map
-import com.vayana.core.database.model.normalizedBookTagsCsv
-import com.vayana.core.database.dao.PendingCloudDeletionDao
-import com.vayana.core.database.dao.VocabularyCardDao
-import com.vayana.core.database.entity.PendingCloudDeletionEntity
+import com.folium.core.database.model.normalizedBookTagsCsv
+import com.folium.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.database.dao.VocabularyCardDao
+import com.folium.core.database.entity.PendingCloudDeletionEntity
 
 class BookRepositoryImpl @Inject constructor(
     private val database: VayanaDatabase,
@@ -290,14 +290,14 @@ class BookRepositoryImpl @Inject constructor(
         require(syncId.isNotBlank() && startedAt > 0 && endedAt >= startedAt && durationSeconds > 0)
         require(startPage >= 0 && endPage >= 0 && (pageCount == null || (pageCount > 0 && endPage <= pageCount)))
         activeIntervals?.let { encoded ->
-            val spans = com.vayana.core.common.ReadingIntervals.decode(encoded)
+            val spans = com.folium.core.common.ReadingIntervals.decode(encoded)
             require(spans.all { it.start >= startedAt && it.end <= endedAt })
-            require((com.vayana.core.common.ReadingIntervals.millis(spans) / 1000).coerceAtLeast(1) == durationSeconds)
+            require((com.folium.core.common.ReadingIntervals.millis(spans) / 1000).coerceAtLeast(1) == durationSeconds)
         }
         database.withTransaction {
             val book = requireNotNull(bookDao.getById(id)) { "Book no longer exists" }
             require(!book.isDeleted && book.format == BookFormat.PHYSICAL.name) { "Book is no longer physical" }
-            val inserted = readingSessionDao.insertIgnore(com.vayana.core.database.entity.ReadingSessionEntity(
+            val inserted = readingSessionDao.insertIgnore(com.folium.core.database.entity.ReadingSessionEntity(
                 syncId = syncId, bookId = id, startedAt = startedAt, endedAt = endedAt,
                 durationSeconds = durationSeconds, startPage = startPage, endPage = endPage, activeIntervals = activeIntervals,
                 deviceName = localDeviceName.value,

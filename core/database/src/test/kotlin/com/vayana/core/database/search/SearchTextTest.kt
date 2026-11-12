@@ -1,4 +1,4 @@
-package com.vayana.core.database.search
+package com.folium.core.database.search
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse

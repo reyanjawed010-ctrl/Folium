@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -8,10 +8,10 @@ import android.graphics.Path
 import android.graphics.Typeface
 import androidx.core.graphics.ColorUtils
 import androidx.core.graphics.createBitmap
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.datastore.settings.WidgetChartDaysMax
-import com.vayana.core.datastore.settings.WidgetChartDaysMin
-import com.vayana.core.datastore.settings.WidgetChartStyle
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.datastore.settings.WidgetChartDaysMax
+import com.folium.core.datastore.settings.WidgetChartDaysMin
+import com.folium.core.datastore.settings.WidgetChartStyle
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId

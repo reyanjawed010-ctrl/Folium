@@ -1,14 +1,14 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.HighlightReviewRepository
-import com.vayana.core.database.repository.ReviewGrade
-import com.vayana.core.filesystem.StorageRoots
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.Book
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.HighlightReviewRepository
+import com.folium.core.database.repository.ReviewGrade
+import com.folium.core.filesystem.StorageRoots
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.time.LocalDate
 import javax.inject.Inject

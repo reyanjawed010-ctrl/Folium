@@ -1,12 +1,12 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.diagnostics.DiagnosticEvent
-import com.vayana.core.diagnostics.DiagnosticsEnvironment
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.diagnostics.buildDiagnosticsReport
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.diagnostics.DiagnosticEvent
+import com.folium.core.diagnostics.DiagnosticsEnvironment
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.diagnostics.buildDiagnosticsReport
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

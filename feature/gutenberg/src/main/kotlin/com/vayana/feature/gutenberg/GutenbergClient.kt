@@ -1,11 +1,11 @@
-package com.vayana.feature.gutenberg
+package com.folium.feature.gutenberg
 
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.util.LruCache
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.ByteArrayOutputStream
 import java.io.File

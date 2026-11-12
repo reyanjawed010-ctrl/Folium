@@ -1,4 +1,4 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
 object CloudAssetLayout {
     private val AssetIdRegex = Regex("^[A-Za-z0-9_-]{16,128}$")

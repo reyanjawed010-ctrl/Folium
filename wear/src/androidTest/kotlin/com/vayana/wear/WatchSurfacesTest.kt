@@ -1,10 +1,10 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.app.Notification
 import android.content.ContextWrapper
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.wear.tiles.RequestBuilders
-import com.vayana.core.wear.WatchTimerSurface
+import com.folium.core.wear.WatchTimerSurface
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -47,24 +47,24 @@ class WatchSurfacesTest {
     }
 
     @Test fun livePhoneRejectsAnUnknownTimerAndAcknowledgesTheRequest() {
-        val transport = com.vayana.core.wear.WearTransport(context)
+        val transport = com.folium.core.wear.WearTransport(context)
         org.junit.Assume.assumeTrue("Phone must be connected for the live transport check", transport.phoneConnected())
-        val command = com.vayana.core.wear.SharedTimerCommand("cmd-${java.util.UUID.randomUUID()}", "phone",
+        val command = com.folium.core.wear.SharedTimerCommand("cmd-${java.util.UUID.randomUUID()}", "phone",
             "session-${java.util.UUID.randomUUID()}", 0, "pause")
-        val path = com.vayana.core.wear.SharedTimerSnapshot.commandPath(command)
+        val path = com.folium.core.wear.SharedTimerSnapshot.commandPath(command)
         try {
             transport.put(path, command.json())
             val deadline = android.os.SystemClock.elapsedRealtime() + 25000
             var receipt: String? = null
             while (receipt == null && android.os.SystemClock.elapsedRealtime() < deadline) {
-                receipt = transport.items().firstOrNull { it.first.path == com.vayana.core.wear.SharedTimerSnapshot.receiptPath(command) }?.second
+                receipt = transport.items().firstOrNull { it.first.path == com.folium.core.wear.SharedTimerSnapshot.receiptPath(command) }?.second
                 if (receipt == null) Thread.sleep(250)
             }
             // The random session ID cannot match an actual user's timer, so no reading state can change.
             assertEquals("ended", command.receiptStatus(receipt))
         } finally {
             transport.items().firstOrNull { it.first.path == path }?.let { transport.delete(it.first) }
-            transport.put(com.vayana.core.wear.WearProtocol.REQUEST, java.util.UUID.randomUUID().toString())
+            transport.put(com.folium.core.wear.WearProtocol.REQUEST, java.util.UUID.randomUUID().toString())
         }
     }
 
@@ -74,11 +74,11 @@ class WatchSurfacesTest {
         val activity = instrumentation.startActivitySync(android.content.Intent(context, WatchActivity::class.java)
             .addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)) as WatchActivity
         val now = android.os.SystemClock.elapsedRealtime()
-        val preview = com.vayana.core.wear.WatchState().start(com.vayana.core.wear.WearBook("preview", "Ambient preview", 10, 100, 1),
+        val preview = com.folium.core.wear.WatchState().start(com.folium.core.wear.WearBook("preview", "Ambient preview", 10, 100, 1),
             10, "wear-12345678-1234-1234-1234-123456789abc", System.currentTimeMillis() - 600000, now - 600000, 1)
         instrumentation.runOnMainSync {
             try {
-                activity.javaClass.getDeclaredMethod("renderAmbient", com.vayana.core.wear.WatchState::class.java)
+                activity.javaClass.getDeclaredMethod("renderAmbient", com.folium.core.wear.WatchState::class.java)
                     .apply { isAccessible = true }.invoke(activity, preview)
                 fun texts(view: android.view.View): List<String> = when (view) {
                     is android.widget.TextView -> listOf(view.text.toString())

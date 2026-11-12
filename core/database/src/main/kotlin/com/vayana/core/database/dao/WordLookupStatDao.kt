@@ -1,10 +1,10 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.vayana.core.database.entity.WordLookupStatEntity
+import com.folium.core.database.entity.WordLookupStatEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

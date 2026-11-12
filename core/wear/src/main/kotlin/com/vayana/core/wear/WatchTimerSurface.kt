@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 /** Stable monotonic base lets the system animate the clock without an app background tick. */
 data class WatchTimerSurface(val title: String, val page: Int, val running: Boolean, val time: Long) {

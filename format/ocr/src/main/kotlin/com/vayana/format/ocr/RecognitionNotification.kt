@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 import android.Manifest
 import android.app.NotificationChannel

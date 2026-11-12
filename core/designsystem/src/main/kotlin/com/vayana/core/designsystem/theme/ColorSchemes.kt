@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.theme
+package com.folium.core.designsystem.theme
 
 import android.content.Context
 import android.os.Build
@@ -9,7 +9,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
-import com.vayana.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.tokens.Palette
 
 /**
  * [ColorScheme] builders from [Palette]. Only these functions (plus [Palette] itself) may

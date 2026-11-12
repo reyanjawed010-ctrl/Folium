@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.driver.AndroidSQLiteDriver
 import androidx.sqlite.execSQL
-import com.vayana.core.database.MIGRATION_27_28
+import com.folium.core.database.MIGRATION_27_28
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue

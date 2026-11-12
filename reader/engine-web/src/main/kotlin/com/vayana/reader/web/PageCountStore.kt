@@ -1,6 +1,6 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
-import com.vayana.core.common.Hashing
+import com.folium.core.common.Hashing
 import java.io.File
 import org.json.JSONArray
 import org.json.JSONObject

@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import android.content.Context
 import android.content.Intent
@@ -35,14 +35,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.common.AppLanguage
-import com.vayana.core.designsystem.theme.VayanaTheme
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.OnlineDictionarySource
+import com.folium.core.common.AppLanguage
+import com.folium.core.designsystem.theme.VayanaTheme
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.OnlineDictionarySource
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

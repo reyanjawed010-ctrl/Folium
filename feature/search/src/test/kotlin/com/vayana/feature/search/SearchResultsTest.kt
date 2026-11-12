@@ -1,10 +1,10 @@
-package com.vayana.feature.search
+package com.folium.feature.search
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -14,7 +14,7 @@ class SearchResultsTest {
             "padding ".repeat(30) + "മലയാളം river at dawn " + "trailing ".repeat(200),
             "x".repeat(100) + " river")
         for (text in texts) for (tokens in listOf(emptyList(), listOf("riv"), listOf("മല"), listOf("absent"))) {
-            val match = com.vayana.core.database.search.wordPrefixMatchRanges(text, tokens).firstOrNull()?.first ?: 0
+            val match = com.folium.core.database.search.wordPrefixMatchRanges(text, tokens).firstOrNull()?.first ?: 0
             val rough = (match - 60).coerceAtLeast(0)
             val start = if (rough == 0) 0 else text.indexOf(' ', rough).takeIf { it in rough..match }?.plus(1) ?: rough
             val previous = text.substring(start, minOf(text.length, start + 300)).trim()

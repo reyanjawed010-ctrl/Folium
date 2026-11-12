@@ -1,11 +1,11 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.di.DatabaseModule
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.AnnotationRepositoryImpl
-import com.vayana.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.di.DatabaseModule
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.AnnotationRepositoryImpl
+import com.folium.core.database.repository.BookRepositoryImpl
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import kotlin.test.*

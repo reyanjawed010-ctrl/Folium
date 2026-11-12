@@ -1,6 +1,6 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
-import com.vayana.core.database.model.isCommunityQuoteLocator
+import com.folium.core.database.model.isCommunityQuoteLocator
 import java.security.MessageDigest
 import org.json.JSONArray
 import org.json.JSONObject

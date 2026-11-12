@@ -1,7 +1,7 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.PartOfSpeech
-import com.vayana.dictionary.api.lookupForms
+import com.folium.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.lookupForms
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

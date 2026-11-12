@@ -1,7 +1,7 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.resources.UiText
-import com.vayana.core.datastore.settings.LaunchReadingProgressCheckMarker
+import com.folium.core.resources.UiText
+import com.folium.core.datastore.settings.LaunchReadingProgressCheckMarker
 
 /**
  * The silent launch-time reading-progress check ([GitHubSyncMode.READING_PROGRESS_PULL_ONLY]).

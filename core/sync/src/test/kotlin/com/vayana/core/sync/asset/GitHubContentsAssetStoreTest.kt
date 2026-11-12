@@ -1,24 +1,24 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
-import com.vayana.core.backup.PortableAnnotation
-import com.vayana.core.backup.PortableAppBuild
-import com.vayana.core.backup.PortableReadingSession
-import com.vayana.core.backup.PortableSnapshot
-import com.vayana.core.backup.PortableSnapshotFormat
-import com.vayana.core.backup.PortableTombstone
-import com.vayana.core.backup.PortableWordLookupCounter
-import com.vayana.core.backup.portableSnapshotSliceDataHash
-import com.vayana.core.backup.repointPortableSnapshotSlices
-import com.vayana.core.backup.toSlicedJsonDocuments
-import com.vayana.core.sync.snapshot.SnapshotSliceCache
-import com.vayana.core.sync.snapshot.getLatestPortableSnapshotDocument
-import com.vayana.core.sync.snapshot.staleSnapshotSliceFiles
-import com.vayana.core.sync.snapshot.pushPortableReadingProgress
-import com.vayana.core.sync.snapshot.putPortableSnapshotDocuments
-import com.vayana.core.sync.snapshot.remotePortableSnapshotDocumentFrom
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotDocument
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotSlice
-import com.vayana.core.sync.snapshot.SyncedSnapshotSlice
+import com.folium.core.backup.PortableAnnotation
+import com.folium.core.backup.PortableAppBuild
+import com.folium.core.backup.PortableReadingSession
+import com.folium.core.backup.PortableSnapshot
+import com.folium.core.backup.PortableSnapshotFormat
+import com.folium.core.backup.PortableTombstone
+import com.folium.core.backup.PortableWordLookupCounter
+import com.folium.core.backup.portableSnapshotSliceDataHash
+import com.folium.core.backup.repointPortableSnapshotSlices
+import com.folium.core.backup.toSlicedJsonDocuments
+import com.folium.core.sync.snapshot.SnapshotSliceCache
+import com.folium.core.sync.snapshot.getLatestPortableSnapshotDocument
+import com.folium.core.sync.snapshot.staleSnapshotSliceFiles
+import com.folium.core.sync.snapshot.pushPortableReadingProgress
+import com.folium.core.sync.snapshot.putPortableSnapshotDocuments
+import com.folium.core.sync.snapshot.remotePortableSnapshotDocumentFrom
+import com.folium.core.sync.snapshot.RemotePortableSnapshotDocument
+import com.folium.core.sync.snapshot.RemotePortableSnapshotSlice
+import com.folium.core.sync.snapshot.SyncedSnapshotSlice
 import java.util.Base64
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
@@ -54,7 +54,7 @@ class GitHubContentsAssetStoreTest {
         // plus the manifest, which is written to both the latest pointer and this device's snapshot.
         val distinctZips = emptySnapshot(2000).toSlicedJsonDocuments()
             .filter { it.sliceKey != null }
-            .map { com.vayana.core.sync.snapshot.zipSnapshotJson(it.jsonText).toList() }
+            .map { com.folium.core.sync.snapshot.zipSnapshotJson(it.jsonText).toList() }
             .distinct().size
         val client = RecordingGitHubHttpClient(
             GitHubHttpResponse(200, "[]".toByteArray()), // prune: no slices folder yet

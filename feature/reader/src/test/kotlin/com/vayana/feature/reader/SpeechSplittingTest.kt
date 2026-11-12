@@ -1,6 +1,6 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.reader.api.SpeechSentence
+import com.folium.reader.api.SpeechSentence
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

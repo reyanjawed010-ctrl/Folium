@@ -1,10 +1,10 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.database.model.WordLookupStat
-import com.vayana.core.database.repository.VocabularyCardRepository
-import com.vayana.core.database.repository.WordLookupStatRepository
+import com.folium.core.database.model.WordLookupStat
+import com.folium.core.database.repository.VocabularyCardRepository
+import com.folium.core.database.repository.WordLookupStatRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,10 +14,10 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.DictionaryPackState
-import com.vayana.dictionary.api.DictionaryRepository
+import com.folium.core.common.runCatchingCancellable
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.DictionaryPackState
+import com.folium.dictionary.api.DictionaryRepository
 import kotlinx.coroutines.launch
 
 data class LearnWordsSummary(

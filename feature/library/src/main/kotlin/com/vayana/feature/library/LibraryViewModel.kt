@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.shownReadingPercent
-import com.vayana.core.common.IncomingBookFiles
-import com.vayana.core.resources.UiText
-import com.vayana.core.resources.R
+import com.folium.core.database.model.shownReadingPercent
+import com.folium.core.common.IncomingBookFiles
+import com.folium.core.resources.UiText
+import com.folium.core.resources.R
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
@@ -16,119 +16,119 @@ import android.provider.OpenableColumns
 import androidx.documentfile.provider.DocumentFile
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.backup.PortableCloudBook
-import com.vayana.core.backup.PortableAsset
-import com.vayana.core.backup.PortableReadingProgressPatch
-import com.vayana.core.backup.PortableReadingSession
-import com.vayana.core.backup.PortableSyncConflict
-import com.vayana.core.backup.PortableWordLookupCounter
-import com.vayana.core.backup.SnapshotExporter
-import com.vayana.core.backup.PortableAnnotation
-import com.vayana.core.backup.PortableBookAlias
-import com.vayana.core.backup.PortableShelf
-import com.vayana.core.backup.PortableShelfMembership
-import com.vayana.core.backup.PortableTombstone
-import com.vayana.core.backup.PortableVocabularyCard
-import com.vayana.core.backup.PortableAppBuild
-import com.vayana.core.backup.parsePortableAnnotations
-import com.vayana.core.backup.parsePortableAppBuild
-import com.vayana.core.backup.parsePortableBookAliases
-import com.vayana.core.backup.parsePortableCloudBooks
-import com.vayana.core.backup.parsePortableReadingSessions
-import com.vayana.core.backup.parsePortableBookFileHashes
-import com.vayana.core.backup.parsePortableShelfMemberships
-import com.vayana.core.backup.parsePortableShelves
-import com.vayana.core.backup.parsePortableTombstones
-import com.vayana.core.backup.parsePortableVocabularyCards
-import com.vayana.core.backup.parsePortableWordLookupCounters
-import com.vayana.core.backup.toJsonString
-import com.vayana.core.common.AppBuild
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.appBuild
-import com.vayana.core.common.Hashing
-import com.vayana.core.common.ParsedQuote
-import com.vayana.core.common.QuoteParser
-import com.vayana.core.common.quoteMatchKey
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.model.normalizedBookTag
-import com.vayana.core.database.dao.AnnotationDao
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.FullSyncStateDao
-import com.vayana.core.database.dao.SyncedSnapshotSliceDao
-import com.vayana.core.database.dao.ShelfDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.dao.VocabularyCardDao
-import com.vayana.core.database.entity.BookAliasEntity
-import com.vayana.core.database.entity.SyncedSnapshotSliceEntity
-import com.vayana.core.database.sync.SyncMergeTransaction
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.Shelf
-import com.vayana.core.database.repository.AnnotationMergeResult
-import com.vayana.core.database.repository.AnnotationRecord
-import com.vayana.core.database.repository.AnnotationRepository
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.bookSyncIdOfReadingProgressReset
-import com.vayana.core.database.repository.CloudBookMergeResult
-import com.vayana.core.database.repository.CloudBookRecord
-import com.vayana.core.database.repository.CloudHomeLibraryOrigin
-import com.vayana.core.database.repository.CloudReadingSessionRecord
-import com.vayana.core.database.repository.CloudShelfMembershipRecord
-import com.vayana.core.database.repository.CloudShelfRecord
-import com.vayana.core.database.repository.CloudVocabularyCardRecord
-import com.vayana.core.database.repository.CloudWordLookupCounter
-import com.vayana.core.database.repository.ReadingSessionMergeResult
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.database.repository.ShelfMembershipMergeResult
-import com.vayana.core.database.repository.ShelfMergeResult
-import com.vayana.core.database.repository.ShelfRepository
-import com.vayana.core.database.repository.TombstoneEntityType
-import com.vayana.core.database.repository.wordOfLookupTombstone
-import com.vayana.core.database.repository.VocabularyCardMergeResult
-import com.vayana.core.database.repository.VocabularyCardRepository
-import com.vayana.core.database.repository.WordLookupCounterMergeResult
-import com.vayana.core.database.repository.WordLookupStatRepository
-import com.vayana.core.database.repository.appliesOver
-import com.vayana.core.datastore.settings.DefaultCoverSource
-import com.vayana.core.datastore.settings.LaunchReadingProgressCheckMarker
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.datastore.settings.ReadingToolsRepository
-import com.vayana.core.datastore.settings.SmartShelf
+import com.folium.core.backup.PortableCloudBook
+import com.folium.core.backup.PortableAsset
+import com.folium.core.backup.PortableReadingProgressPatch
+import com.folium.core.backup.PortableReadingSession
+import com.folium.core.backup.PortableSyncConflict
+import com.folium.core.backup.PortableWordLookupCounter
+import com.folium.core.backup.SnapshotExporter
+import com.folium.core.backup.PortableAnnotation
+import com.folium.core.backup.PortableBookAlias
+import com.folium.core.backup.PortableShelf
+import com.folium.core.backup.PortableShelfMembership
+import com.folium.core.backup.PortableTombstone
+import com.folium.core.backup.PortableVocabularyCard
+import com.folium.core.backup.PortableAppBuild
+import com.folium.core.backup.parsePortableAnnotations
+import com.folium.core.backup.parsePortableAppBuild
+import com.folium.core.backup.parsePortableBookAliases
+import com.folium.core.backup.parsePortableCloudBooks
+import com.folium.core.backup.parsePortableReadingSessions
+import com.folium.core.backup.parsePortableBookFileHashes
+import com.folium.core.backup.parsePortableShelfMemberships
+import com.folium.core.backup.parsePortableShelves
+import com.folium.core.backup.parsePortableTombstones
+import com.folium.core.backup.parsePortableVocabularyCards
+import com.folium.core.backup.parsePortableWordLookupCounters
+import com.folium.core.backup.toJsonString
+import com.folium.core.common.AppBuild
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.appBuild
+import com.folium.core.common.Hashing
+import com.folium.core.common.ParsedQuote
+import com.folium.core.common.QuoteParser
+import com.folium.core.common.quoteMatchKey
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.model.normalizedBookTag
+import com.folium.core.database.dao.AnnotationDao
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.FullSyncStateDao
+import com.folium.core.database.dao.SyncedSnapshotSliceDao
+import com.folium.core.database.dao.ShelfDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.dao.VocabularyCardDao
+import com.folium.core.database.entity.BookAliasEntity
+import com.folium.core.database.entity.SyncedSnapshotSliceEntity
+import com.folium.core.database.sync.SyncMergeTransaction
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.Shelf
+import com.folium.core.database.repository.AnnotationMergeResult
+import com.folium.core.database.repository.AnnotationRecord
+import com.folium.core.database.repository.AnnotationRepository
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.bookSyncIdOfReadingProgressReset
+import com.folium.core.database.repository.CloudBookMergeResult
+import com.folium.core.database.repository.CloudBookRecord
+import com.folium.core.database.repository.CloudHomeLibraryOrigin
+import com.folium.core.database.repository.CloudReadingSessionRecord
+import com.folium.core.database.repository.CloudShelfMembershipRecord
+import com.folium.core.database.repository.CloudShelfRecord
+import com.folium.core.database.repository.CloudVocabularyCardRecord
+import com.folium.core.database.repository.CloudWordLookupCounter
+import com.folium.core.database.repository.ReadingSessionMergeResult
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.database.repository.ShelfMembershipMergeResult
+import com.folium.core.database.repository.ShelfMergeResult
+import com.folium.core.database.repository.ShelfRepository
+import com.folium.core.database.repository.TombstoneEntityType
+import com.folium.core.database.repository.wordOfLookupTombstone
+import com.folium.core.database.repository.VocabularyCardMergeResult
+import com.folium.core.database.repository.VocabularyCardRepository
+import com.folium.core.database.repository.WordLookupCounterMergeResult
+import com.folium.core.database.repository.WordLookupStatRepository
+import com.folium.core.database.repository.appliesOver
+import com.folium.core.datastore.settings.DefaultCoverSource
+import com.folium.core.datastore.settings.LaunchReadingProgressCheckMarker
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.datastore.settings.ReadingToolsRepository
+import com.folium.core.datastore.settings.SmartShelf
 import java.time.LocalDate
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.sync.asset.CloudAssetReference
-import com.vayana.core.sync.asset.CloudBookAssetTransfer
-import com.vayana.core.sync.asset.CloudBookFileDownloadPhase
-import com.vayana.core.sync.asset.GitHubAssetStoreException
-import com.vayana.core.sync.asset.GitHubContentsAssetStore
-import com.vayana.core.sync.asset.GitHubRepository
-import com.vayana.core.sync.snapshot.PortableSnapshotPublishProgress
-import com.vayana.core.sync.snapshot.PortableSnapshotPublishStage
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotDocument
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotSlice
-import com.vayana.core.sync.snapshot.SyncedSnapshotSlice
-import com.vayana.core.sync.snapshot.locallyUnchangedSliceKeys
-import com.vayana.core.sync.snapshot.markedSlices
-import com.vayana.core.sync.snapshot.getLatestPortableSnapshotDocumentUnlessSha
-import com.vayana.core.sync.snapshot.getLatestPortableSnapshotDocument
-import com.vayana.core.sync.snapshot.pushPortableReadingProgress
-import com.vayana.core.sync.snapshot.putPortableSnapshotDocuments
-import com.vayana.core.filesystem.BookFileImporter
-import com.vayana.core.filesystem.ResolvedBooks
-import com.vayana.core.filesystem.CoverImages
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.core.homelibrary.HomeLibraryStatus
-import com.vayana.core.homelibrary.HomeLibrarySync
-import com.vayana.format.pdf.PdfPasswordProtectedException
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.sync.asset.CloudAssetReference
+import com.folium.core.sync.asset.CloudBookAssetTransfer
+import com.folium.core.sync.asset.CloudBookFileDownloadPhase
+import com.folium.core.sync.asset.GitHubAssetStoreException
+import com.folium.core.sync.asset.GitHubContentsAssetStore
+import com.folium.core.sync.asset.GitHubRepository
+import com.folium.core.sync.snapshot.PortableSnapshotPublishProgress
+import com.folium.core.sync.snapshot.PortableSnapshotPublishStage
+import com.folium.core.sync.snapshot.RemotePortableSnapshotDocument
+import com.folium.core.sync.snapshot.RemotePortableSnapshotSlice
+import com.folium.core.sync.snapshot.SyncedSnapshotSlice
+import com.folium.core.sync.snapshot.locallyUnchangedSliceKeys
+import com.folium.core.sync.snapshot.markedSlices
+import com.folium.core.sync.snapshot.getLatestPortableSnapshotDocumentUnlessSha
+import com.folium.core.sync.snapshot.getLatestPortableSnapshotDocument
+import com.folium.core.sync.snapshot.pushPortableReadingProgress
+import com.folium.core.sync.snapshot.putPortableSnapshotDocuments
+import com.folium.core.filesystem.BookFileImporter
+import com.folium.core.filesystem.ResolvedBooks
+import com.folium.core.filesystem.CoverImages
+import com.folium.core.filesystem.StorageRoots
+import com.folium.core.homelibrary.HomeLibraryStatus
+import com.folium.core.homelibrary.HomeLibrarySync
+import com.folium.format.pdf.PdfPasswordProtectedException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
@@ -161,18 +161,18 @@ import kotlin.math.roundToInt
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import com.vayana.core.sync.asset.CloudAssetDeletionProcessor
+import com.folium.core.sync.asset.CloudAssetDeletionProcessor
 import kotlinx.coroutines.NonCancellable
-import com.vayana.core.database.repository.isBookDeletion
-import com.vayana.core.database.repository.isSyncedWithReadingProgress
-import com.vayana.core.sync.RemoteBookDeletionNotices
-import com.vayana.core.sync.SyncOperationCoordinator
-import com.vayana.core.sync.SyncedBookDeletionApplier
-import com.vayana.core.sync.asset.deletePendingAndLog
-import com.vayana.core.sync.progress.ReadingProgressOnlySyncer
-import com.vayana.core.sync.isOfflineSyncFailure
-import com.vayana.core.sync.usage.SyncDataUsageLog
-import com.vayana.core.sync.usage.SyncKind
+import com.folium.core.database.repository.isBookDeletion
+import com.folium.core.database.repository.isSyncedWithReadingProgress
+import com.folium.core.sync.RemoteBookDeletionNotices
+import com.folium.core.sync.SyncOperationCoordinator
+import com.folium.core.sync.SyncedBookDeletionApplier
+import com.folium.core.sync.asset.deletePendingAndLog
+import com.folium.core.sync.progress.ReadingProgressOnlySyncer
+import com.folium.core.sync.isOfflineSyncFailure
+import com.folium.core.sync.usage.SyncDataUsageLog
+import com.folium.core.sync.usage.SyncKind
 
 /** Result of one import batch, still kept for the final Snackbar summary. */
 data class ImportSummary(val imported: Int, val duplicates: Int, val unsupported: Int, val failed: Int)
@@ -858,7 +858,7 @@ class LibraryViewModel @Inject constructor(
         viewModelScope.launch {
             val capacity = settingsRepository.observe(SettingsRegistry.ReadNextCapacity).first()
             val bumped = try { bookRepository.setReadNext(bookId, queued, capacity) }
-            catch (_: com.vayana.core.database.repository.ReadNextQueueFullException) {
+            catch (_: com.folium.core.database.repository.ReadNextQueueFullException) {
                 _bookDetailMessage.value = BookDetailMessage.QUEUE_FULL
                 return@launch
             }
@@ -1018,17 +1018,17 @@ class LibraryViewModel @Inject constructor(
                         try {
                             val cleanupContext = kotlinx.coroutines.currentCoroutineContext()
                             val source = storageRoots.resolve(book.filePath)
-                            val removed = com.vayana.format.epub.GutenbergCleanup.clean(source, destination,
+                            val removed = com.folium.format.epub.GutenbergCleanup.clean(source, destination,
                                 onProgress = { completed, total ->
                                     _cleanupProgress.value = BookCleanupProgress(bookId, completed.toFloat() / total.coerceAtLeast(1))
                                 }, checkCancelled = { cleanupContext.ensureActive() })
                             if (removed == 0) return@withContext BookDetailMessage.NOTHING_TO_CLEAN
                             // The original is retained, so only resolve its position when a copy actually changed.
-                            val restoredLocator = com.vayana.format.epub.EpubCleanupPosition.capture(source, book.lastLocator) {
+                            val restoredLocator = com.folium.format.epub.EpubCleanupPosition.capture(source, book.lastLocator) {
                                 cleanupContext.ensureActive()
                             }
                             installed = bookRepository.attachCleanedSource(bookId, book.fileHash,
-                                storageRoots.relativize(destination), com.vayana.core.common.Hashing.sha256(destination.inputStream()), restoredLocator)
+                                storageRoots.relativize(destination), com.folium.core.common.Hashing.sha256(destination.inputStream()), restoredLocator)
                             if (installed) BookDetailMessage.CLEANED else BookDetailMessage.SOURCE_FAILED
                         } catch (failure: Exception) {
                             if (failure is kotlinx.coroutines.CancellationException) throw failure

@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -87,7 +87,7 @@ class SpeechPronunciationTest {
     @Test
     fun splitReplacementsKeepTheirOriginalRange() {
         val text = "abc ".repeat(730) + "Hermione today."
-        val parts = com.vayana.reader.api.SpeechSentence("s", text).splitForSpeech(
+        val parts = com.folium.reader.api.SpeechSentence("s", text).splitForSpeech(
             listOf(SpeechPronunciation("Hermione", "her ".repeat(40).trim())),
         )
         assertEquals(2, parts.size)

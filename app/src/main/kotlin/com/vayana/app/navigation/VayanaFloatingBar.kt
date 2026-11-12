@@ -1,6 +1,6 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
-import com.vayana.core.designsystem.theme.isMonochromeEink
+import com.folium.core.designsystem.theme.isMonochromeEink
 import android.os.Build
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.EnterExitState
@@ -90,16 +90,16 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.toRoute
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.LocalDynamicColor
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.LocalMotionSetting
-import com.vayana.core.designsystem.theme.MotionSetting
-import com.vayana.feature.library.LibraryAddAction
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.LocalDynamicColor
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.LocalMotionSetting
+import com.folium.core.designsystem.theme.MotionSetting
+import com.folium.feature.library.LibraryAddAction
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
@@ -256,9 +256,9 @@ fun VayanaFloatingBar(
             icon = Icons.AutoMirrored.Outlined.ArrowBack,
             contentDescription = stringResource(
                 if (showSettingsBackAttachment) {
-                    com.vayana.core.resources.R.string.settings_back_content_description
+                    com.folium.core.resources.R.string.settings_back_content_description
                 } else {
-                    com.vayana.core.resources.R.string.library_back_to_library_content_description
+                    com.folium.core.resources.R.string.library_back_to_library_content_description
                 },
             ),
             pressedIconOffsetX = (-2).dp,
@@ -287,9 +287,9 @@ fun VayanaFloatingBar(
             icon = if (showReadBookAttachment) Icons.Outlined.AutoStories else Icons.Outlined.Add,
             contentDescription = stringResource(
                 if (showReadBookAttachment) {
-                    com.vayana.core.resources.R.string.library_continue_reading
+                    com.folium.core.resources.R.string.library_continue_reading
                 } else {
-                    com.vayana.core.resources.R.string.library_add_content_description
+                    com.folium.core.resources.R.string.library_add_content_description
                 },
             ),
             iconRotationDegrees = if (showAddBookAttachment && addBookMenuExpanded) 45f else 0f,
@@ -704,21 +704,21 @@ private fun AddBookDropdownMenu(
         shadowElevation = Elevations.shadowMedium,
     ) {
         DropdownMenuItem(
-            text = { Text(stringResource(com.vayana.core.resources.R.string.library_import_files)) },
+            text = { Text(stringResource(com.folium.core.resources.R.string.library_import_files)) },
             leadingIcon = { AddBookMenuIcon(Icons.Outlined.AutoStories) },
             modifier = Modifier.heightIn(min = Sizes.menuItemLargeHeight),
             contentPadding = PaddingValues(horizontal = Spacing.md, vertical = Spacing.sm),
             onClick = { onAction(LibraryAddAction.IMPORT_FILES) },
         )
         DropdownMenuItem(
-            text = { Text(stringResource(com.vayana.core.resources.R.string.library_import_folder)) },
+            text = { Text(stringResource(com.folium.core.resources.R.string.library_import_folder)) },
             leadingIcon = { AddBookMenuIcon(Icons.Outlined.CreateNewFolder) },
             modifier = Modifier.heightIn(min = Sizes.menuItemLargeHeight),
             contentPadding = PaddingValues(horizontal = Spacing.md, vertical = Spacing.sm),
             onClick = { onAction(LibraryAddAction.IMPORT_FOLDER) },
         )
         DropdownMenuItem(
-            text = { Text(stringResource(com.vayana.core.resources.R.string.library_free_books)) },
+            text = { Text(stringResource(com.folium.core.resources.R.string.library_free_books)) },
             leadingIcon = { AddBookMenuIcon(Icons.Outlined.LocalLibrary) },
             modifier = Modifier.heightIn(min = Sizes.menuItemLargeHeight),
             contentPadding = PaddingValues(horizontal = Spacing.md, vertical = Spacing.sm),

@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.ui.semantics.Role
@@ -37,16 +37,16 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.repeatOnLifecycle
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZoneOffset
-import com.vayana.core.designsystem.theme.asAppDate
+import com.folium.core.designsystem.theme.asAppDate
 import java.util.UUID
 import kotlinx.coroutines.delay
 

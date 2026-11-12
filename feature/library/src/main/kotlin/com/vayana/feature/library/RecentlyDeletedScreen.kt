@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -36,15 +36,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.designsystem.theme.VayanaSnackbarHost
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.designsystem.theme.VayanaSnackbarHost
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 @Composable
 fun RecentlyDeletedRoute(

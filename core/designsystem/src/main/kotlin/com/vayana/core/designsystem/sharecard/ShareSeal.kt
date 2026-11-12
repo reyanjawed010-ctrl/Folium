@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.sharecard
+package com.folium.core.designsystem.sharecard
 
 import android.content.Context
 import android.graphics.BitmapFactory
@@ -40,10 +40,10 @@ import androidx.compose.ui.res.stringResource
 import coil3.compose.AsyncImage
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import android.app.KeyguardManager
 import android.app.admin.DevicePolicyManager
@@ -6,11 +6,11 @@ import android.content.Context
 import android.os.Build
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.sync.github.assetStore
-import com.vayana.core.sync.github.gitHubSyncConfig
-import com.vayana.format.ocr.BookRecognition
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.sync.github.assetStore
+import com.folium.core.sync.github.gitHubSyncConfig
+import com.folium.format.ocr.BookRecognition
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject

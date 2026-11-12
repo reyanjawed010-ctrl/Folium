@@ -1,6 +1,6 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import java.io.File
 import javax.inject.Inject
 import kotlinx.coroutines.withContext

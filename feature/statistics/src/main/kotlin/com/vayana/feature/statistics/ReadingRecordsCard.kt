@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,13 +17,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.theme.asAppDate
-import com.vayana.core.designsystem.theme.rememberCoverColorFilter
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.theme.asAppDate
+import com.folium.core.designsystem.theme.rememberCoverColorFilter
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.io.File
 
 @Composable

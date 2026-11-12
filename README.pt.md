@@ -2,18 +2,18 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="core/resources/src/main/res/drawable-nodpi/vayana_share_dark_reader.webp">
     <source media="(prefers-color-scheme: light)" srcset="core/resources/src/main/res/drawable-nodpi/vayana_share_light.webp">
-    <img alt="Vayana: um leitor de livros digitais para Android. Leia sem interrupções." src="core/resources/src/main/res/drawable-nodpi/vayana_share_light.webp" width="820">
+    <img alt="Folium: um leitor de livros digitais para Android. Leia sem interrupções." src="core/resources/src/main/res/drawable-nodpi/vayana_share_light.webp" width="820">
   </picture>
 
-  <h1>Vayana</h1>
+  <h1>Folium</h1>
 
   <p><strong>Leia sem interrupções.</strong></p>
   <p>Um leitor de <a href="docs/USER_GUIDE.pt.md#reading-epub-books">EPUB</a> e <a href="docs/USER_GUIDE.pt.md#reading-pdf-books">PDF</a> para Android, tranquilo e com prioridade ao armazenamento local, feito para telas convencionais e <a href="docs/USER_GUIDE.pt.md#e-ink-and-accessibility">dispositivos E‑Ink</a>.</p>
 
   <p>
-    <a href="https://github.com/rjwarrier/Vayana/releases/latest"><strong>Baixar a versão mais recente</strong></a> ·
-    <a href="https://ranjithj.in/vayana/"><strong>Site do Vayana</strong></a> ·
-    <a href="https://github.com/rjwarrier/Vayana/releases/tag/v0.93">Notas da versão</a> ·
+    <a href="https://github.com/rjwarrier/Folium/releases/latest"><strong>Baixar a versão mais recente</strong></a> ·
+    <a href="https://ranjithj.in/vayana/"><strong>Site do Folium</strong></a> ·
+    <a href="https://github.com/rjwarrier/Folium/releases/tag/v0.93">Notas da versão</a> ·
     <a href="docs/USER_GUIDE.pt.md">Guia do usuário</a> ·
     <a href="docs/FEATURES.md">Documentação de recursos</a> ·
     <a href="docs/GITHUB_SYNC_SETUP.md">Configurar a sincronização com o GitHub</a>
@@ -33,11 +33,11 @@
 
 <a id="why-vayana"></a>
 
-## Por que Vayana?
+## Por que Folium?
 
-A maioria dos aplicativos de leitura se limita a exibir um livro. O Vayana trata a leitura como uma prática conectada: organize o que deseja ler, mantenha o foco no texto, guarde passagens importantes, aprenda palavras novas, revisite o que importa e leve seu progresso com segurança entre dispositivos.
+A maioria dos aplicativos de leitura se limita a exibir um livro. O Folium trata a leitura como uma prática conectada: organize o que deseja ler, mantenha o foco no texto, guarde passagens importantes, aprenda palavras novas, revisite o que importa e leve seu progresso com segurança entre dispositivos.
 
-O Vayana faz isso sem exigir uma conta Vayana ou exibir anúncios durante a leitura. Sua biblioteca é local por padrão. Os recursos opcionais on-line, como o [enriquecimento com Goodreads](docs/USER_GUIDE.pt.md#book-details-and-reading-status) e a [sincronização com o GitHub gerenciada por você](docs/USER_GUIDE.pt.md#github-sync), permanecem sob seu controle.
+O Folium faz isso sem exigir uma conta Folium ou exibir anúncios durante a leitura. Sua biblioteca é local por padrão. Os recursos opcionais on-line, como o [enriquecimento com Goodreads](docs/USER_GUIDE.pt.md#book-details-and-reading-status) e a [sincronização com o GitHub gerenciada por você](docs/USER_GUIDE.pt.md#github-sync), permanecem sob seu controle.
 
 <a id="latest-source-updates"></a>
 
@@ -45,13 +45,13 @@ O Vayana faz isso sem exigir uma conta Vayana ou exibir anúncios durante a leit
 
 A versão 0.93 traz uma tela de **Estatísticas** redesenhada (semana, mês, ano e tudo, comparados ao período anterior, gráfico de barras ou de linha, quando você lê, livros mais lidos, tempo de leitura por dispositivo sincronizado e tempo ouvido versus lido), **vários dicionários off-line** escolhidos pelo idioma do livro (Open English WordNet, GCIDE, Olam inglês→malaiala, mais de 300 dicionários bilíngues do FreeDict ou seus próprios arquivos StarDict) e uma tela **Aprender** que guarda só as consultas intencionais de palavras reais e mostra seus significados. Veja as [mudanças desde a v0.92](docs/releases/v0.93.md).
 
-A versão **v0.93** inclui APKs assinados para celular e Wear OS. Instale `Vayana-v0.93.apk` no celular e `Vayana-WearOS-v0.93.apk` no relógio; veja a [configuração do Wear OS](docs/WEAR_OS.md#install-and-build). O relógio registra sessões de leitura de livros físicos; não exibe livros EPUB ou PDF.
+A versão **v0.93** inclui APKs assinados para celular e Wear OS. Instale `Folium-v0.93.apk` no celular e `Folium-WearOS-v0.93.apk` no relógio; veja a [configuração do Wear OS](docs/WEAR_OS.md#install-and-build). O relógio registra sessões de leitura de livros físicos; não exibe livros EPUB ou PDF.
 
 ## Destaques
 
 - **[Um verdadeiro modo E‑Ink](docs/USER_GUIDE.pt.md#e-ink-and-accessibility):** sem animações, com teclas físicas de página, telas do aplicativo paginadas, atualizações completas periódicas e uma paleta monocromática ou colorida feita para telas E‑Ink.
 - **[Leitura que se transforma em aprendizado](docs/USER_GUIDE.pt.md#dictionary-translation-and-vocabulary):** toque duas vezes em uma palavra para ver definições off-line de dicionários escolhidos pelo idioma do livro, também com o significado no seu idioma; guarde as palavras que você realmente queria consultar, revise-as com repetição espaçada e exporte-as para o Anki.
-- **[Sincronização do seu jeito](docs/USER_GUIDE.pt.md#github-sync):** sem conta no Vayana. Posições, sessões, notas, livros e capas são sincronizados por um repositório do GitHub que é seu, com livros e capas criptografados pela sua frase secreta.
+- **[Sincronização do seu jeito](docs/USER_GUIDE.pt.md#github-sync):** sem conta no Folium. Posições, sessões, notas, livros e capas são sincronizados por um repositório do GitHub que é seu, com livros e capas criptografados pela sua frase secreta.
 - **[Uma biblioteca para todos os livros](docs/USER_GUIDE.pt.md#offline-physical-borrowed-and-other-books):** EPUB e PDF ao lado de livros físicos, emprestados e audiolivros, com acompanhamento de páginas, lembretes de devolução e um [aplicativo complementar para Wear OS](docs/WEAR_OS.md) que cronometra a leitura no papel pelo pulso.
 - **[Estatísticas que dizem algo](docs/USER_GUIDE.pt.md#statistics-and-goals):** como esta semana, este mês ou este ano se compara ao anterior, quando você lê, quais livros ficaram com seu tempo, quanto você ouviu e em qual dispositivo.
 - **[Leitura em voz alta que acompanha o texto](docs/USER_GUIDE.pt.md#read-aloud):** frase por frase com as palavras marcadas, pausas naturais, pronúncias por livro e uma escuta que continua contando com a tela desligada.
@@ -72,7 +72,7 @@ A versão **v0.93** inclui APKs assinados para celular e Wear OS. Instale `Vayan
   </tr>
   <tr>
     <td width="50%" align="center">
-      <img src="docs/assets/screenshots/03-book-library.png" alt="Biblioteca do Vayana com cartão de leitura atual e grade de capas" width="100%"><br>
+      <img src="docs/assets/screenshots/03-book-library.png" alt="Biblioteca do Folium com cartão de leitura atual e grade de capas" width="100%"><br>
       <sub><a href="docs/USER_GUIDE.pt.md#managing-the-library"><strong>Biblioteca</strong></a>: continue lendo, pesquise e filtre uma coleção organizada pelas capas.</sub>
     </td>
     <td width="50%" align="center">
@@ -106,7 +106,7 @@ O E‑Ink é um perfil de exibição próprio, e não apenas um filtro de cor:
 
 ### [Leitura que se transforma em aprendizado](docs/USER_GUIDE.pt.md#dictionary-translation-and-vocabulary)
 
-- Toque duas vezes em uma palavra para ver a definição off-line. O Vayana escolhe os dicionários pelo idioma do livro e pode acrescentar o significado no seu idioma: instale Open English WordNet, GCIDE (Webster de 1913), Olam inglês→malaiala, qualquer um dos mais de 300 dicionários bilíngues do FreeDict ou seu próprio arquivo StarDict. Palavras que faltarem podem ser consultadas no Wiktionary ou na Wikipedia com um toque.
+- Toque duas vezes em uma palavra para ver a definição off-line. O Folium escolhe os dicionários pelo idioma do livro e pode acrescentar o significado no seu idioma: instale Open English WordNet, GCIDE (Webster de 1913), Olam inglês→malaiala, qualquer um dos mais de 300 dicionários bilíngues do FreeDict ou seu próprio arquivo StarDict. Palavras que faltarem podem ser consultadas no Wiktionary ou na Wikipedia com um toque.
 - Só as consultas intencionais de palavras de dicionário vão para **Aprender**; toque em uma palavra ali para ver o significado ou removê-la.
 - Salve as palavras consultadas diretamente em um conjunto de revisão espaçada.
 - Descubra palavras incomuns do capítulo atual com suas definições.
@@ -171,18 +171,18 @@ Siga o [guia passo a passo de sincronização com o GitHub](docs/GITHUB_SYNC_SET
 | [**Idiomas**](docs/USER_GUIDE.pt.md#settings-and-languages) | Seleção de idioma no aplicativo: inglês, espanhol, português, russo, alemão, francês, italiano, malaiala e tâmil |
 | [**Aparência**](docs/USER_GUIDE.pt.md#settings-and-languages) | Material 3, modos sistema/claro/escuro, preto puro, cores Material You opcionais, perfis Padrão/E‑Ink, controles de movimento e navegação adaptável a celulares/tablets |
 
-O Vayana também permite [registrar livros físicos e emprestados](docs/USER_GUIDE.pt.md#offline-physical-borrowed-and-other-books) sem arquivo digital, incluindo progresso, datas, avaliações, notas e estatísticas.
+O Folium também permite [registrar livros físicos e emprestados](docs/USER_GUIDE.pt.md#offline-physical-borrowed-and-other-books) sem arquivo digital, incluindo progresso, datas, avaliações, notas e estatísticas.
 
 <a id="install"></a>
 
 ## Instalação
 
-O Vayana é compatível com **Android 8.0 (API 26) ou mais recente**.
+O Folium é compatível com **Android 8.0 (API 26) ou mais recente**.
 
 Para conhecer o primeiro uso, veja o [guia de início rápido](docs/USER_GUIDE.pt.md#quick-start).
 
-1. Abra a [versão mais recente no GitHub](https://github.com/rjwarrier/Vayana/releases/latest).
-2. Baixe `Vayana-v0.93.apk`.
+1. Abra a [versão mais recente no GitHub](https://github.com/rjwarrier/Folium/releases/latest).
+2. Baixe `Folium-v0.93.apk`.
 3. Se o Android solicitar, permita a instalação pelo navegador ou gerenciador de arquivos e abra o APK.
 
 O Android pode avisar que o aplicativo veio de fora do Google Play. Os arquivos da versão incluem um arquivo `.sha256` para verificar o download antes da instalação.
@@ -221,8 +221,8 @@ SHA-256 do certificado da versão
 Clone o repositório e compile um APK de depuração com o wrapper do Gradle incluído:
 
 ```bash
-git clone https://github.com/rjwarrier/Vayana.git
-cd Vayana
+git clone https://github.com/rjwarrier/Folium.git
+cd Folium
 ./gradlew :app:assembleDebug
 ```
 
@@ -285,7 +285,7 @@ O aplicativo usa Kotlin, Jetpack Compose, Material 3, Room, DataStore, Hilt, Wor
 
 ## Documentação
 
-- [Site do Vayana](https://ranjithj.in/vayana/)
+- [Site do Folium](https://ranjithj.in/vayana/)
 - [Guia do usuário e ajuda detalhada dos recursos](docs/USER_GUIDE.pt.md)
 - [Índice da documentação](docs/README.md)
 - [Comportamento dos recursos e regras invariantes](docs/FEATURES.md)
@@ -295,23 +295,23 @@ O aplicativo usa Kotlin, Jetpack Compose, Material 3, Room, DataStore, Hilt, Wor
 - [Decisões de arquitetura e implementação](docs/DECISIONS.md)
 - [Histórico de alterações do banco de dados](docs/DATABASE_CHANGELOG.md)
 - [Projeto da sincronização com o GitHub](docs/GITHUB_SYNC_IMPLEMENTATION_PLAN.md)
-- [Notas da versão v0.93](https://github.com/rjwarrier/Vayana/releases/tag/v0.93)
+- [Notas da versão v0.93](https://github.com/rjwarrier/Folium/releases/tag/v0.93)
 - [Notas da versão v0.85](docs/releases/v0.85.md)
 
 <a id="feedback"></a>
 
 ## Comentários e sugestões
 
-Use o [GitHub Issues](https://github.com/rjwarrier/Vayana/issues) para relatar erros reproduzíveis e solicitar recursos específicos. Ao relatar problemas no leitor ou na sincronização, inclua a versão do Android, o modelo do dispositivo, o perfil de tela e a [exportação de diagnóstico](docs/USER_GUIDE.pt.md#diagnostics-and-support), quando disponível; nunca inclua um token do GitHub ou a frase secreta de sincronização.
+Use o [GitHub Issues](https://github.com/rjwarrier/Folium/issues) para relatar erros reproduzíveis e solicitar recursos específicos. Ao relatar problemas no leitor ou na sincronização, inclua a versão do Android, o modelo do dispositivo, o perfil de tela e a [exportação de diagnóstico](docs/USER_GUIDE.pt.md#diagnostics-and-support), quando disponível; nunca inclua um token do GitHub ou a frase secreta de sincronização.
 
 <a id="support"></a>
 
 ## Apoio
 
-Se o Vayana for útil para você, considere apoiar seu desenvolvimento:
+Se o Folium for útil para você, considere apoiar seu desenvolvimento:
 
 <a href="https://www.buymeacoffee.com/ranjithj"><img alt="Pague-me um café" src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ranjithj&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" height="44"></a>
 
 ## Licença
 
-O Vayana é software livre sob a [Licença Pública Geral GNU, versão 3 ou posterior](LICENSE). Você pode usá-lo, modificá-lo e compartilhá-lo; versões modificadas distribuídas também devem ser publicadas sob a GPL com o código-fonte.
+O Folium é software livre sob a [Licença Pública Geral GNU, versão 3 ou posterior](LICENSE). Você pode usá-lo, modificá-lo e compartilhá-lo; versões modificadas distribuídas também devem ser publicadas sob a GPL com o código-fonte.

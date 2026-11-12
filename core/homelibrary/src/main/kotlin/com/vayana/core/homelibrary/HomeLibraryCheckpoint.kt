@@ -1,4 +1,4 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import android.content.Context
 import androidx.datastore.core.DataStore

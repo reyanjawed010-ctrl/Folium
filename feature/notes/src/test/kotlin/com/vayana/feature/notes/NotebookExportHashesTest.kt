@@ -1,4 +1,4 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

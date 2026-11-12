@@ -1,4 +1,4 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
 import java.io.File
 import kotlin.io.path.createTempDirectory

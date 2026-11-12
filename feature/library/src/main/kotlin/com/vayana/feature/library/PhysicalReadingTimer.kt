@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.ReadingSession
+import com.folium.core.database.model.ReadingSession
 import kotlin.math.ceil
 import kotlin.math.abs
 
-typealias PhysicalTimerPhase = com.vayana.core.wear.PhysicalTimerPhase
-typealias PhysicalTimerSession = com.vayana.core.wear.PhysicalTimerSession
+typealias PhysicalTimerPhase = com.folium.core.wear.PhysicalTimerPhase
+typealias PhysicalTimerSession = com.folium.core.wear.PhysicalTimerSession
 
 internal data class PhysicalSessionRecorded(val pagesRead: Int, val minutesRead: Int)
 

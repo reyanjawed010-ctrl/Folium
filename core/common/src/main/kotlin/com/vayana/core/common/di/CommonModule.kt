@@ -1,8 +1,8 @@
-package com.vayana.core.common.di
+package com.folium.core.common.di
 
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DefaultDispatcherProvider
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DefaultDispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

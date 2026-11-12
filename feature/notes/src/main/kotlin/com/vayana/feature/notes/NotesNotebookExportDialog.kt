@@ -1,7 +1,7 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
 import androidx.compose.foundation.layout.*
-import com.vayana.core.designsystem.theme.PagedLazyColumn as LazyColumn
+import com.folium.core.designsystem.theme.PagedLazyColumn as LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material3.*
@@ -11,8 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import com.vayana.core.resources.R
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.resources.R
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 

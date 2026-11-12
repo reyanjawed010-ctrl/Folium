@@ -1,6 +1,6 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
-import com.vayana.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsRegistry
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue

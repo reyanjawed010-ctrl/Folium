@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.database.model.Book
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.resources.R
 
 /**
  * What a book's share card shows in its status, two stats and footer, and what the option chips that toggle them are

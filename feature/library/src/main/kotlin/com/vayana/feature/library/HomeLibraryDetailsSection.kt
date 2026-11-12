@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,11 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.HomeLibraryDetails
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.HomeLibraryDetails
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /**
  * What Home Library says about a mirrored book beyond the fields Vayana has columns for, plus the way back to it. Home

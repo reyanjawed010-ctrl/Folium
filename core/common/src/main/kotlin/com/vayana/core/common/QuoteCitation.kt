@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 /** Formats a highlight/quote for sharing or copying, attributed to its source when known. */
 object QuoteCitation {

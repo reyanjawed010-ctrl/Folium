@@ -1,16 +1,16 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.AnnotationDao
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.AnnotationEntity
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.search.ftsSearchMatch
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.AnnotationDao
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.AnnotationEntity
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.search.ftsSearchMatch
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged

@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.safeDrawing
@@ -13,8 +13,8 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.unit.Constraints
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.reader.api.ReaderSelection
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.reader.api.ReaderSelection
 
 /** Where the selection is on screen: its top and bottom edges in pixels, in root coordinates. */
 internal data class SelectionAnchor(val top: Float, val bottom: Float)

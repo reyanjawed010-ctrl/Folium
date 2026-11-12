@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 /** Timed notes on one sync, saved to diagnostics as a single event so slow phases are easy to spot. */
 internal class FullSyncLog(val label: String = "Full sync", private val nanoClock: () -> Long = System::nanoTime) {

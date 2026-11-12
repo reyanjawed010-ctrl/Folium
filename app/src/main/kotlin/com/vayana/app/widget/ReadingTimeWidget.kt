@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -13,13 +13,13 @@ import android.os.SystemClock
 import android.util.TypedValue
 import android.view.View
 import android.widget.RemoteViews
-import com.vayana.app.MainActivity
-import com.vayana.app.R
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.datastore.settings.SettingsRepository
+import com.folium.app.MainActivity
+import com.folium.app.R
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.datastore.settings.SettingsRepository
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.time.LocalDate
@@ -42,7 +42,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.vayana.core.resources.R as Res
+import com.folium.core.resources.R as Res
 
 /** The reading-time widget: today's minutes across devices and the last seven days as a line chart. */
 @AndroidEntryPoint

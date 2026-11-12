@@ -1,4 +1,4 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

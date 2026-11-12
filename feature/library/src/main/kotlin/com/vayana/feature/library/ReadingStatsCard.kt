@@ -1,7 +1,7 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.BorrowedReadingPlan
-import com.vayana.core.database.model.borrowedReadingPlan
+import com.folium.core.database.model.BorrowedReadingPlan
+import com.folium.core.database.model.borrowedReadingPlan
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.ui.semantics.Role
@@ -33,14 +33,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.text.style.TextOverflow
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.VayanaLinearWavyProgressIndicator
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.VayanaLinearWavyProgressIndicator
+import com.folium.core.resources.R
 import kotlin.math.roundToInt
 
 /**

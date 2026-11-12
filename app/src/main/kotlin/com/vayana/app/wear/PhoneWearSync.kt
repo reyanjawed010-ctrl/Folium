@@ -1,4 +1,4 @@
-package com.vayana.app.wear
+package com.folium.app.wear
 
 import android.content.Context
 import androidx.work.*
@@ -6,13 +6,13 @@ import com.google.android.gms.wearable.DataEventBuffer
 import com.google.android.gms.wearable.DataEvent
 import com.google.android.gms.wearable.CapabilityInfo
 import com.google.android.gms.wearable.WearableListenerService
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.CompanionReadingRepository
-import com.vayana.core.wear.*
-import com.vayana.feature.library.PhysicalReadingTimerController
+import com.folium.core.common.ApplicationScope
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.Book
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.CompanionReadingRepository
+import com.folium.core.wear.*
+import com.folium.feature.library.PhysicalReadingTimerController
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
@@ -37,15 +37,15 @@ interface PhoneWearDependencies {
     fun books(): BookRepository
     fun importer(): CompanionReadingRepository
     fun timer(): PhysicalReadingTimerController
-    fun sessions(): com.vayana.core.database.repository.ReadingSessionRepository
-    fun storageRoots(): com.vayana.core.filesystem.StorageRoots
+    fun sessions(): com.folium.core.database.repository.ReadingSessionRepository
+    fun storageRoots(): com.folium.core.filesystem.StorageRoots
 }
 
 @Singleton
 class PhoneWearSync @Inject constructor(
     @ApplicationContext private val context: Context,
     private val books: BookRepository,
-    private val sessions: com.vayana.core.database.repository.ReadingSessionRepository,
+    private val sessions: com.folium.core.database.repository.ReadingSessionRepository,
     private val timer: PhysicalReadingTimerController,
     @ApplicationScope private val scope: CoroutineScope,
 ) {
@@ -192,9 +192,9 @@ private fun hasPlayServices(context: Context) = com.google.android.gms.common.Go
 
 private fun timerOverlaps(timer: PhysicalTimerSession, session: WearSession): Boolean {
     val current = timer.checkpoint(android.os.SystemClock.elapsedRealtime())
-    val a = current.activeIntervals?.let(com.vayana.core.common.ReadingIntervals::decode)
-        ?: listOf(com.vayana.core.common.ReadingInterval(timer.startedAt, maxOf(timer.startedAt + 1, timer.endedAt.takeIf { it > 0 } ?: System.currentTimeMillis())))
-    val b = session.activeIntervals?.let(com.vayana.core.common.ReadingIntervals::decode)
-        ?: listOf(com.vayana.core.common.ReadingInterval(session.startedAt, maxOf(session.startedAt + 1, session.endedAt)))
+    val a = current.activeIntervals?.let(com.folium.core.common.ReadingIntervals::decode)
+        ?: listOf(com.folium.core.common.ReadingInterval(timer.startedAt, maxOf(timer.startedAt + 1, timer.endedAt.takeIf { it > 0 } ?: System.currentTimeMillis())))
+    val b = session.activeIntervals?.let(com.folium.core.common.ReadingIntervals::decode)
+        ?: listOf(com.folium.core.common.ReadingInterval(session.startedAt, maxOf(session.startedAt + 1, session.endedAt)))
     return a.any { left -> b.any { right -> left.start < right.end && left.end > right.start } }
 }

@@ -1,15 +1,15 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.entity.AnnotationEntity
-import com.vayana.core.database.entity.BookAliasEntity
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.BookShelfCrossRefEntity
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.entity.ShelfEntity
-import com.vayana.core.database.entity.VocabularyCardEntity
-import com.vayana.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.entity.AnnotationEntity
+import com.folium.core.database.entity.BookAliasEntity
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.BookShelfCrossRefEntity
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.entity.ShelfEntity
+import com.folium.core.database.entity.VocabularyCardEntity
+import com.folium.core.database.repository.BookRepositoryImpl
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -20,9 +20,9 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.CloudBookMergeResult
-import com.vayana.core.database.repository.CloudBookRecord
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.CloudBookMergeResult
+import com.folium.core.database.repository.CloudBookRecord
 
 /** Repository-level permanent deletion against a real (in-memory) Room database. */
 @RunWith(RobolectricTestRunner::class)

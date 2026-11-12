@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -25,13 +25,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.unit.dp
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.theme.isMotionEnabled
-import com.vayana.core.designsystem.theme.vayanaTween
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.theme.isMotionEnabled
+import com.folium.core.designsystem.theme.vayanaTween
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.time.Month
 import java.time.format.TextStyle
 

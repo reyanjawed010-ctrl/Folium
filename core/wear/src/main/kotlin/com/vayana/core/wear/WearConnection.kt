@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 import android.content.Context
 import com.google.android.gms.common.ConnectionResult

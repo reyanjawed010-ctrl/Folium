@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.datastore.settings.SmartShelf
-import com.vayana.core.datastore.settings.SmartShelfStatus
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.datastore.settings.SmartShelf
+import com.folium.core.datastore.settings.SmartShelfStatus
 import java.time.LocalDate
 import kotlin.test.Test
 import kotlin.test.assertEquals

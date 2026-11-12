@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 import java.time.Instant
 import java.time.ZoneId

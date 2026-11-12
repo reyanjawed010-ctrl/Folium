@@ -1,4 +1,4 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
 import javax.crypto.AEADBadTagException
 import kotlin.test.Test

@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.material3.AssistChipDefaults
 import android.net.Uri
@@ -41,9 +41,9 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.vayana.core.common.QuoteParser
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.common.QuoteParser
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -53,19 +53,19 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.style.TextOverflow
-import com.vayana.core.database.model.normalizedBookTag
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.component.VayanaDropdownMenu
-import com.vayana.core.designsystem.component.VayanaMenuGroup
-import com.vayana.core.designsystem.component.VayanaMenuItem
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Palette
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
+import com.folium.core.database.model.normalizedBookTag
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.component.VayanaDropdownMenu
+import com.folium.core.designsystem.component.VayanaMenuGroup
+import com.folium.core.designsystem.component.VayanaMenuItem
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
 import kotlinx.coroutines.launch
 import java.util.Locale
 

@@ -1,6 +1,6 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.format.epub.EpubCleanupPosition
+import com.folium.format.epub.EpubCleanupPosition
 import java.io.File
 import java.net.URLDecoder
 import java.util.zip.ZipEntry

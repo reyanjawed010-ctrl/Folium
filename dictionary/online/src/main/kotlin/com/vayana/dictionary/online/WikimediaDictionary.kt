@@ -1,9 +1,9 @@
-package com.vayana.dictionary.online
+package com.folium.dictionary.online
 
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.OnlineDictionary
-import com.vayana.dictionary.api.OnlineDictionarySource
+import com.folium.core.common.DispatcherProvider
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.OnlineDictionary
+import com.folium.dictionary.api.OnlineDictionarySource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

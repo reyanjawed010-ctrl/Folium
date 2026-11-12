@@ -1,4 +1,4 @@
-package com.vayana.core.database.entity
+package com.folium.core.database.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey

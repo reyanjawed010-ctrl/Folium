@@ -1,4 +1,4 @@
-package com.vayana.feature.gutenberg
+package com.folium.feature.gutenberg
 
 import java.io.StringReader
 import java.net.URI

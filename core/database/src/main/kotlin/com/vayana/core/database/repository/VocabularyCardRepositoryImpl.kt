@@ -1,14 +1,14 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.dao.VocabularyCardDao
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.entity.VocabularyCardEntity
-import com.vayana.core.database.model.VocabularyCard
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.dao.VocabularyCardDao
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.entity.VocabularyCardEntity
+import com.folium.core.database.model.VocabularyCard
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

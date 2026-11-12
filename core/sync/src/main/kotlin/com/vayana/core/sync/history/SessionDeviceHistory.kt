@@ -1,6 +1,6 @@
-package com.vayana.core.sync.history
+package com.folium.core.sync.history
 
-import com.vayana.core.sync.asset.GitHubSnapshotCommit
+import com.folium.core.sync.asset.GitHubSnapshotCommit
 
 /** Where one published version of the reading sessions lives, and which device published it. */
 internal data class SessionsVersion(val blobSha: String, val zipped: Boolean, val device: String)

@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.theme
+package com.folium.core.designsystem.theme
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.material3.CircularProgressIndicator
@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.vayana.core.designsystem.tokens.Durations
+import com.folium.core.designsystem.tokens.Durations
 
 /**
  * Drop-in replacement for [CircularProgressIndicator]'s indeterminate spinner. An indeterminate

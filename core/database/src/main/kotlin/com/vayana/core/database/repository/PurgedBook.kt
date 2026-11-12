@@ -1,4 +1,4 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 /** What a permanent deletion removed, for the caller to finish off (local files) and report. */
 data class PurgedBook(

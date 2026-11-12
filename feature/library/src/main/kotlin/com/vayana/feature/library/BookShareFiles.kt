@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.content.Intent
 import androidx.core.content.FileProvider
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.resources.R
 import java.io.File
 import java.util.Locale
 import kotlinx.coroutines.Dispatchers

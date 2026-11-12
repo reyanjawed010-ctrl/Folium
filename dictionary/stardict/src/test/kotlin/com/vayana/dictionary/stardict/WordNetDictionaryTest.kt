@@ -1,6 +1,6 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.PartOfSpeech
 import java.io.File
 import kotlin.io.path.createTempDirectory
 import kotlin.test.Test

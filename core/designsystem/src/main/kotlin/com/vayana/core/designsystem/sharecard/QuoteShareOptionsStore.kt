@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.sharecard
+package com.folium.core.designsystem.sharecard
 
 import android.content.Context
 import android.content.SharedPreferences

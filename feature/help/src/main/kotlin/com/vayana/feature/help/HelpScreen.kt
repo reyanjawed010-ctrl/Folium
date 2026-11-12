@@ -1,4 +1,4 @@
-package com.vayana.feature.help
+package com.folium.feature.help
 
 import androidx.annotation.ArrayRes
 import androidx.annotation.StringRes
@@ -55,12 +55,12 @@ import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 private val HelpPagePadding = Paddings.page
 private val HelpIconBadgeSize = Sizes.badge

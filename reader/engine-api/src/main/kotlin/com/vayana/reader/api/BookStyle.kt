@@ -1,9 +1,9 @@
-package com.vayana.reader.api
+package com.folium.reader.api
 
 /**
  * Minimal slice of docs/PRODUCT_SPEC.md §4.3's full typography settings — just enough to drive
  * the style panel's first pass. Grows in place as more of §4.3 is implemented; never a breaking
- * rename, since [com.vayana.core.datastore]'s settings registry (§5) will own the persisted form.
+ * rename, since [com.folium.core.datastore]'s settings registry (§5) will own the persisted form.
  */
 data class BookStyle(
     val fontSizePercent: Int = 100,

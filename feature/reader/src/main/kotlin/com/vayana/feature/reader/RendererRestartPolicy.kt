@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 /**
  * Decides whether the reader may rebuild its engine after the WebView's renderer died. A book that kills the renderer

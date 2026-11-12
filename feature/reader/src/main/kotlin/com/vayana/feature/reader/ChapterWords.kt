@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 /** A word from the chapter on screen with its first dictionary sense; [saved] when it's already a vocabulary card. */
 data class ChapterWord(val word: String, val definition: String, val saved: Boolean)

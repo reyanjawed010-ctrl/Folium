@@ -1,15 +1,15 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.entity.AnnotationEntity
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.CloudWordLookupCounter
-import com.vayana.core.database.repository.WordLookupCounterMergeResult
-import com.vayana.core.database.repository.WordLookupStatRepositoryImpl
-import com.vayana.core.database.sync.FullSyncChangeTrackerCallback
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.entity.AnnotationEntity
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.CloudWordLookupCounter
+import com.folium.core.database.repository.WordLookupCounterMergeResult
+import com.folium.core.database.repository.WordLookupStatRepositoryImpl
+import com.folium.core.database.sync.FullSyncChangeTrackerCallback
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test

@@ -1,26 +1,26 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.hasStartedReading
-import com.vayana.core.database.model.shownReadingPercent
+import com.folium.core.database.model.hasStartedReading
+import com.folium.core.database.model.shownReadingPercent
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.isCommunityQuote
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.VocabularyCard
-import com.vayana.core.database.model.WordLookupStat
-import com.vayana.core.database.repository.AnnotationRepository
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.HighlightReviewRepository
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.database.repository.VocabularyCardRepository
-import com.vayana.core.database.repository.WordLookupStatRepository
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsRepository
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.isCommunityQuote
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.VocabularyCard
+import com.folium.core.database.model.WordLookupStat
+import com.folium.core.database.repository.AnnotationRepository
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.HighlightReviewRepository
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.database.repository.VocabularyCardRepository
+import com.folium.core.database.repository.WordLookupStatRepository
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsRepository
 import kotlinx.coroutines.launch
-import com.vayana.core.filesystem.StorageRoots
+import com.folium.core.filesystem.StorageRoots
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
@@ -152,7 +152,7 @@ class StatisticsViewModel @Inject constructor(
     vocabularyCardRepository: VocabularyCardRepository,
     highlightReviewRepository: HighlightReviewRepository,
     storageRoots: StorageRoots,
-    resolvedBooks: com.vayana.core.filesystem.ResolvedBooks,
+    resolvedBooks: com.folium.core.filesystem.ResolvedBooks,
     @ApplicationContext context: Context,
 ) : ViewModel() {
     /** One live query shared by the summary and the library size, instead of two. */

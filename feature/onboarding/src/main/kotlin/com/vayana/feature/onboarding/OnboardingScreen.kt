@@ -1,4 +1,4 @@
-package com.vayana.feature.onboarding
+package com.folium.feature.onboarding
 
 import android.content.Context
 import android.net.Uri
@@ -29,8 +29,8 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.designsystem.component.asString
-import com.vayana.core.designsystem.component.morphingButtonShapes
+import com.folium.core.designsystem.component.asString
+import com.folium.core.designsystem.component.morphingButtonShapes
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -67,17 +67,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.EinkPalette
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.LocalEinkPalette
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.EinkPalette
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.LocalEinkPalette
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 @Composable
 fun OnboardingRoute(

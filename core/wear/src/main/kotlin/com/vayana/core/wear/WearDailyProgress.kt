@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 import org.json.JSONArray
 import org.json.JSONObject
@@ -25,7 +25,7 @@ data class WearDailyProgress(val day: String, val seconds: Long, val includedIds
                 .also { LocalDate.parse(it.day); require(it.seconds >= 0) }
         }
         fun clippedSeconds(started: Long, ended: Long, seconds: Long, intervals: String?, start: Long, end: Long): Long {
-            if (intervals != null) return com.vayana.core.common.ReadingIntervals.decode(intervals).sumOf {
+            if (intervals != null) return com.folium.core.common.ReadingIntervals.decode(intervals).sumOf {
                 (minOf(it.end, end) - maxOf(it.start, start)).coerceAtLeast(0)
             } / 1000
             val overlap = (minOf(ended, end) - maxOf(started, start)).coerceAtLeast(0)

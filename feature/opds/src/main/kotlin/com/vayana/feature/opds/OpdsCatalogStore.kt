@@ -1,4 +1,4 @@
-package com.vayana.feature.opds
+package com.folium.feature.opds
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext

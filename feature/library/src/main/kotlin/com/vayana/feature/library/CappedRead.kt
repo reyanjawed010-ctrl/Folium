@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import java.io.ByteArrayOutputStream
 import java.io.InputStream

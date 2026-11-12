@@ -1,18 +1,18 @@
-package com.vayana.app
+package com.folium.app
 
 import android.app.Application
 import android.content.Context
-import com.vayana.core.common.AppLanguage
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.diagnostics.CrashReporter
-import com.vayana.core.filesystem.StorageMaintenance
-import com.vayana.core.homelibrary.HomeLibrarySync
-import com.vayana.app.widget.AppShortcuts
-import com.vayana.app.widget.ContinueReadingWidgetUpdater
-import com.vayana.app.widget.ReadingTimeWidgetUpdater
-import com.vayana.feature.reminders.ReminderScheduler
-import com.vayana.feature.library.PhysicalReadingTimerNotification
+import com.folium.core.common.AppLanguage
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.diagnostics.CrashReporter
+import com.folium.core.filesystem.StorageMaintenance
+import com.folium.core.homelibrary.HomeLibrarySync
+import com.folium.app.widget.AppShortcuts
+import com.folium.app.widget.ContinueReadingWidgetUpdater
+import com.folium.app.widget.ReadingTimeWidgetUpdater
+import com.folium.feature.reminders.ReminderScheduler
+import com.folium.feature.library.PhysicalReadingTimerNotification
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
@@ -22,22 +22,22 @@ import kotlinx.coroutines.launch
 @HiltAndroidApp
 class VayanaApp : Application() {
 
-    @Inject lateinit var phoneWearSync: com.vayana.app.wear.PhoneWearSync
+    @Inject lateinit var phoneWearSync: com.folium.app.wear.PhoneWearSync
 
     @Inject lateinit var crashReporter: CrashReporter
     @Inject lateinit var storageMaintenance: StorageMaintenance
     @Inject lateinit var reminderScheduler: ReminderScheduler
     @Inject lateinit var continueReadingWidgetUpdater: ContinueReadingWidgetUpdater
     @Inject lateinit var appShortcuts: AppShortcuts
-    @Inject lateinit var notebookExport: com.vayana.feature.notes.AutomaticNotebookExport
-    @Inject lateinit var epubContentIndex: com.vayana.feature.search.EpubContentIndex
+    @Inject lateinit var notebookExport: com.folium.feature.notes.AutomaticNotebookExport
+    @Inject lateinit var epubContentIndex: com.folium.feature.search.EpubContentIndex
     @Inject lateinit var homeLibrarySync: HomeLibrarySync
     @Inject lateinit var readingTimeWidgetUpdater: ReadingTimeWidgetUpdater
     @Inject lateinit var physicalReadingTimerNotification: PhysicalReadingTimerNotification
-    @Inject lateinit var appDataUsageHistory: com.vayana.feature.settings.AppDataUsageHistory
-    @Inject lateinit var settingsRepository: com.vayana.core.datastore.settings.SettingsRepository
-    @Inject lateinit var localDeviceName: com.vayana.core.database.repository.LocalDeviceName
-    @Inject lateinit var sessionDeviceBackfill: com.vayana.core.sync.history.SessionDeviceBackfill
+    @Inject lateinit var appDataUsageHistory: com.folium.feature.settings.AppDataUsageHistory
+    @Inject lateinit var settingsRepository: com.folium.core.datastore.settings.SettingsRepository
+    @Inject lateinit var localDeviceName: com.folium.core.database.repository.LocalDeviceName
+    @Inject lateinit var sessionDeviceBackfill: com.folium.core.sync.history.SessionDeviceBackfill
     @Inject @ApplicationScope lateinit var applicationScope: CoroutineScope
 
     override fun attachBaseContext(base: Context) {

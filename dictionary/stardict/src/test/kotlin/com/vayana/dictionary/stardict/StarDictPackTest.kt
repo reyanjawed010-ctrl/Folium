@@ -1,8 +1,8 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.PartOfSpeech
-import com.vayana.dictionary.api.foldAccents
-import com.vayana.dictionary.api.languageDisplayName
+import com.folium.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.foldAccents
+import com.folium.dictionary.api.languageDisplayName
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.util.Locale

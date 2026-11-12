@@ -1,8 +1,8 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.PurgedBook
-import com.vayana.core.filesystem.BookFileCleaner
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.PurgedBook
+import com.folium.core.filesystem.BookFileCleaner
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 

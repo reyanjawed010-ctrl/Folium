@@ -1,13 +1,13 @@
-package com.vayana.core.designsystem.component
+package com.folium.core.designsystem.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.resources.R
+import com.folium.core.resources.R
 import java.time.Instant
 import java.time.ZoneId
-import com.vayana.core.designsystem.theme.asAppDateTime
+import com.folium.core.designsystem.theme.asAppDateTime
 import java.util.concurrent.TimeUnit
 
 /** The device a synced snapshot came from, or a generic label when it didn't say. */

@@ -1,4 +1,4 @@
-package com.vayana.core.sync.snapshot
+package com.folium.core.sync.snapshot
 
 import kotlin.test.Test
 import kotlin.test.assertContentEquals

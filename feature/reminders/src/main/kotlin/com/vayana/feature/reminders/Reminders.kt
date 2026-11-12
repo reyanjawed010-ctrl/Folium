@@ -1,4 +1,4 @@
-package com.vayana.feature.reminders
+package com.folium.feature.reminders
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -15,11 +15,11 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.resources.R
+import com.folium.core.common.ApplicationScope
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.resources.R
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors

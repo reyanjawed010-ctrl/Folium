@@ -1,4 +1,4 @@
-package com.vayana.dictionary.api
+package com.folium.dictionary.api
 
 data class DictionaryEntry(
     val headword: String,

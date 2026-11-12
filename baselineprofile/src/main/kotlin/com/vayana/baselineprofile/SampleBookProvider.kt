@@ -1,4 +1,4 @@
-package com.vayana.baselineprofile
+package com.folium.baselineprofile
 
 import android.content.ContentProvider
 import android.content.ContentValues

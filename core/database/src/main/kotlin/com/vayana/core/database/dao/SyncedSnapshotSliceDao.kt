@@ -1,11 +1,11 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.vayana.core.database.entity.SyncSliceVersionEntity
-import com.vayana.core.database.entity.SyncedSnapshotSliceEntity
+import com.folium.core.database.entity.SyncSliceVersionEntity
+import com.folium.core.database.entity.SyncedSnapshotSliceEntity
 
 @Dao
 interface SyncedSnapshotSliceDao {

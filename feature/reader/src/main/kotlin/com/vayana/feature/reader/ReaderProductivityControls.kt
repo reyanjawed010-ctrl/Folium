@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,9 +16,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 

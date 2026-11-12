@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 data class VocabularyCard(
     val id: Long,

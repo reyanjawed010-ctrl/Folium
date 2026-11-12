@@ -1,6 +1,6 @@
-package com.vayana.core.designsystem
+package com.folium.core.designsystem
 
-import com.vayana.core.designsystem.theme.*
+import com.folium.core.designsystem.theme.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import org.junit.jupiter.api.Assertions.*

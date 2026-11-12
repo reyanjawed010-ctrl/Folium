@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.sharecard
+package com.folium.core.designsystem.sharecard
 
 import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
@@ -20,9 +20,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.core.content.edit
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /**
  * The reader's name for share cards, set in Settings → Profile and shown at the bottom right of a card when its

@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.semantics.contentDescription
-import com.vayana.core.designsystem.tokens.Strokes
+import com.folium.core.designsystem.tokens.Strokes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -58,13 +58,13 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.theme.asAppDate
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.theme.asAppDate
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.time.format.TextStyle
 import kotlin.math.abs
 

@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.tokens
+package com.folium.core.designsystem.tokens
 
 import androidx.compose.ui.unit.dp
 

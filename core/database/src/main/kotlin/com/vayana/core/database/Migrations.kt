@@ -1,13 +1,13 @@
-package com.vayana.core.database
+package com.folium.core.database
 
 import androidx.room.migration.Migration
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.execSQL
-import com.vayana.core.database.model.hasNullBookTag
-import com.vayana.core.database.model.normalizedBookTagsCsv
-import com.vayana.core.database.search.BookSearchIndex
-import com.vayana.core.database.search.EpubPassageIndex
-import com.vayana.core.database.sync.FullSyncChangeTracker
+import com.folium.core.database.model.hasNullBookTag
+import com.folium.core.database.model.normalizedBookTagsCsv
+import com.folium.core.database.search.BookSearchIndex
+import com.folium.core.database.search.EpubPassageIndex
+import com.folium.core.database.sync.FullSyncChangeTracker
 
 val MIGRATION_1_2 = object : Migration(1, 2) {
     override fun migrate(connection: SQLiteConnection) {
@@ -579,7 +579,7 @@ val MIGRATION_35_36 = object : Migration(35, 36) {
 /** Per-slice change counters, so full sync skips exporting slices that haven't changed since it published them. */
 val MIGRATION_36_37 = object : Migration(36, 37) {
     override fun migrate(connection: SQLiteConnection) {
-        com.vayana.core.database.sync.SyncSliceVersions.create(connection)
+        com.folium.core.database.sync.SyncSliceVersions.create(connection)
         connection.execSQL("ALTER TABLE `synced_snapshot_slices` ADD COLUMN `localVersion` INTEGER NOT NULL DEFAULT -1")
     }
 }
@@ -591,7 +591,7 @@ val MIGRATION_36_37 = object : Migration(36, 37) {
 val MIGRATION_37_38 = object : Migration(37, 38) {
     override fun migrate(connection: SQLiteConnection) {
         FullSyncChangeTracker.recreate(connection)
-        com.vayana.core.database.sync.SyncSliceVersions.recreate(connection)
+        com.folium.core.database.sync.SyncSliceVersions.recreate(connection)
     }
 }
 

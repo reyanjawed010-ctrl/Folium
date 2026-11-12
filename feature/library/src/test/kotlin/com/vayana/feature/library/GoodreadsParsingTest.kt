@@ -1,7 +1,7 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.common.quoteMatchKey
-import com.vayana.core.common.ParsedQuote
+import com.folium.core.common.quoteMatchKey
+import com.folium.core.common.ParsedQuote
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.test.Test
 import kotlin.test.assertEquals

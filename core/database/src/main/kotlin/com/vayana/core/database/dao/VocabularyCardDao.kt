@@ -1,10 +1,10 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.vayana.core.database.entity.VocabularyCardEntity
+import com.folium.core.database.entity.VocabularyCardEntity
 import kotlinx.coroutines.flow.Flow
 
 /** When a card counts as due for review: not known, and new or scheduled at or before `:now`. */

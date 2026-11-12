@@ -1,8 +1,8 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 import org.json.JSONArray
 import org.json.JSONObject
-import com.vayana.core.common.ReadingIntervals
+import com.folium.core.common.ReadingIntervals
 
 /** Stable book identities, never phone-local database row IDs, cross the Data Layer. */
 data class WearBook(val id: String, val title: String, val page: Int, val total: Int?, val version: Long) {

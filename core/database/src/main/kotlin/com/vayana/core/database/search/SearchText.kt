@@ -1,4 +1,4 @@
-package com.vayana.core.database.search
+package com.folium.core.database.search
 
 /** Words typed into search, lower-cased. Punctuation - including FTS syntax like `"`, `-`, `*` - is dropped. */
 fun searchTokens(text: String): List<String> =

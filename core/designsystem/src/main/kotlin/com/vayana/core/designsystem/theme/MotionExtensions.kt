@@ -1,6 +1,6 @@
 @file:OptIn(androidx.compose.material3.ExperimentalMaterial3ExpressiveApi::class)
 
-package com.vayana.core.designsystem.theme
+package com.folium.core.designsystem.theme
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.ContentTransform
@@ -31,7 +31,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
-import com.vayana.core.designsystem.tokens.Durations
+import com.folium.core.designsystem.tokens.Durations
 
 @Composable
 fun isMotionEnabled(): Boolean {

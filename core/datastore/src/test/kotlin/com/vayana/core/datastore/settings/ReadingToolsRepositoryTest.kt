@@ -1,4 +1,4 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
 import java.time.LocalDate
 import kotlin.test.Test

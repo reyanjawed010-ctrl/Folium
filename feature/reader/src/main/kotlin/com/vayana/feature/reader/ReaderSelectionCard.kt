@@ -1,6 +1,6 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.designsystem.theme.isMonochromeEink
+import com.folium.core.designsystem.theme.isMonochromeEink
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.togetherWith
@@ -57,28 +57,28 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.IntSize
-import com.vayana.core.designsystem.component.ConnectedButton
-import com.vayana.core.designsystem.component.VayanaConnectedButtonGroup
-import com.vayana.core.designsystem.component.VayanaLoadingIndicator
-import com.vayana.core.designsystem.component.VayanaSwatchButton
-import com.vayana.core.designsystem.component.asString
-import com.vayana.core.designsystem.component.morphingButtonShapes
-import com.vayana.core.designsystem.component.morphingIconButtonShapes
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.vayanaFadeIn
-import com.vayana.core.designsystem.theme.vayanaFadeOut
-import com.vayana.core.designsystem.theme.vayanaSpring
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.languageDisplayName
-import com.vayana.dictionary.api.DictionarySense
-import com.vayana.dictionary.api.OnlineDictionarySource
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.core.designsystem.component.ConnectedButton
+import com.folium.core.designsystem.component.VayanaConnectedButtonGroup
+import com.folium.core.designsystem.component.VayanaLoadingIndicator
+import com.folium.core.designsystem.component.VayanaSwatchButton
+import com.folium.core.designsystem.component.asString
+import com.folium.core.designsystem.component.morphingButtonShapes
+import com.folium.core.designsystem.component.morphingIconButtonShapes
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.vayanaFadeIn
+import com.folium.core.designsystem.theme.vayanaFadeOut
+import com.folium.core.designsystem.theme.vayanaSpring
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.languageDisplayName
+import com.folium.dictionary.api.DictionarySense
+import com.folium.dictionary.api.OnlineDictionarySource
+import com.folium.dictionary.api.PartOfSpeech
 
 /**
  * The card over a selection (or a word looked up from elsewhere): the dictionary on top, then highlight swatches and

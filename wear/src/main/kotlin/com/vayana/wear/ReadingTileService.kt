@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.graphics.Bitmap
 import android.os.SystemClock
@@ -15,7 +15,7 @@ import androidx.wear.protolayout.ModifiersBuilders as M
 import androidx.wear.protolayout.ResourceBuilders as R
 import androidx.wear.protolayout.TimelineBuilders as T
 import com.google.common.util.concurrent.Futures
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 import java.io.ByteArrayOutputStream
 
 /** A glanceable shortcut backed solely by the same durable local state as the watch app. */
@@ -85,7 +85,7 @@ class ReadingTileService : TileService() {
             val bitmap = covers.bitmap(book.id)
             val image = R.ImageResource.Builder()
             if (bitmap == null) image.setAndroidResourceByResId(R.AndroidImageResourceByResId.Builder()
-                .setResourceId(com.vayana.wear.R.drawable.ic_reading_timer).build())
+                .setResourceId(com.folium.wear.R.drawable.ic_reading_timer).build())
             else try {
                 val stream = ByteArrayOutputStream()
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)

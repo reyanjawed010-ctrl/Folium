@@ -1,7 +1,7 @@
-package com.vayana.core.designsystem
+package com.folium.core.designsystem
 
-import com.vayana.core.designsystem.theme.DateFormatStyle
-import com.vayana.core.designsystem.theme.format
+import com.folium.core.designsystem.theme.DateFormatStyle
+import com.folium.core.designsystem.theme.format
 import java.time.LocalDate
 import java.util.Locale
 import org.junit.jupiter.api.Assertions.assertEquals

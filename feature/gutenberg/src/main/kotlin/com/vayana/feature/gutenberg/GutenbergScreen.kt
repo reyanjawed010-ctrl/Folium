@@ -1,4 +1,4 @@
-package com.vayana.feature.gutenberg
+package com.folium.feature.gutenberg
 
 import android.text.format.Formatter
 import androidx.annotation.StringRes
@@ -80,19 +80,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.common.LibraryIndex
-import com.vayana.core.designsystem.component.VayanaDropdownMenu
-import com.vayana.core.designsystem.component.VayanaLoadingIndicator
-import com.vayana.core.designsystem.component.VayanaMenuGroup
-import com.vayana.core.designsystem.component.VayanaMenuItem
-import com.vayana.core.designsystem.component.morphingButtonShapes
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.common.LibraryIndex
+import com.folium.core.designsystem.component.VayanaDropdownMenu
+import com.folium.core.designsystem.component.VayanaLoadingIndicator
+import com.folium.core.designsystem.component.VayanaMenuGroup
+import com.folium.core.designsystem.component.VayanaMenuItem
+import com.folium.core.designsystem.component.morphingButtonShapes
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.util.Locale
 import kotlinx.coroutines.delay
 

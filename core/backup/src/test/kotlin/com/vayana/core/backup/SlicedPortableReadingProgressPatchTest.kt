@@ -1,4 +1,4 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

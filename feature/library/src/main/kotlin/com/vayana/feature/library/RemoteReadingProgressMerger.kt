@@ -1,13 +1,13 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.backup.PortableReadingPositionAlternative
-import com.vayana.core.backup.PortableSyncConflict
-import com.vayana.core.backup.parsePortableReadingProgressSnapshot
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.ReadingProgressMergeResult
-import com.vayana.core.database.repository.ReadingProgressVersion
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotDocument
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotSlice
+import com.folium.core.backup.PortableReadingPositionAlternative
+import com.folium.core.backup.PortableSyncConflict
+import com.folium.core.backup.parsePortableReadingProgressSnapshot
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.ReadingProgressMergeResult
+import com.folium.core.database.repository.ReadingProgressVersion
+import com.folium.core.sync.snapshot.RemotePortableSnapshotDocument
+import com.folium.core.sync.snapshot.RemotePortableSnapshotSlice
 
 /** Which remote deletions a pull applies. */
 internal enum class TombstoneMergeScope {

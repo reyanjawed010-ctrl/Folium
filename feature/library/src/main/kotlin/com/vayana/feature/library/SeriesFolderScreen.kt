@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -36,14 +36,14 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.PagedLazyVerticalGrid
-import com.vayana.core.designsystem.theme.vayanaPressScale
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.PagedLazyVerticalGrid
+import com.folium.core.designsystem.theme.vayanaPressScale
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 @Composable
 internal fun SeriesFolderCell(folder: SeriesLibraryItem.Folder, onClick: () -> Unit) {

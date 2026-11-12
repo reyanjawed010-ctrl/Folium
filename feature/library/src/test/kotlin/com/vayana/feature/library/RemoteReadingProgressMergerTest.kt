@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.resources.UiText
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.ReadingProgressMergeResult
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotDocument
+import com.folium.core.resources.UiText
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.ReadingProgressMergeResult
+import com.folium.core.sync.snapshot.RemotePortableSnapshotDocument
 import java.lang.reflect.Proxy
 import kotlin.test.Test
 import kotlin.test.assertEquals

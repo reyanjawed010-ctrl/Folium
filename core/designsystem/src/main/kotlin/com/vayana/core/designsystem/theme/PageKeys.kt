@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.theme
+package com.folium.core.designsystem.theme
 
 import android.view.KeyEvent
 

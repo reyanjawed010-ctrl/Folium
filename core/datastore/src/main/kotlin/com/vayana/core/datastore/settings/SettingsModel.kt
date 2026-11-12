@@ -1,13 +1,13 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
 import androidx.annotation.StringRes
-import com.vayana.core.designsystem.theme.DarkVariant
-import com.vayana.core.designsystem.theme.DateFormatStyle
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.EinkPalette
-import com.vayana.core.designsystem.theme.MotionSetting
-import com.vayana.core.designsystem.theme.ThemeMode
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.DarkVariant
+import com.folium.core.designsystem.theme.DateFormatStyle
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.EinkPalette
+import com.folium.core.designsystem.theme.MotionSetting
+import com.folium.core.designsystem.theme.ThemeMode
+import com.folium.core.resources.R
 import java.time.DayOfWeek
 
 enum class SettingsGroup(
@@ -223,66 +223,66 @@ enum class RecentlyDeletedRetention(val days: Int) { FOREVER(0), DAYS_7(7), DAYS
 enum class WeekStart(val day: DayOfWeek) { SUNDAY(DayOfWeek.SUNDAY), MONDAY(DayOfWeek.MONDAY) }
 
 object SettingsRegistry {
-    val ThemeMode: ChoiceSetting<com.vayana.core.designsystem.theme.ThemeMode> =
-        ChoiceSetting<com.vayana.core.designsystem.theme.ThemeMode>(
+    val ThemeMode: ChoiceSetting<com.folium.core.designsystem.theme.ThemeMode> =
+        ChoiceSetting<com.folium.core.designsystem.theme.ThemeMode>(
         key = "appearance.theme_mode",
-        defaultValue = com.vayana.core.designsystem.theme.ThemeMode.SYSTEM,
+        defaultValue = com.folium.core.designsystem.theme.ThemeMode.SYSTEM,
         titleRes = R.string.settings_theme_mode_title,
         subtitleRes = R.string.settings_theme_mode_subtitle,
         group = SettingsGroup.APPEARANCE,
-        options = listOf<ChoiceOption<com.vayana.core.designsystem.theme.ThemeMode>>(
-            ChoiceOption(com.vayana.core.designsystem.theme.ThemeMode.SYSTEM, R.string.settings_theme_mode_system),
-            ChoiceOption(com.vayana.core.designsystem.theme.ThemeMode.LIGHT, R.string.settings_theme_mode_light),
-            ChoiceOption(com.vayana.core.designsystem.theme.ThemeMode.DARK, R.string.settings_theme_mode_dark),
+        options = listOf<ChoiceOption<com.folium.core.designsystem.theme.ThemeMode>>(
+            ChoiceOption(com.folium.core.designsystem.theme.ThemeMode.SYSTEM, R.string.settings_theme_mode_system),
+            ChoiceOption(com.folium.core.designsystem.theme.ThemeMode.LIGHT, R.string.settings_theme_mode_light),
+            ChoiceOption(com.folium.core.designsystem.theme.ThemeMode.DARK, R.string.settings_theme_mode_dark),
         ),
     )
-    val DisplayProfile: ChoiceSetting<com.vayana.core.designsystem.theme.DisplayProfile> =
-        ChoiceSetting<com.vayana.core.designsystem.theme.DisplayProfile>(
+    val DisplayProfile: ChoiceSetting<com.folium.core.designsystem.theme.DisplayProfile> =
+        ChoiceSetting<com.folium.core.designsystem.theme.DisplayProfile>(
         key = "appearance.display_profile",
-        defaultValue = com.vayana.core.designsystem.theme.DisplayProfile.STANDARD,
+        defaultValue = com.folium.core.designsystem.theme.DisplayProfile.STANDARD,
         titleRes = R.string.settings_display_profile_title,
         subtitleRes = R.string.settings_display_profile_subtitle,
         group = SettingsGroup.APPEARANCE,
-        options = listOf<ChoiceOption<com.vayana.core.designsystem.theme.DisplayProfile>>(
-            ChoiceOption(com.vayana.core.designsystem.theme.DisplayProfile.STANDARD, R.string.settings_display_profile_standard),
-            ChoiceOption(com.vayana.core.designsystem.theme.DisplayProfile.E_INK, R.string.settings_display_profile_eink),
+        options = listOf<ChoiceOption<com.folium.core.designsystem.theme.DisplayProfile>>(
+            ChoiceOption(com.folium.core.designsystem.theme.DisplayProfile.STANDARD, R.string.settings_display_profile_standard),
+            ChoiceOption(com.folium.core.designsystem.theme.DisplayProfile.E_INK, R.string.settings_display_profile_eink),
         ),
     )
     val EinkPalette = ChoiceSetting(
         key = "appearance.eink_palette",
-        defaultValue = com.vayana.core.designsystem.theme.EinkPalette.MONOCHROME,
+        defaultValue = com.folium.core.designsystem.theme.EinkPalette.MONOCHROME,
         titleRes = R.string.settings_eink_palette_title,
         subtitleRes = R.string.settings_eink_palette_subtitle,
         group = SettingsGroup.APPEARANCE,
         options = listOf(
-            ChoiceOption(com.vayana.core.designsystem.theme.EinkPalette.MONOCHROME, R.string.settings_eink_palette_monochrome),
-            ChoiceOption(com.vayana.core.designsystem.theme.EinkPalette.COLOR, R.string.settings_eink_palette_color),
+            ChoiceOption(com.folium.core.designsystem.theme.EinkPalette.MONOCHROME, R.string.settings_eink_palette_monochrome),
+            ChoiceOption(com.folium.core.designsystem.theme.EinkPalette.COLOR, R.string.settings_eink_palette_color),
         ),
     )
-    val DarkVariant: ChoiceSetting<com.vayana.core.designsystem.theme.DarkVariant> =
-        ChoiceSetting<com.vayana.core.designsystem.theme.DarkVariant>(
+    val DarkVariant: ChoiceSetting<com.folium.core.designsystem.theme.DarkVariant> =
+        ChoiceSetting<com.folium.core.designsystem.theme.DarkVariant>(
         key = "appearance.dark_variant",
-        defaultValue = com.vayana.core.designsystem.theme.DarkVariant.STANDARD,
+        defaultValue = com.folium.core.designsystem.theme.DarkVariant.STANDARD,
         titleRes = R.string.settings_dark_variant_title,
         subtitleRes = R.string.settings_dark_variant_subtitle,
         group = SettingsGroup.APPEARANCE,
-        options = listOf<ChoiceOption<com.vayana.core.designsystem.theme.DarkVariant>>(
-            ChoiceOption(com.vayana.core.designsystem.theme.DarkVariant.STANDARD, R.string.settings_dark_variant_standard),
-            ChoiceOption(com.vayana.core.designsystem.theme.DarkVariant.SOFTER, R.string.settings_dark_variant_softer),
-            ChoiceOption(com.vayana.core.designsystem.theme.DarkVariant.TRUE_BLACK, R.string.settings_dark_variant_true_black),
+        options = listOf<ChoiceOption<com.folium.core.designsystem.theme.DarkVariant>>(
+            ChoiceOption(com.folium.core.designsystem.theme.DarkVariant.STANDARD, R.string.settings_dark_variant_standard),
+            ChoiceOption(com.folium.core.designsystem.theme.DarkVariant.SOFTER, R.string.settings_dark_variant_softer),
+            ChoiceOption(com.folium.core.designsystem.theme.DarkVariant.TRUE_BLACK, R.string.settings_dark_variant_true_black),
         ),
     )
-    val Motion: ChoiceSetting<com.vayana.core.designsystem.theme.MotionSetting> =
-        ChoiceSetting<com.vayana.core.designsystem.theme.MotionSetting>(
+    val Motion: ChoiceSetting<com.folium.core.designsystem.theme.MotionSetting> =
+        ChoiceSetting<com.folium.core.designsystem.theme.MotionSetting>(
         key = "appearance.motion",
-        defaultValue = com.vayana.core.designsystem.theme.MotionSetting.FULL,
+        defaultValue = com.folium.core.designsystem.theme.MotionSetting.FULL,
         titleRes = R.string.settings_motion_title,
         subtitleRes = R.string.settings_motion_subtitle,
         group = SettingsGroup.APPEARANCE,
-        options = listOf<ChoiceOption<com.vayana.core.designsystem.theme.MotionSetting>>(
-            ChoiceOption(com.vayana.core.designsystem.theme.MotionSetting.FULL, R.string.settings_motion_full),
-            ChoiceOption(com.vayana.core.designsystem.theme.MotionSetting.REDUCED, R.string.settings_motion_reduced),
-            ChoiceOption(com.vayana.core.designsystem.theme.MotionSetting.OFF, R.string.settings_motion_off),
+        options = listOf<ChoiceOption<com.folium.core.designsystem.theme.MotionSetting>>(
+            ChoiceOption(com.folium.core.designsystem.theme.MotionSetting.FULL, R.string.settings_motion_full),
+            ChoiceOption(com.folium.core.designsystem.theme.MotionSetting.REDUCED, R.string.settings_motion_reduced),
+            ChoiceOption(com.folium.core.designsystem.theme.MotionSetting.OFF, R.string.settings_motion_off),
         ),
     )
     val EinkAudioFeatures: BooleanSetting = BooleanSetting(
@@ -292,16 +292,16 @@ object SettingsRegistry {
         subtitleRes = R.string.settings_eink_audio_features_subtitle,
         group = SettingsGroup.APPEARANCE,
     )
-    val NavigationMode: ChoiceSetting<com.vayana.core.datastore.settings.NavigationMode> =
-        ChoiceSetting<com.vayana.core.datastore.settings.NavigationMode>(
+    val NavigationMode: ChoiceSetting<com.folium.core.datastore.settings.NavigationMode> =
+        ChoiceSetting<com.folium.core.datastore.settings.NavigationMode>(
         key = "appearance.navigation_mode",
-        defaultValue = com.vayana.core.datastore.settings.NavigationMode.FLOATING_BAR,
+        defaultValue = com.folium.core.datastore.settings.NavigationMode.FLOATING_BAR,
         titleRes = R.string.settings_navigation_mode_title,
         subtitleRes = R.string.settings_navigation_mode_subtitle,
         group = SettingsGroup.APPEARANCE,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.NavigationMode>>(
-            ChoiceOption(com.vayana.core.datastore.settings.NavigationMode.BOTTOM_BAR, R.string.settings_navigation_mode_bottom_bar),
-            ChoiceOption(com.vayana.core.datastore.settings.NavigationMode.FLOATING_BAR, R.string.settings_navigation_mode_floating_bar),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.NavigationMode>>(
+            ChoiceOption(com.folium.core.datastore.settings.NavigationMode.BOTTOM_BAR, R.string.settings_navigation_mode_bottom_bar),
+            ChoiceOption(com.folium.core.datastore.settings.NavigationMode.FLOATING_BAR, R.string.settings_navigation_mode_floating_bar),
         ),
     )
     val ReaderFontSize: IntSetting = IntSetting(
@@ -322,36 +322,36 @@ object SettingsRegistry {
         range = 1.2f..4.0f,
         step = 0.1f,
     )
-    val ReaderFontFamily: ChoiceSetting<com.vayana.core.datastore.settings.ReaderFontFamily> =
-        ChoiceSetting<com.vayana.core.datastore.settings.ReaderFontFamily>(
+    val ReaderFontFamily: ChoiceSetting<com.folium.core.datastore.settings.ReaderFontFamily> =
+        ChoiceSetting<com.folium.core.datastore.settings.ReaderFontFamily>(
         key = "reader.font_family",
-        defaultValue = com.vayana.core.datastore.settings.ReaderFontFamily.SERIF,
+        defaultValue = com.folium.core.datastore.settings.ReaderFontFamily.SERIF,
         titleRes = R.string.settings_reader_font_family_title,
         subtitleRes = R.string.settings_reader_font_family_subtitle,
         group = SettingsGroup.READER_TEXT,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.ReaderFontFamily>>(
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderFontFamily.SERIF, R.string.settings_reader_font_family_serif),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderFontFamily.SANS, R.string.settings_reader_font_family_sans),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderFontFamily.MONO, R.string.settings_reader_font_family_mono),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.ReaderFontFamily>>(
+            ChoiceOption(com.folium.core.datastore.settings.ReaderFontFamily.SERIF, R.string.settings_reader_font_family_serif),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderFontFamily.SANS, R.string.settings_reader_font_family_sans),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderFontFamily.MONO, R.string.settings_reader_font_family_mono),
         ),
     )
-    val ReaderTheme: ChoiceSetting<com.vayana.core.datastore.settings.ReaderTheme> =
-        ChoiceSetting<com.vayana.core.datastore.settings.ReaderTheme>(
+    val ReaderTheme: ChoiceSetting<com.folium.core.datastore.settings.ReaderTheme> =
+        ChoiceSetting<com.folium.core.datastore.settings.ReaderTheme>(
         key = "reader.theme",
-        defaultValue = com.vayana.core.datastore.settings.ReaderTheme.SYSTEM,
+        defaultValue = com.folium.core.datastore.settings.ReaderTheme.SYSTEM,
         titleRes = R.string.settings_reader_theme_title,
         subtitleRes = R.string.settings_reader_theme_subtitle,
         group = SettingsGroup.READER_PAGE,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.ReaderTheme>>(
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.SYSTEM, R.string.settings_reader_theme_system),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.LIGHT, R.string.settings_reader_theme_light),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.PAPER, R.string.settings_reader_theme_paper),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.SEPIA, R.string.settings_reader_theme_sepia),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.MINT, R.string.settings_reader_theme_mint),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.SKY, R.string.settings_reader_theme_sky),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.ROSE, R.string.settings_reader_theme_rose),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.DARK, R.string.settings_reader_theme_dark),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTheme.OLED, R.string.settings_reader_theme_oled),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.ReaderTheme>>(
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.SYSTEM, R.string.settings_reader_theme_system),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.LIGHT, R.string.settings_reader_theme_light),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.PAPER, R.string.settings_reader_theme_paper),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.SEPIA, R.string.settings_reader_theme_sepia),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.MINT, R.string.settings_reader_theme_mint),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.SKY, R.string.settings_reader_theme_sky),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.ROSE, R.string.settings_reader_theme_rose),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.DARK, R.string.settings_reader_theme_dark),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTheme.OLED, R.string.settings_reader_theme_oled),
         ),
     )
     val ReaderSideMargin: IntSetting = IntSetting(
@@ -399,16 +399,16 @@ object SettingsRegistry {
             ChoiceOption(TapZoneMode.SWIPE_ONLY, R.string.settings_reader_tap_zone_swipe_only),
         ),
     )
-    val ReaderControlsTapMode: ChoiceSetting<com.vayana.core.datastore.settings.ReaderControlsTapMode> = ChoiceSetting(
+    val ReaderControlsTapMode: ChoiceSetting<com.folium.core.datastore.settings.ReaderControlsTapMode> = ChoiceSetting(
         key = "reader.controls_tap_mode",
-        defaultValue = com.vayana.core.datastore.settings.ReaderControlsTapMode.DOUBLE,
+        defaultValue = com.folium.core.datastore.settings.ReaderControlsTapMode.DOUBLE,
         titleRes = R.string.settings_reader_controls_tap_title,
         subtitleRes = R.string.settings_reader_controls_tap_subtitle,
         group = SettingsGroup.READER_CONTROLS,
         options = listOf(
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderControlsTapMode.SINGLE, R.string.settings_reader_controls_tap_single),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderControlsTapMode.DOUBLE, R.string.settings_reader_controls_tap_double),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderControlsTapMode.TRIPLE, R.string.settings_reader_controls_tap_triple),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderControlsTapMode.SINGLE, R.string.settings_reader_controls_tap_single),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderControlsTapMode.DOUBLE, R.string.settings_reader_controls_tap_double),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderControlsTapMode.TRIPLE, R.string.settings_reader_controls_tap_triple),
         ),
     )
     val ReaderVolumeKeys: BooleanSetting = BooleanSetting(
@@ -506,32 +506,32 @@ object SettingsRegistry {
         subtitleRes = R.string.reader_pdf_fit_width_subtitle,
         group = SettingsGroup.READER_PAGE,
     )
-    val ReaderTextAlign: ChoiceSetting<com.vayana.core.datastore.settings.ReaderTextAlign> =
-        ChoiceSetting<com.vayana.core.datastore.settings.ReaderTextAlign>(
+    val ReaderTextAlign: ChoiceSetting<com.folium.core.datastore.settings.ReaderTextAlign> =
+        ChoiceSetting<com.folium.core.datastore.settings.ReaderTextAlign>(
         key = "reader.text_align",
-        defaultValue = com.vayana.core.datastore.settings.ReaderTextAlign.BOOK,
+        defaultValue = com.folium.core.datastore.settings.ReaderTextAlign.BOOK,
         titleRes = R.string.settings_reader_text_align_title,
         subtitleRes = R.string.settings_reader_text_align_subtitle,
         group = SettingsGroup.READER_TEXT,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.ReaderTextAlign>>(
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTextAlign.BOOK, R.string.settings_reader_text_align_book),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTextAlign.JUSTIFIED, R.string.settings_reader_text_align_justified),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTextAlign.LEFT, R.string.settings_reader_text_align_left),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTextAlign.CENTER, R.string.settings_reader_text_align_center),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderTextAlign.RIGHT, R.string.settings_reader_text_align_right),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.ReaderTextAlign>>(
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTextAlign.BOOK, R.string.settings_reader_text_align_book),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTextAlign.JUSTIFIED, R.string.settings_reader_text_align_justified),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTextAlign.LEFT, R.string.settings_reader_text_align_left),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTextAlign.CENTER, R.string.settings_reader_text_align_center),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderTextAlign.RIGHT, R.string.settings_reader_text_align_right),
         ),
     )
-    val ReaderHyphenation: ChoiceSetting<com.vayana.core.datastore.settings.ReaderHyphenation> =
-        ChoiceSetting<com.vayana.core.datastore.settings.ReaderHyphenation>(
+    val ReaderHyphenation: ChoiceSetting<com.folium.core.datastore.settings.ReaderHyphenation> =
+        ChoiceSetting<com.folium.core.datastore.settings.ReaderHyphenation>(
         key = "reader.hyphenation",
-        defaultValue = com.vayana.core.datastore.settings.ReaderHyphenation.BOOK,
+        defaultValue = com.folium.core.datastore.settings.ReaderHyphenation.BOOK,
         titleRes = R.string.settings_reader_hyphenation_title,
         subtitleRes = R.string.settings_reader_hyphenation_subtitle,
         group = SettingsGroup.READER_TEXT,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.ReaderHyphenation>>(
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderHyphenation.BOOK, R.string.settings_reader_hyphenation_book),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderHyphenation.ON, R.string.settings_reader_hyphenation_on),
-            ChoiceOption(com.vayana.core.datastore.settings.ReaderHyphenation.OFF, R.string.settings_reader_hyphenation_off),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.ReaderHyphenation>>(
+            ChoiceOption(com.folium.core.datastore.settings.ReaderHyphenation.BOOK, R.string.settings_reader_hyphenation_book),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderHyphenation.ON, R.string.settings_reader_hyphenation_on),
+            ChoiceOption(com.folium.core.datastore.settings.ReaderHyphenation.OFF, R.string.settings_reader_hyphenation_off),
         ),
     )
 
@@ -665,44 +665,44 @@ object SettingsRegistry {
             ChoiceOption(DateFormatStyle.ISO, R.string.settings_date_format_iso),
         ),
     )
-    val StartScreen: ChoiceSetting<com.vayana.core.datastore.settings.StartScreen> =
-        ChoiceSetting<com.vayana.core.datastore.settings.StartScreen>(
+    val StartScreen: ChoiceSetting<com.folium.core.datastore.settings.StartScreen> =
+        ChoiceSetting<com.folium.core.datastore.settings.StartScreen>(
         key = "app.start_screen",
-        defaultValue = com.vayana.core.datastore.settings.StartScreen.LIBRARY,
+        defaultValue = com.folium.core.datastore.settings.StartScreen.LIBRARY,
         titleRes = R.string.settings_start_screen_title,
         subtitleRes = R.string.settings_start_screen_subtitle,
         group = SettingsGroup.LIBRARY,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.StartScreen>>(
-            ChoiceOption(com.vayana.core.datastore.settings.StartScreen.LIBRARY, R.string.settings_start_screen_library),
-            ChoiceOption(com.vayana.core.datastore.settings.StartScreen.LAST_BOOK, R.string.settings_start_screen_last_book),
-            ChoiceOption(com.vayana.core.datastore.settings.StartScreen.NOTES, R.string.settings_start_screen_notes),
-            ChoiceOption(com.vayana.core.datastore.settings.StartScreen.STATISTICS, R.string.settings_start_screen_statistics),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.StartScreen>>(
+            ChoiceOption(com.folium.core.datastore.settings.StartScreen.LIBRARY, R.string.settings_start_screen_library),
+            ChoiceOption(com.folium.core.datastore.settings.StartScreen.LAST_BOOK, R.string.settings_start_screen_last_book),
+            ChoiceOption(com.folium.core.datastore.settings.StartScreen.NOTES, R.string.settings_start_screen_notes),
+            ChoiceOption(com.folium.core.datastore.settings.StartScreen.STATISTICS, R.string.settings_start_screen_statistics),
         ),
     )
-    val RecentlyDeletedRetention: ChoiceSetting<com.vayana.core.datastore.settings.RecentlyDeletedRetention> =
-        ChoiceSetting<com.vayana.core.datastore.settings.RecentlyDeletedRetention>(
+    val RecentlyDeletedRetention: ChoiceSetting<com.folium.core.datastore.settings.RecentlyDeletedRetention> =
+        ChoiceSetting<com.folium.core.datastore.settings.RecentlyDeletedRetention>(
         key = "library.recently_deleted_retention",
-        defaultValue = com.vayana.core.datastore.settings.RecentlyDeletedRetention.FOREVER,
+        defaultValue = com.folium.core.datastore.settings.RecentlyDeletedRetention.FOREVER,
         titleRes = R.string.settings_recently_deleted_retention_title,
         subtitleRes = R.string.settings_recently_deleted_retention_subtitle,
         group = SettingsGroup.LIBRARY,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.RecentlyDeletedRetention>>(
-            ChoiceOption(com.vayana.core.datastore.settings.RecentlyDeletedRetention.FOREVER, R.string.settings_recently_deleted_retention_forever),
-            ChoiceOption(com.vayana.core.datastore.settings.RecentlyDeletedRetention.DAYS_7, R.string.settings_recently_deleted_retention_7),
-            ChoiceOption(com.vayana.core.datastore.settings.RecentlyDeletedRetention.DAYS_30, R.string.settings_recently_deleted_retention_30),
-            ChoiceOption(com.vayana.core.datastore.settings.RecentlyDeletedRetention.DAYS_90, R.string.settings_recently_deleted_retention_90),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.RecentlyDeletedRetention>>(
+            ChoiceOption(com.folium.core.datastore.settings.RecentlyDeletedRetention.FOREVER, R.string.settings_recently_deleted_retention_forever),
+            ChoiceOption(com.folium.core.datastore.settings.RecentlyDeletedRetention.DAYS_7, R.string.settings_recently_deleted_retention_7),
+            ChoiceOption(com.folium.core.datastore.settings.RecentlyDeletedRetention.DAYS_30, R.string.settings_recently_deleted_retention_30),
+            ChoiceOption(com.folium.core.datastore.settings.RecentlyDeletedRetention.DAYS_90, R.string.settings_recently_deleted_retention_90),
         ),
     )
-    val WeekStart: ChoiceSetting<com.vayana.core.datastore.settings.WeekStart> =
-        ChoiceSetting<com.vayana.core.datastore.settings.WeekStart>(
+    val WeekStart: ChoiceSetting<com.folium.core.datastore.settings.WeekStart> =
+        ChoiceSetting<com.folium.core.datastore.settings.WeekStart>(
         key = "goals.week_start",
-        defaultValue = com.vayana.core.datastore.settings.WeekStart.SUNDAY,
+        defaultValue = com.folium.core.datastore.settings.WeekStart.SUNDAY,
         titleRes = R.string.settings_week_start_title,
         subtitleRes = R.string.settings_week_start_subtitle,
         group = SettingsGroup.GOALS,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.WeekStart>>(
-            ChoiceOption(com.vayana.core.datastore.settings.WeekStart.SUNDAY, R.string.settings_week_start_sunday),
-            ChoiceOption(com.vayana.core.datastore.settings.WeekStart.MONDAY, R.string.settings_week_start_monday),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.WeekStart>>(
+            ChoiceOption(com.folium.core.datastore.settings.WeekStart.SUNDAY, R.string.settings_week_start_sunday),
+            ChoiceOption(com.folium.core.datastore.settings.WeekStart.MONDAY, R.string.settings_week_start_monday),
         ),
     )
 
@@ -847,16 +847,16 @@ object SettingsRegistry {
         subtitleRes = R.string.settings_home_library_sync_subtitle,
         group = SettingsGroup.LIBRARY,
     )
-    val DefaultCoverSource: ChoiceSetting<com.vayana.core.datastore.settings.DefaultCoverSource> =
-        ChoiceSetting<com.vayana.core.datastore.settings.DefaultCoverSource>(
+    val DefaultCoverSource: ChoiceSetting<com.folium.core.datastore.settings.DefaultCoverSource> =
+        ChoiceSetting<com.folium.core.datastore.settings.DefaultCoverSource>(
         key = "library.default_cover_source",
-        defaultValue = com.vayana.core.datastore.settings.DefaultCoverSource.YOURS,
+        defaultValue = com.folium.core.datastore.settings.DefaultCoverSource.YOURS,
         titleRes = R.string.settings_default_cover_source_title,
         subtitleRes = R.string.settings_default_cover_source_subtitle,
         group = SettingsGroup.LIBRARY,
-        options = listOf<ChoiceOption<com.vayana.core.datastore.settings.DefaultCoverSource>>(
-            ChoiceOption(com.vayana.core.datastore.settings.DefaultCoverSource.YOURS, R.string.settings_default_cover_source_yours),
-            ChoiceOption(com.vayana.core.datastore.settings.DefaultCoverSource.GOODREADS, R.string.settings_default_cover_source_goodreads),
+        options = listOf<ChoiceOption<com.folium.core.datastore.settings.DefaultCoverSource>>(
+            ChoiceOption(com.folium.core.datastore.settings.DefaultCoverSource.YOURS, R.string.settings_default_cover_source_yours),
+            ChoiceOption(com.folium.core.datastore.settings.DefaultCoverSource.GOODREADS, R.string.settings_default_cover_source_goodreads),
         ),
     )
     val LandscapeTwoColumnLayout: BooleanSetting = BooleanSetting(

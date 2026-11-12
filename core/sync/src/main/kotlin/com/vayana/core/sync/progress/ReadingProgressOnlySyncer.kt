@@ -1,42 +1,42 @@
-package com.vayana.core.sync.progress
+package com.folium.core.sync.progress
 
-import com.vayana.core.backup.PortableReadingProgress
-import com.vayana.core.backup.PortableReadingProgressPatch
-import com.vayana.core.backup.PortableReadNextState
-import com.vayana.core.backup.PortableTombstone
-import com.vayana.core.backup.parsePortableWordLookupCounters
-import com.vayana.core.backup.parsePortableReadingSessions
-import com.vayana.core.backup.parsePortableBookFileHashes
-import com.vayana.core.backup.parsePortableTombstones
-import com.vayana.core.backup.PortableWordLookupCounter
-import com.vayana.core.backup.PortableReadingSession
-import com.vayana.core.backup.parsePortableReadingProgressSnapshot
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.TombstoneEntityType
-import com.vayana.core.database.repository.wordOfLookupTombstone
-import com.vayana.core.database.repository.WordLookupStatRepository
-import com.vayana.core.database.repository.WordLookupCounterMergeResult
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.database.repository.ReadingSessionMergeResult
-import com.vayana.core.database.repository.CloudWordLookupCounter
-import com.vayana.core.database.repository.CloudReadingSessionRecord
-import com.vayana.core.database.repository.ReadingProgressMergeResult
-import com.vayana.core.database.repository.bookSyncIdOfReadingProgressReset
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.sync.asset.GitHubAssetStoreException
-import com.vayana.core.sync.github.assetStore
-import com.vayana.core.sync.github.gitHubSyncConfig
-import com.vayana.core.sync.snapshot.RemotePortableSnapshotSlice
-import com.vayana.core.sync.snapshot.getLatestPortableSnapshotDocument
-import com.vayana.core.sync.snapshot.pushPortableReadingProgress
-import com.vayana.core.sync.snapshot.markedSlices
-import com.vayana.core.sync.snapshot.locallyUnchangedSliceKeys
+import com.folium.core.backup.PortableReadingProgress
+import com.folium.core.backup.PortableReadingProgressPatch
+import com.folium.core.backup.PortableReadNextState
+import com.folium.core.backup.PortableTombstone
+import com.folium.core.backup.parsePortableWordLookupCounters
+import com.folium.core.backup.parsePortableReadingSessions
+import com.folium.core.backup.parsePortableBookFileHashes
+import com.folium.core.backup.parsePortableTombstones
+import com.folium.core.backup.PortableWordLookupCounter
+import com.folium.core.backup.PortableReadingSession
+import com.folium.core.backup.parsePortableReadingProgressSnapshot
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.TombstoneEntityType
+import com.folium.core.database.repository.wordOfLookupTombstone
+import com.folium.core.database.repository.WordLookupStatRepository
+import com.folium.core.database.repository.WordLookupCounterMergeResult
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.database.repository.ReadingSessionMergeResult
+import com.folium.core.database.repository.CloudWordLookupCounter
+import com.folium.core.database.repository.CloudReadingSessionRecord
+import com.folium.core.database.repository.ReadingProgressMergeResult
+import com.folium.core.database.repository.bookSyncIdOfReadingProgressReset
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.sync.asset.GitHubAssetStoreException
+import com.folium.core.sync.github.assetStore
+import com.folium.core.sync.github.gitHubSyncConfig
+import com.folium.core.sync.snapshot.RemotePortableSnapshotSlice
+import com.folium.core.sync.snapshot.getLatestPortableSnapshotDocument
+import com.folium.core.sync.snapshot.pushPortableReadingProgress
+import com.folium.core.sync.snapshot.markedSlices
+import com.folium.core.sync.snapshot.locallyUnchangedSliceKeys
 import java.net.HttpURLConnection
 import java.util.concurrent.atomic.AtomicLong
 import java.util.concurrent.atomic.AtomicReference
@@ -44,15 +44,15 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
-import com.vayana.core.database.repository.isSyncedWithReadingProgress
-import com.vayana.core.sync.RemoteBookDeletionNotices
-import com.vayana.core.sync.SyncOperationCoordinator
-import com.vayana.core.sync.SyncedBookDeletionApplier
-import com.vayana.core.sync.isOfflineSyncFailure
-import com.vayana.core.sync.asset.CloudAssetDeletionProcessor
-import com.vayana.core.sync.asset.deletePendingAndLog
-import com.vayana.core.sync.usage.SyncDataUsageLog
-import com.vayana.core.sync.usage.SyncKind
+import com.folium.core.database.repository.isSyncedWithReadingProgress
+import com.folium.core.sync.RemoteBookDeletionNotices
+import com.folium.core.sync.SyncOperationCoordinator
+import com.folium.core.sync.SyncedBookDeletionApplier
+import com.folium.core.sync.isOfflineSyncFailure
+import com.folium.core.sync.asset.CloudAssetDeletionProcessor
+import com.folium.core.sync.asset.deletePendingAndLog
+import com.folium.core.sync.usage.SyncDataUsageLog
+import com.folium.core.sync.usage.SyncKind
 
 enum class ReadingProgressSyncStatus {
     /** Neither side had anything new; no network write was made. */
@@ -99,7 +99,7 @@ class ReadingProgressOnlySyncer @Inject constructor(
     private val cloudAssetDeletionProcessor: CloudAssetDeletionProcessor,
     private val remoteBookDeletionNotices: RemoteBookDeletionNotices,
     private val syncOperationCoordinator: SyncOperationCoordinator,
-    private val syncedSnapshotSliceDao: com.vayana.core.database.dao.SyncedSnapshotSliceDao,
+    private val syncedSnapshotSliceDao: com.folium.core.database.dao.SyncedSnapshotSliceDao,
     private val syncDataUsageLog: SyncDataUsageLog,
 ) {
     private val lastSyncedAtMillis = AtomicLong(0L)
@@ -503,14 +503,14 @@ private fun CloudWordLookupCounter.toPortable(): PortableWordLookupCounter = Por
     lastLookedUpAt = lastLookedUpAt,
 )
 
-private fun com.vayana.core.database.entity.TombstoneEntity.toPortable(): PortableTombstone = PortableTombstone(
+private fun com.folium.core.database.entity.TombstoneEntity.toPortable(): PortableTombstone = PortableTombstone(
     syncId = syncId,
     entityType = entityType,
     deletedAt = deletedAt,
 )
 
-private fun PortableTombstone.toEntity(): com.vayana.core.database.entity.TombstoneEntity =
-    com.vayana.core.database.entity.TombstoneEntity(
+private fun PortableTombstone.toEntity(): com.folium.core.database.entity.TombstoneEntity =
+    com.folium.core.database.entity.TombstoneEntity(
         syncId = syncId,
         entityType = entityType,
         deletedAt = deletedAt,

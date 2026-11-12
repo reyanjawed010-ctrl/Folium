@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.content.Context
 import android.content.Intent
@@ -6,11 +6,11 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
-import com.vayana.app.MainActivity
-import com.vayana.app.R
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.database.repository.BookRepository
+import com.folium.app.MainActivity
+import com.folium.app.R
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.database.repository.BookRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.vayana.core.resources.R as Res
+import com.folium.core.resources.R as Res
 
 /**
  * The app icon's long-press shortcuts: the book being read, by its title, then Free books and Search. Republished
@@ -92,9 +92,9 @@ class AppShortcuts @Inject constructor(
     private fun intent(action: String) = Intent(context, MainActivity::class.java).setAction(action)
 
     companion object {
-        const val ActionFreeBooks = "com.vayana.app.FREE_BOOKS"
-        const val ActionSearch = "com.vayana.app.SEARCH"
-        const val ActionStatistics = "com.vayana.app.STATISTICS"
+        const val ActionFreeBooks = "com.folium.app.FREE_BOOKS"
+        const val ActionSearch = "com.folium.app.SEARCH"
+        const val ActionStatistics = "com.folium.app.STATISTICS"
         private const val IdContinue = "continue_reading"
         private const val IdFreeBooks = "free_books"
         private const val IdSearch = "search"

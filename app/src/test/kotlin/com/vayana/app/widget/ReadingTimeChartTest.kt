@@ -1,6 +1,6 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
-import com.vayana.core.database.model.ReadingSession
+import com.folium.core.database.model.ReadingSession
 import java.time.LocalDate
 import java.time.ZoneId
 import kotlin.test.Test

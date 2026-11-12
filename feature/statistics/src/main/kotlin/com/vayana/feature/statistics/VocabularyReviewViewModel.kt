@@ -1,10 +1,10 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.database.model.VocabularyCard
-import com.vayana.core.database.repository.ReviewGrade
-import com.vayana.core.database.repository.VocabularyCardRepository
+import com.folium.core.database.model.VocabularyCard
+import com.folium.core.database.repository.ReviewGrade
+import com.folium.core.database.repository.VocabularyCardRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

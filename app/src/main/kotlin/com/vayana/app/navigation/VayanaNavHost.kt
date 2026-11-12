@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.animation.core.spring
@@ -20,42 +20,42 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.LocalMotionSetting
-import com.vayana.core.designsystem.theme.vayanaNavEnter
-import com.vayana.core.designsystem.theme.vayanaNavExit
-import com.vayana.core.designsystem.theme.vayanaNavPopEnter
-import com.vayana.core.designsystem.theme.vayanaNavPopExit
-import com.vayana.core.designsystem.theme.vayanaSharedElementEnter
-import com.vayana.core.designsystem.theme.vayanaSharedElementExit
-import com.vayana.core.designsystem.theme.vayanaSharedElementCrossfadeEnter
-import com.vayana.core.designsystem.theme.vayanaSharedElementCrossfadeExit
-import com.vayana.core.designsystem.theme.vayanaNavTabEnter
-import com.vayana.core.designsystem.theme.vayanaNavTabExit
-import com.vayana.feature.gutenberg.GutenbergRoute as GutenbergScreenRoute
-import com.vayana.feature.opds.OpdsBrowseRoute as OpdsBrowseScreenRoute
-import com.vayana.feature.opds.OpdsCatalogsRoute as OpdsCatalogsScreenRoute
-import com.vayana.feature.library.OfflineBooksRoute as OfflineBooksScreenRoute
-import com.vayana.feature.library.RecentlyDeletedRoute as RecentlyDeletedScreenRoute
-import com.vayana.feature.library.LibraryAddAction
-import com.vayana.feature.library.BookOpenTransitionSource
-import com.vayana.feature.library.ProvideBookSharedTransitionScopes
-import com.vayana.feature.library.LibraryViewModel
-import com.vayana.feature.library.ShelfDetailRoute as ShelfDetailScreenRoute
-import com.vayana.feature.library.ShelvesRoute as ShelvesScreenRoute
-import com.vayana.feature.library.SeriesFolderScreenRoute
-import com.vayana.feature.notes.NotesRoute
-import com.vayana.feature.help.HelpRoute as HelpScreenRoute
-import com.vayana.feature.reader.ReaderRoute as ReaderScreenRoute
-import com.vayana.feature.search.SearchRoute as SearchScreenRoute
-import com.vayana.feature.settings.DiagnosticsRoute as DiagnosticsScreenRoute
-import com.vayana.feature.settings.DataUsageRoute as DataUsageScreenRoute
-import com.vayana.feature.settings.PrivacyRoute as PrivacyScreenRoute
-import com.vayana.feature.settings.SettingsRoute as SettingsScreenRoute
-import com.vayana.feature.statistics.HighlightReviewRoute as HighlightReviewScreenRoute
-import com.vayana.feature.statistics.LearnWordsRoute as LearnWordsScreenRoute
-import com.vayana.feature.statistics.StatisticsRoute
-import com.vayana.feature.statistics.VocabularyReviewRoute as VocabularyReviewScreenRoute
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.LocalMotionSetting
+import com.folium.core.designsystem.theme.vayanaNavEnter
+import com.folium.core.designsystem.theme.vayanaNavExit
+import com.folium.core.designsystem.theme.vayanaNavPopEnter
+import com.folium.core.designsystem.theme.vayanaNavPopExit
+import com.folium.core.designsystem.theme.vayanaSharedElementEnter
+import com.folium.core.designsystem.theme.vayanaSharedElementExit
+import com.folium.core.designsystem.theme.vayanaSharedElementCrossfadeEnter
+import com.folium.core.designsystem.theme.vayanaSharedElementCrossfadeExit
+import com.folium.core.designsystem.theme.vayanaNavTabEnter
+import com.folium.core.designsystem.theme.vayanaNavTabExit
+import com.folium.feature.gutenberg.GutenbergRoute as GutenbergScreenRoute
+import com.folium.feature.opds.OpdsBrowseRoute as OpdsBrowseScreenRoute
+import com.folium.feature.opds.OpdsCatalogsRoute as OpdsCatalogsScreenRoute
+import com.folium.feature.library.OfflineBooksRoute as OfflineBooksScreenRoute
+import com.folium.feature.library.RecentlyDeletedRoute as RecentlyDeletedScreenRoute
+import com.folium.feature.library.LibraryAddAction
+import com.folium.feature.library.BookOpenTransitionSource
+import com.folium.feature.library.ProvideBookSharedTransitionScopes
+import com.folium.feature.library.LibraryViewModel
+import com.folium.feature.library.ShelfDetailRoute as ShelfDetailScreenRoute
+import com.folium.feature.library.ShelvesRoute as ShelvesScreenRoute
+import com.folium.feature.library.SeriesFolderScreenRoute
+import com.folium.feature.notes.NotesRoute
+import com.folium.feature.help.HelpRoute as HelpScreenRoute
+import com.folium.feature.reader.ReaderRoute as ReaderScreenRoute
+import com.folium.feature.search.SearchRoute as SearchScreenRoute
+import com.folium.feature.settings.DiagnosticsRoute as DiagnosticsScreenRoute
+import com.folium.feature.settings.DataUsageRoute as DataUsageScreenRoute
+import com.folium.feature.settings.PrivacyRoute as PrivacyScreenRoute
+import com.folium.feature.settings.SettingsRoute as SettingsScreenRoute
+import com.folium.feature.statistics.HighlightReviewRoute as HighlightReviewScreenRoute
+import com.folium.feature.statistics.LearnWordsRoute as LearnWordsScreenRoute
+import com.folium.feature.statistics.StatisticsRoute
+import com.folium.feature.statistics.VocabularyReviewRoute as VocabularyReviewScreenRoute
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -292,7 +292,7 @@ fun VayanaNavHost(
             }
             val libraryViewModel = navController.sharedLibraryViewModel(backStackEntry)
             ProvideBookSharedTransitionScopes(this@SharedTransitionLayout, this@composable) {
-                com.vayana.feature.library.BookDetailRoute(
+                com.folium.feature.library.BookDetailRoute(
                     bookId = route.bookId,
                     transitionSource = transitionSource,
                     openGoodreads = route.openGoodreads,

@@ -1,16 +1,16 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.ShelfDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.BookShelfCrossRefEntity
-import com.vayana.core.database.entity.ShelfEntity
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.Shelf
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.ShelfDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.BookShelfCrossRefEntity
+import com.folium.core.database.entity.ShelfEntity
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.Shelf
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

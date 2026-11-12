@@ -1,4 +1,4 @@
-package com.vayana.buildlogic.convention
+package com.folium.buildlogic.convention
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog

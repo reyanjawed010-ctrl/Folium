@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 
 object WatchGoals {
     fun today(context: Context, state: WatchState): Long {

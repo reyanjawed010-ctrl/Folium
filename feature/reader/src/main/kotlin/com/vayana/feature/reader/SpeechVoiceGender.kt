@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 /** The gender a voice is published as. Android's own voice API does not say. */
 internal enum class VoiceGender { FEMALE, MALE }

@@ -1,10 +1,10 @@
-package com.vayana.core.sync
+package com.folium.core.sync
 
-import com.vayana.core.backup.PortableTombstone
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.TombstoneEntityType
-import com.vayana.core.database.repository.bookSyncIdOfPurge
-import com.vayana.core.filesystem.BookFileCleaner
+import com.folium.core.backup.PortableTombstone
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.TombstoneEntityType
+import com.folium.core.database.repository.bookSyncIdOfPurge
+import com.folium.core.filesystem.BookFileCleaner
 import javax.inject.Inject
 
 /** Applies whole-book deletes synced from another device; shared by the full sync and the reading-progress sync. */

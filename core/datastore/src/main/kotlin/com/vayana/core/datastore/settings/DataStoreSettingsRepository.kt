@@ -1,4 +1,4 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
@@ -9,10 +9,10 @@ import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.vayana.core.designsystem.theme.DarkVariant
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.MotionSetting
-import com.vayana.core.designsystem.theme.ThemeMode
+import com.folium.core.designsystem.theme.DarkVariant
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.MotionSetting
+import com.folium.core.designsystem.theme.ThemeMode
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

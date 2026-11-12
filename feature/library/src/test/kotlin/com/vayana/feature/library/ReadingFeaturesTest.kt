@@ -1,15 +1,15 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.EpubChapterText
-import com.vayana.core.database.search.EpubPassageIndexCallback
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.ReadNextQueueFullException
-import com.vayana.core.common.passageLink
-import com.vayana.core.common.parsePassageLink
-import com.vayana.core.common.PassageLink
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.EpubChapterText
+import com.folium.core.database.search.EpubPassageIndexCallback
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.ReadNextQueueFullException
+import com.folium.core.common.passageLink
+import com.folium.core.common.parsePassageLink
+import com.folium.core.common.PassageLink
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
@@ -65,7 +65,7 @@ class ReadingFeaturesTest {
 
     @Test fun todayAggregateKeepsStartTimeBoundaryAndReflectsRecordedAndDeletedSessions() = runBlocking {
         val book = books.insertOfflineBook("Paper", null, BookFormat.PHYSICAL, null, null)
-        val sessions = com.vayana.core.database.repository.ReadingSessionRepositoryImpl(
+        val sessions = com.folium.core.database.repository.ReadingSessionRepositoryImpl(
             db, db.readingSessionDao(), db.bookDao(), db.bookAliasDao(), db.tombstoneDao())
         assertEquals(0L, sessions.observeSecondsSince(1000).first())
         sessions.record(book.id, 999, 5000, 200)
@@ -162,7 +162,7 @@ class ReadingFeaturesTest {
         val dao = db.epubPassageDao()
         dao.replace(book.id, book.fileHash, sequenceOf(chapter("OEBPS/a.xhtml", "Café moonlight on the river")))
         assertEquals(1, dao.search("cafe*", 10).first().size)
-        assertEquals(listOf(com.vayana.core.database.dao.IndexedEpubFile(book.id, book.fileHash)), dao.indexedFiles())
+        assertEquals(listOf(com.folium.core.database.dao.IndexedEpubFile(book.id, book.fileHash)), dao.indexedFiles())
         db.bookDao().update(db.bookDao().getById(book.id)!!.copy(fileAvailability = "CLOUD_ONLY"))
         assertTrue(dao.search("moon*", 10).first().isEmpty())
         assertTrue(dao.indexedFiles().isEmpty())
@@ -199,14 +199,14 @@ class ReadingFeaturesTest {
                 entry("OPS/chapter one.xhtml", """<html><head><title>Hidden title</title><style>Hidden style</style></head><body><h1>First chapter</h1><p>Café &amp; river.</p><script>Hidden script</script></body></html>""")
                 entry("OPS/two.xhtml", "<html><body><h1>Second chapter</h1><p>Moonlight.</p></body></html>")
             }
-            val chapters = com.vayana.format.epub.EpubTextExtractor.extract(file)
+            val chapters = com.folium.format.epub.EpubTextExtractor.extract(file)
             assertEquals(listOf("OPS/chapter one.xhtml", "OPS/two.xhtml"), chapters.map { it.href })
             assertEquals("First chapter", chapters.first().title)
             assertTrue(chapters.first().text.contains("Café & river."))
             assertFalse(chapters.first().text.contains("Hidden"))
             var checkpoints = 0
             assertFailsWith<kotlinx.coroutines.CancellationException> {
-                com.vayana.format.epub.EpubTextExtractor.extract(file) {
+                com.folium.format.epub.EpubTextExtractor.extract(file) {
                     checkpoints++
                     if (checkpoints == 3) throw kotlinx.coroutines.CancellationException("Stop indexing")
                 }
@@ -222,19 +222,19 @@ class ReadingFeaturesTest {
     @Test fun questionsUseTheExistingReviewScheduleAndResetToDue() = runBlocking {
         val book = books.insertOfflineBook("Paper", null, BookFormat.PHYSICAL, null, null)
         val dao = db.annotationDao()
-        val id = dao.insert(com.vayana.core.database.entity.AnnotationEntity(bookId=book.id, type="HIGHLIGHT", colorKey="yellow", locator="physical-page:1", chapterTitle="Page 1", chapterHref=null, selectedText="Answer", readerNote=null, createdAt=100, updatedAt=100, reviewQuestion="Question?"))
-        val reviews = com.vayana.core.database.repository.HighlightReviewRepositoryImpl(db.highlightReviewDao(), db)
+        val id = dao.insert(com.folium.core.database.entity.AnnotationEntity(bookId=book.id, type="HIGHLIGHT", colorKey="yellow", locator="physical-page:1", chapterTitle="Page 1", chapterHref=null, selectedText="Answer", readerNote=null, createdAt=100, updatedAt=100, reviewQuestion="Question?"))
+        val reviews = com.folium.core.database.repository.HighlightReviewRepositoryImpl(db.highlightReviewDao(), db)
         val note = dao.getById(id)!!
         assertEquals(1, reviews.observeDueCount(100).first())
         assertEquals("Question?", reviews.session(100).annotations.single().reviewQuestion)
-        reviews.grade(note.syncId, com.vayana.core.database.repository.ReviewGrade.GOOD, 100)
+        reviews.grade(note.syncId, com.folium.core.database.repository.ReviewGrade.GOOD, 100)
         assertEquals(0, reviews.observeDueCount(100).first())
-        val annotations = com.vayana.core.database.repository.AnnotationRepositoryImpl(db, dao, db.bookDao(), db.bookAliasDao(), db.tombstoneDao())
+        val annotations = com.folium.core.database.repository.AnnotationRepositoryImpl(db, dao, db.bookDao(), db.bookAliasDao(), db.tombstoneDao())
         annotations.update(annotations.getById(id)!!.copy(reviewQuestion = "Edited question?"))
         assertEquals(1, reviews.observeDueCount(100).first())
-        reviews.grade(note.syncId, com.vayana.core.database.repository.ReviewGrade.GOOD, 100)
+        reviews.grade(note.syncId, com.folium.core.database.repository.ReviewGrade.GOOD, 100)
         val current = annotations.getById(id)!!
-        annotations.mergeCloudAnnotation(com.vayana.core.database.repository.AnnotationRecord(
+        annotations.mergeCloudAnnotation(com.folium.core.database.repository.AnnotationRecord(
             syncId=current.syncId, bookSyncId=book.syncId, type=current.type, colorKey=current.colorKey,
             locator=current.locator, chapterTitle=current.chapterTitle, chapterHref=current.chapterHref,
             selectedText=current.selectedText, readerNote=current.readerNote, createdAt=current.createdAt,

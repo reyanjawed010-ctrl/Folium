@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.AnimatedContent
@@ -34,17 +34,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.designsystem.theme.vayanaPressScale
-import com.vayana.core.designsystem.theme.vayanaAnimateContentSize
-import com.vayana.core.designsystem.theme.vayanaTween
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.designsystem.theme.vayanaPressScale
+import com.folium.core.designsystem.theme.vayanaAnimateContentSize
+import com.folium.core.designsystem.theme.vayanaTween
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 

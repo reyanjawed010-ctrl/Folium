@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 import android.content.ClipData
 import android.content.Context

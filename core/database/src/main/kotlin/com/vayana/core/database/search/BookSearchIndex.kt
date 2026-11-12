@@ -1,4 +1,4 @@
-package com.vayana.core.database.search
+package com.folium.core.database.search
 
 import androidx.room.RoomDatabase
 import androidx.sqlite.SQLiteConnection

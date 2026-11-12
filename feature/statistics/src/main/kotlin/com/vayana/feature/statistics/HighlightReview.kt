@@ -1,8 +1,8 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.isCommunityQuoteLocator
-import com.vayana.core.database.repository.HighlightReview
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.isCommunityQuoteLocator
+import com.folium.core.database.repository.HighlightReview
 import java.time.LocalDate
 
 /** The reader's own highlights and notes with text: not bookmarks, and not popular quotes imported from Goodreads. */

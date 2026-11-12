@@ -1,12 +1,12 @@
-package com.vayana.core.diagnostics
+package com.folium.core.diagnostics
 
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.InputStreamReader
 import javax.inject.Inject

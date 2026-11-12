@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.app.PendingIntent
 import android.content.ComponentName
@@ -9,7 +9,7 @@ import androidx.wear.watchface.complications.datasource.ComplicationDataSourceSe
 import androidx.wear.watchface.complications.datasource.ComplicationRequest
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceUpdateRequester
 import androidx.wear.watchface.complications.data.*
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 import java.time.Instant
 
 class ReadingComplicationService : ComplicationDataSourceService() {

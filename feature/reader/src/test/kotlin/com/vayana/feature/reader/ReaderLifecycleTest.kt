@@ -1,7 +1,7 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.designsystem.theme.DisplayProfile
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.designsystem.theme.DisplayProfile
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

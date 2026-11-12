@@ -1,7 +1,7 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
-import com.vayana.core.datastore.settings.NavigationMode
-import com.vayana.core.designsystem.theme.DisplayProfile
+import com.folium.core.datastore.settings.NavigationMode
+import com.folium.core.designsystem.theme.DisplayProfile
 
 enum class NavigationPresentation {
     Hidden,

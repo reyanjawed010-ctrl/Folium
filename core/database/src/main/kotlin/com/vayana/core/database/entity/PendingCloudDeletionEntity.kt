@@ -1,4 +1,4 @@
-package com.vayana.core.database.entity
+package com.folium.core.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,7 +11,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "pending_cloud_deletions")
 data class PendingCloudDeletionEntity(
     @PrimaryKey val assetId: String,
-    /** A [com.vayana.core.database.repository.CloudAssetKind] value. */
+    /** A [com.folium.core.database.repository.CloudAssetKind] value. */
     val kind: String,
     val queuedAt: Long,
     val attempts: Int = 0,

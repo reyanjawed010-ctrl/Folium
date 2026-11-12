@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.clickable
 import androidx.annotation.StringRes
@@ -7,8 +7,8 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.items as gridItems
 import androidx.compose.material3.FilterChip
 import androidx.compose.runtime.remember
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.designsystem.theme.PagedLazyVerticalGrid
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.designsystem.theme.PagedLazyVerticalGrid
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -46,8 +46,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntOffset
-import com.vayana.core.designsystem.theme.vayanaSpring
-import com.vayana.core.designsystem.theme.vayanaTween
+import com.folium.core.designsystem.theme.vayanaSpring
+import com.folium.core.designsystem.theme.vayanaTween
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
@@ -55,17 +55,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.homelibrary.HomeLibraryStatus
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.homelibrary.HomeLibraryStatus
+import com.folium.core.resources.R
 import kotlin.math.roundToInt
 
 /**

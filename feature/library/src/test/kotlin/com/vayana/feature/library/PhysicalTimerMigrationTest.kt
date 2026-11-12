@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.database.sqlite.SQLiteDatabase
 import androidx.room.Room
-import com.vayana.core.database.ALL_MIGRATIONS
-import com.vayana.core.database.VayanaDatabase
+import com.folium.core.database.ALL_MIGRATIONS
+import com.folium.core.database.VayanaDatabase
 import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
 import org.junit.runner.RunWith

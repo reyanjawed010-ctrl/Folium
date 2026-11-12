@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.EpubChapterText
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.search.EpubPassageIndex
-import com.vayana.core.database.search.EpubPassageIndexCallback
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.EpubChapterText
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.search.EpubPassageIndex
+import com.folium.core.database.search.EpubPassageIndexCallback
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.runner.RunWith

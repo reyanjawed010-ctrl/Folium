@@ -1,8 +1,8 @@
-package com.vayana.core.designsystem
+package com.folium.core.designsystem
 
 import android.view.KeyEvent
-import com.vayana.core.designsystem.theme.PageKeyDirection
-import com.vayana.core.designsystem.theme.pageKeyDirection
+import com.folium.core.designsystem.theme.PageKeyDirection
+import com.folium.core.designsystem.theme.pageKeyDirection
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test

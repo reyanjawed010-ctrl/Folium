@@ -1,4 +1,4 @@
-package com.vayana.format.epub
+package com.folium.format.epub
 
 import android.text.Html
 import android.util.Xml

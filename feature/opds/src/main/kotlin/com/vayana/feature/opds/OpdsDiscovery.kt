@@ -1,6 +1,6 @@
-package com.vayana.feature.opds
+package com.folium.feature.opds
 
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import java.net.Inet4Address
 import java.net.InetSocketAddress
 import java.net.NetworkInterface

@@ -1,7 +1,7 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.FreeDictOffer
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.FreeDictOffer
+import com.folium.dictionary.api.PartOfSpeech
 import java.io.File
 import java.io.InputStream
 import java.util.zip.GZIPInputStream

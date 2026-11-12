@@ -1,4 +1,4 @@
-package com.vayana.core.database.entity
+package com.folium.core.database.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
@@ -6,7 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 /**
- * One spine document of an indexed EPUB, its plain text Deflate-compressed ([com.vayana.core.database.search.EpubPassageIndex]).
+ * One spine document of an indexed EPUB, its plain text Deflate-compressed ([com.folium.core.database.search.EpubPassageIndex]).
  * The text is kept only to show result excerpts and to remove the chapter's words from the full-text index exactly.
  * A disposable, device-local index: never included in backups or cloud snapshots.
  *

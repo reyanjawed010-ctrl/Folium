@@ -1,4 +1,4 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Query

@@ -1,13 +1,13 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.filesystem.CoverImages
-import com.vayana.core.filesystem.StorageRoots
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.filesystem.CoverImages
+import com.folium.core.filesystem.StorageRoots
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton

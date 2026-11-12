@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -8,13 +8,13 @@ import android.view.View
 import android.widget.RemoteViews
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.toArgb
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.designsystem.theme.ColorSchemes
-import com.vayana.core.designsystem.theme.DarkVariant
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.EinkPalette
-import com.vayana.core.designsystem.theme.ThemeMode
-import com.vayana.core.designsystem.theme.isMonochrome
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.designsystem.theme.ColorSchemes
+import com.folium.core.designsystem.theme.DarkVariant
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.EinkPalette
+import com.folium.core.designsystem.theme.ThemeMode
+import com.folium.core.designsystem.theme.isMonochrome
 
 /** The app's theme settings the widgets colour themselves from, so every widget matches the app and each other. */
 internal data class WidgetTheme(

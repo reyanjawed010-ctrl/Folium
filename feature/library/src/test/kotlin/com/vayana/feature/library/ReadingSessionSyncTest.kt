@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.*
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.*
 import kotlinx.coroutines.runBlocking
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner

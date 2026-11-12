@@ -1,8 +1,8 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.BookSource
-import com.vayana.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.BookSource
+import com.folium.core.database.model.PhysicalBookOwnership
 import org.json.JSONArray
 import org.json.JSONObject
 

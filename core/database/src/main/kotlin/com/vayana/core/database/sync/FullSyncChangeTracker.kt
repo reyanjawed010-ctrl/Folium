@@ -1,4 +1,4 @@
-package com.vayana.core.database.sync
+package com.folium.core.database.sync
 
 import androidx.room.RoomDatabase
 import androidx.sqlite.SQLiteConnection

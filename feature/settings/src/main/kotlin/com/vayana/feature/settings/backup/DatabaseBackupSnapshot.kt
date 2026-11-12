@@ -1,9 +1,9 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
 import android.database.sqlite.SQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.vayana.core.resources.R
-import com.vayana.core.resources.failUnless
+import com.folium.core.resources.R
+import com.folium.core.resources.failUnless
 import java.io.File
 
 /**

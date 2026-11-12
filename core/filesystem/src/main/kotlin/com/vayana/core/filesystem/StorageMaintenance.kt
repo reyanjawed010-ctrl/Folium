@@ -1,11 +1,11 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
 import android.content.Context
 import android.webkit.WebView
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.DatabaseMaintenance
-import com.vayana.core.database.repository.BookRepository
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.DatabaseMaintenance
+import com.folium.core.database.repository.BookRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.util.concurrent.TimeUnit

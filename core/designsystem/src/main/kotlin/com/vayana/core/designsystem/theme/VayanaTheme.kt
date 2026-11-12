@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.theme
+package com.folium.core.designsystem.theme
 
 import android.os.Build
 import androidx.compose.foundation.IndicationNodeFactory
@@ -18,8 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.node.DelegatableNode
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.VayanaTypography
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.VayanaTypography
 
 /** No press ripple - a fading ripple is exactly the kind of animated repaint that ghosts on E-Ink. */
 private object NoIndication : IndicationNodeFactory {

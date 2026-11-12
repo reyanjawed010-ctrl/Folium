@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.content.Context
 import android.os.SystemClock
 import android.provider.Settings
-import com.vayana.core.database.repository.BookRepository
+import com.folium.core.database.repository.BookRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -16,7 +16,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 import kotlinx.coroutines.flow.first
 
 /** A single durable timer; a stopped log stays recoverable until its database transaction succeeds. */

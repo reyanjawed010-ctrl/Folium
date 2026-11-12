@@ -1,6 +1,6 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.reader.api.Locator
+import com.folium.reader.api.Locator
 import kotlin.math.abs
 
 /** Says when enough pages have turned to sync; [thresholdPages] is read on every page, 0 or less turns syncing off. */

@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.animation.core.animateFloatAsState
@@ -21,7 +21,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.navigation.NavHostController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.vayana.core.designsystem.theme.vayanaSpring
+import com.folium.core.designsystem.theme.vayanaSpring
 
 /** Tablet/wide-screen counterpart to [VayanaBottomBar] — same destinations, rail layout. */
 @Composable
@@ -69,7 +69,7 @@ fun VayanaNavigationRail(
                         animationLabel = "ShelvesRailIcon",
                     )
                 },
-                label = { Text(stringResource(com.vayana.core.resources.R.string.library_shelves_title)) },
+                label = { Text(stringResource(com.folium.core.resources.R.string.library_shelves_title)) },
             )
             NavigationRailItem(
                 selected = deletedSelected,
@@ -81,7 +81,7 @@ fun VayanaNavigationRail(
                         animationLabel = "RecentlyDeletedRailIcon",
                     )
                 },
-                label = { Text(stringResource(com.vayana.core.resources.R.string.library_recently_deleted_title)) },
+                label = { Text(stringResource(com.folium.core.resources.R.string.library_recently_deleted_title)) },
             )
         }
         if (showSettings) {
@@ -96,7 +96,7 @@ fun VayanaNavigationRail(
                         animationLabel = "SettingsRailIcon",
                     )
                 },
-                label = { Text(stringResource(com.vayana.core.resources.R.string.settings_title)) },
+                label = { Text(stringResource(com.folium.core.resources.R.string.settings_title)) },
             )
         }
     }

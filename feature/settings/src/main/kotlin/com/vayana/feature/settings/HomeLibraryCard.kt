@@ -1,4 +1,4 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import android.text.format.DateUtils
 import androidx.compose.foundation.layout.Arrangement
@@ -22,13 +22,13 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.homelibrary.HomeLibraryStatus
-import com.vayana.core.homelibrary.HomeLibrarySync
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.homelibrary.HomeLibraryStatus
+import com.folium.core.homelibrary.HomeLibrarySync
+import com.folium.core.resources.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted

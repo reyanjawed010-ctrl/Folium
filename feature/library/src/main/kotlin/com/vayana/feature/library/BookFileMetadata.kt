@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.BookFormat
-import com.vayana.format.epub.EpubParser
-import com.vayana.format.pdf.PdfParser
-import com.vayana.format.pdf.PdfPasswordProtectedException
+import com.folium.core.database.model.BookFormat
+import com.folium.format.epub.EpubParser
+import com.folium.format.pdf.PdfParser
+import com.folium.format.pdf.PdfPasswordProtectedException
 import java.io.File
 
 /** Formats the reader can open. Anything else is reported as unsupported on import. */

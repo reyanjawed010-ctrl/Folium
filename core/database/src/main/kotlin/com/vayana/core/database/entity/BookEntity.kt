@@ -1,4 +1,4 @@
-package com.vayana.core.database.entity
+package com.folium.core.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -82,7 +82,7 @@ data class BookEntity(
      * so a mirrored book is matched on it and never on title or ISBN.
      */
     val syncUuid: String? = null,
-    /** Which app owns a mirrored row ([com.vayana.core.database.model.BookSource]); null for Vayana's own books. */
+    /** Which app owns a mirrored row ([com.folium.core.database.model.BookSource]); null for Vayana's own books. */
     val source: String? = null,
     /** The owner's own `updated_at` for the row, so a changed cover is fetched again. */
     val sourceUpdatedAt: Long? = null,

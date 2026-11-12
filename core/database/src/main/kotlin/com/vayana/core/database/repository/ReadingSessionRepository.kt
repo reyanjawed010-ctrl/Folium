@@ -1,7 +1,7 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.PhysicalReadingSessionSummary
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.PhysicalReadingSessionSummary
 import kotlinx.coroutines.flow.Flow
 
 data class CloudReadingSessionRecord(

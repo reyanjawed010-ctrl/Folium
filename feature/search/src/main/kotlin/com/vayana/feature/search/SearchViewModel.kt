@@ -1,19 +1,19 @@
-package com.vayana.feature.search
+package com.folium.feature.search
 
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.Shelf
-import com.vayana.core.database.repository.ShelfRepository
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.repository.AnnotationRepository
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.search.hasWordStartingWithAny
-import com.vayana.core.database.search.searchTokens
-import com.vayana.core.filesystem.ResolvedBooks
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.Shelf
+import com.folium.core.database.repository.ShelfRepository
+import com.folium.core.database.model.Book
+import com.folium.core.database.repository.AnnotationRepository
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.search.hasWordStartingWithAny
+import com.folium.core.database.search.searchTokens
+import com.folium.core.filesystem.ResolvedBooks
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -30,9 +30,9 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
-import com.vayana.core.datastore.settings.SettingsRepository
+import com.folium.core.datastore.settings.SettingsRepository
 import kotlinx.coroutines.launch
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 
 data class GlobalSearchUiState(
     val query: String = "",
@@ -104,7 +104,7 @@ class SearchViewModel @Inject constructor(
     shelfRepository: ShelfRepository,
     private val settingsRepository: SettingsRepository,
     dispatchers: DispatcherProvider,
-    private val passages: com.vayana.core.database.dao.EpubPassageDao,
+    private val passages: com.folium.core.database.dao.EpubPassageDao,
     val contentIndex: EpubContentIndex,
 ) : ViewModel() {
     init { contentIndex.start() }
@@ -134,7 +134,7 @@ class SearchViewModel @Inject constructor(
                     },
                     resolvedBooks.all,
                     filter.searchFlow(SearchFilter.CONTENTS) {
-                        passages.search(requireNotNull(com.vayana.core.database.search.ftsSearchMatch(text)), 60, scope.bookId, scope.shelfId)
+                        passages.search(requireNotNull(com.folium.core.database.search.ftsSearchMatch(text)), 60, scope.bookId, scope.shelfId)
                     },
                 ) { bookIds, annotations, books, content ->
                     val byId = books.associateBy { it.id }
@@ -265,7 +265,7 @@ private const val MaxAnnotationResults = 80
 private const val ChapterCacheChars = 2_000_000
 
 internal fun passageExcerpt(text: String, tokens: List<String>): String {
-    val firstMatch = com.vayana.core.database.search.firstWordPrefixMatchOffset(text, tokens) ?: 0
+    val firstMatch = com.folium.core.database.search.firstWordPrefixMatchOffset(text, tokens) ?: 0
     val roughStart = (firstMatch - 60).coerceAtLeast(0)
     val start = if (roughStart == 0) 0 else text.indexOf(' ', roughStart).takeIf { it in roughStart..firstMatch }?.plus(1) ?: roughStart
     return text.substring(start, minOf(text.length, start + 300)).trim()

@@ -1,9 +1,9 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
 import androidx.datastore.preferences.core.mutablePreferencesOf
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.EinkPalette
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.EinkPalette
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

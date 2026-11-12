@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import android.content.ActivityNotFoundException
 import android.content.Context

@@ -1,7 +1,7 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.ReadingSession
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.ReadingSession
 import java.time.DayOfWeek
 import java.time.Instant
 import java.time.LocalDate

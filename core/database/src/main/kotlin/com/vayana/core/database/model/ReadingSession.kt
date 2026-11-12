@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 /** A small projection for the physical timer; history rows are loaded only on demand. */
 data class PhysicalReadingSessionSummary(val sessionCount: Long = 0, val totalSeconds: Long = 0) {

@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.content.Context
 import androidx.work.*
@@ -6,7 +6,7 @@ import com.google.android.gms.wearable.DataEventBuffer
 import com.google.android.gms.wearable.DataEvent
 import com.google.android.gms.wearable.CapabilityInfo
 import com.google.android.gms.wearable.WearableListenerService
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

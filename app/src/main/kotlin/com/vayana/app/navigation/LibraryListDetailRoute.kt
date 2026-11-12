@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import android.content.res.Configuration
 import androidx.activity.compose.BackHandler
@@ -38,15 +38,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.window.core.layout.WindowSizeClass
-import com.vayana.feature.library.BookDetailRoute
-import com.vayana.feature.library.ProvideBookSharedTransitionScopes
-import com.vayana.feature.library.LibraryAddAction
-import com.vayana.feature.library.LibraryRoute
-import com.vayana.feature.library.LibraryViewModel
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.resources.R
+import com.folium.feature.library.BookDetailRoute
+import com.folium.feature.library.ProvideBookSharedTransitionScopes
+import com.folium.feature.library.LibraryAddAction
+import com.folium.feature.library.LibraryRoute
+import com.folium.feature.library.LibraryViewModel
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.resources.R
 import kotlinx.coroutines.launch
 
 /**

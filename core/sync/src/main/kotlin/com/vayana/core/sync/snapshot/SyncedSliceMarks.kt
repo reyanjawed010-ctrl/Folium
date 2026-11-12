@@ -1,6 +1,6 @@
-package com.vayana.core.sync.snapshot
+package com.folium.core.sync.snapshot
 
-import com.vayana.core.database.dao.SyncedSnapshotSliceDao
+import com.folium.core.database.dao.SyncedSnapshotSliceDao
 
 /** The slice files this device last published, for [RemotePortableSnapshotDocument.skipAlreadySynced]. */
 suspend fun SyncedSnapshotSliceDao.markedSlices(): List<SyncedSnapshotSlice> =

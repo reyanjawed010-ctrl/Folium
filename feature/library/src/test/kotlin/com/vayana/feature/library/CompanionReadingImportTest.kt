@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.CompanionReadingRepository
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.CompanionReadingRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner

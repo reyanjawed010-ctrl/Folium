@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,14 +29,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.dialog.ConfirmActionDialog
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.dialog.ConfirmActionDialog
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /** First step of deleting a book: move it to Recently deleted (restorable), or delete it permanently everywhere. */
 @Composable

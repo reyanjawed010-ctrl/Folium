@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug build only. Overrides the app name shown in the launcher so the debug APK is visually
+    distinct from a release install. This file is not included in release builds.
+-->
+<resources>
+    <string name="app_name">Folium</string>
+</resources>

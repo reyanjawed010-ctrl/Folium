@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 import java.nio.file.Files
 import java.util.zip.ZipEntry

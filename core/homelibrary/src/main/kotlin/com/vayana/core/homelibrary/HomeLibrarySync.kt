@@ -1,4 +1,4 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import android.content.Context
 import android.database.ContentObserver
@@ -9,12 +9,12 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors

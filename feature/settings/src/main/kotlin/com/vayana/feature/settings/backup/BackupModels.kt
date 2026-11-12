@@ -1,6 +1,6 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
-import com.vayana.core.resources.UiText
+import com.folium.core.resources.UiText
 
 data class BackupManifest(
     val appVersion: String,

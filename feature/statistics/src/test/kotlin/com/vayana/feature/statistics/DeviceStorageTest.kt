@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import java.io.File
 import kotlin.io.path.createTempDirectory

@@ -1,4 +1,4 @@
-package com.vayana.reader.api
+package com.folium.reader.api
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow

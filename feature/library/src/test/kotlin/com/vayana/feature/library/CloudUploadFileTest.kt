@@ -1,16 +1,16 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.common.DefaultDispatcherProvider
-import com.vayana.core.common.Hashing
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.core.sync.asset.CloudAssetCipher
-import com.vayana.core.sync.asset.CloudAssetStager
-import com.vayana.core.sync.asset.CloudAssetStore
-import com.vayana.core.sync.asset.CloudBookAssetTransfer
+import com.folium.core.common.DefaultDispatcherProvider
+import com.folium.core.common.Hashing
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.filesystem.StorageRoots
+import com.folium.core.sync.asset.CloudAssetCipher
+import com.folium.core.sync.asset.CloudAssetStager
+import com.folium.core.sync.asset.CloudAssetStore
+import com.folium.core.sync.asset.CloudBookAssetTransfer
 import java.io.File
 import java.io.IOException
 import kotlinx.coroutines.runBlocking

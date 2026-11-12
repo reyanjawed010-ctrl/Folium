@@ -1,4 +1,4 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import android.text.format.Formatter
 import androidx.compose.foundation.Canvas
@@ -52,20 +52,20 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.designsystem.component.VayanaLoadingIndicator
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.designsystem.theme.asAppDateTime
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
-import com.vayana.core.sync.usage.DataNetwork
-import com.vayana.core.sync.usage.DayUsage
-import com.vayana.core.sync.usage.NetworkSplit
-import com.vayana.core.sync.usage.SyncDataUsageEntry
-import com.vayana.core.sync.usage.SyncKind
+import com.folium.core.designsystem.component.VayanaLoadingIndicator
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.designsystem.theme.asAppDateTime
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
+import com.folium.core.sync.usage.DataNetwork
+import com.folium.core.sync.usage.DayUsage
+import com.folium.core.sync.usage.NetworkSplit
+import com.folium.core.sync.usage.SyncDataUsageEntry
+import com.folium.core.sync.usage.SyncKind
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

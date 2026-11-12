@@ -1,4 +1,4 @@
-package com.vayana.dictionary.api
+package com.folium.dictionary.api
 
 import java.text.Normalizer
 import java.util.Locale

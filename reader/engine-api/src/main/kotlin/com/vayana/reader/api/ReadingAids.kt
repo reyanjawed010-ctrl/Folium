@@ -1,4 +1,4 @@
-package com.vayana.reader.api
+package com.folium.reader.api
 
 /** A footnote's text, shown in place of jumping to it; [href] still leads to where the note lives. */
 data class Footnote(val text: String, val href: String)

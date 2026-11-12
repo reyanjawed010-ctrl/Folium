@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -30,11 +30,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.text.font.FontStyle
-import com.vayana.core.designsystem.component.VayanaLoadingIndicator
-import com.vayana.core.designsystem.theme.vayanaAnimateContentSize
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.dictionary.api.PartOfSpeech
-import com.vayana.dictionary.api.languageDisplayName
+import com.folium.core.designsystem.component.VayanaLoadingIndicator
+import com.folium.core.designsystem.theme.vayanaAnimateContentSize
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.languageDisplayName
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -43,14 +43,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.vayana.core.database.model.WordLookupStat
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.designsystem.theme.asAppDate
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.WordLookupStat
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.designsystem.theme.asAppDate
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable

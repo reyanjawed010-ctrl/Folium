@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ExperimentalMaterial3Api

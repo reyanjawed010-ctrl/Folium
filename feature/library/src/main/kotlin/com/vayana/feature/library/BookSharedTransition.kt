@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.SharedTransitionScope
@@ -9,10 +9,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Rect
-import com.vayana.core.designsystem.tokens.Durations
-import com.vayana.core.designsystem.theme.isMotionEnabled
-import com.vayana.core.designsystem.theme.vayanaSpring
-import com.vayana.core.designsystem.theme.vayanaTween
+import com.folium.core.designsystem.tokens.Durations
+import com.folium.core.designsystem.theme.isMotionEnabled
+import com.folium.core.designsystem.theme.vayanaSpring
+import com.folium.core.designsystem.theme.vayanaTween
 
 /** The Books-screen element that opens Book Details. */
 enum class BookOpenTransitionSource {

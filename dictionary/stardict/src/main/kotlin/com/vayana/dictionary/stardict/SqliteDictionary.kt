@@ -1,13 +1,13 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteStatement
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.DictionarySense
-import com.vayana.dictionary.api.PartOfSpeech
-import com.vayana.dictionary.api.foldAccents
-import com.vayana.dictionary.api.inflectionStems
-import com.vayana.dictionary.api.lookupForms
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.DictionarySense
+import com.folium.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.foldAccents
+import com.folium.dictionary.api.inflectionStems
+import com.folium.dictionary.api.lookupForms
 import java.io.Closeable
 import java.io.File
 import java.util.Locale

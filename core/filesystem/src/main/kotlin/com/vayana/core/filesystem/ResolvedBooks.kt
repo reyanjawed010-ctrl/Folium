@@ -1,9 +1,9 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.repository.BookRepository
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.database.model.Book
+import com.folium.core.database.repository.BookRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineScope

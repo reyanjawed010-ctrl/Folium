@@ -1,4 +1,4 @@
-package com.vayana.core.resources
+package com.folium.core.resources
 
 import android.content.res.Resources
 import androidx.annotation.PluralsRes

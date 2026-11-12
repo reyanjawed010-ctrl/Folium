@@ -1,4 +1,4 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
 import android.content.Context
 import android.content.Intent
@@ -23,13 +23,13 @@ import androidx.lifecycle.viewModelScope
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
-import com.vayana.core.database.model.*
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.repository.*
-import com.vayana.core.datastore.settings.*
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.filesystem.ResolvedBooks
-import com.vayana.core.resources.R
+import com.folium.core.database.model.*
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.repository.*
+import com.folium.core.datastore.settings.*
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.filesystem.ResolvedBooks
+import com.folium.core.resources.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.UUID

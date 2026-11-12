@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.repository.AnnotationRepositoryImpl
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.repository.AnnotationRepositoryImpl
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test

@@ -1,4 +1,4 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -7,11 +7,11 @@ import androidx.room.RawQuery
 import androidx.room.RoomRawQuery
 import androidx.room.SkipQueryVerification
 import androidx.room.Transaction
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.EpubChapterEntity
-import com.vayana.core.database.entity.EpubPassageEntity
-import com.vayana.core.database.entity.EpubPassageTextEntity
-import com.vayana.core.database.search.EpubPassageIndex
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.EpubChapterEntity
+import com.folium.core.database.entity.EpubPassageEntity
+import com.folium.core.database.entity.EpubPassageTextEntity
+import com.folium.core.database.search.EpubPassageIndex
 import kotlinx.coroutines.flow.Flow
 
 data class IndexedEpubFile(val bookId: Long, val fileHash: String)
@@ -146,7 +146,7 @@ abstract class EpubPassageDao {
     protected abstract suspend fun unindexStaged()
 
     // Raw so Room watches the tables it knows; it can't observe the index table it didn't declare.
-    @RawQuery(observedEntities = [EpubPassageEntity::class, EpubChapterEntity::class, BookEntity::class, com.vayana.core.database.entity.BookShelfCrossRefEntity::class])
+    @RawQuery(observedEntities = [EpubPassageEntity::class, EpubChapterEntity::class, BookEntity::class, com.folium.core.database.entity.BookShelfCrossRefEntity::class])
     protected abstract fun searchRaw(query: RoomRawQuery): Flow<List<EpubPassageHit>>
 
     private companion object {

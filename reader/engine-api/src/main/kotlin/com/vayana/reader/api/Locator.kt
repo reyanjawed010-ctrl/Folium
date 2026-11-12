@@ -1,4 +1,4 @@
-package com.vayana.reader.api
+package com.folium.reader.api
 
 /**
  * A position within a book. [cfi] is the durable, reflow-safe locator; the rest is display-only.

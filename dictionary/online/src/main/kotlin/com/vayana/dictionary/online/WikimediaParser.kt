@@ -1,8 +1,8 @@
-package com.vayana.dictionary.online
+package com.folium.dictionary.online
 
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.DictionarySense
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.DictionarySense
+import com.folium.dictionary.api.PartOfSpeech
 import org.json.JSONArray
 import org.json.JSONObject
 

@@ -1,9 +1,9 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
-import com.vayana.core.sync.usage.DataNetwork
-import com.vayana.core.sync.usage.NetworkSplit
-import com.vayana.core.sync.usage.SyncDataUsageEntry
-import com.vayana.core.sync.usage.SyncKind
+import com.folium.core.sync.usage.DataNetwork
+import com.folium.core.sync.usage.NetworkSplit
+import com.folium.core.sync.usage.SyncDataUsageEntry
+import com.folium.core.sync.usage.SyncKind
 import java.time.LocalDate
 import java.time.ZoneId
 import kotlin.test.Test

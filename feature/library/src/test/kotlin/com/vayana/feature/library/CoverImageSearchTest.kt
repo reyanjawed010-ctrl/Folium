@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import java.net.InetAddress
 import kotlin.test.Test

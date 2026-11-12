@@ -1,14 +1,14 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookNotebookFields
-import com.vayana.core.database.dao.LocalEpubFile
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.ReadingSessionRepositoryImpl
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookNotebookFields
+import com.folium.core.database.dao.LocalEpubFile
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.ReadingSessionRepositoryImpl
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.runner.RunWith

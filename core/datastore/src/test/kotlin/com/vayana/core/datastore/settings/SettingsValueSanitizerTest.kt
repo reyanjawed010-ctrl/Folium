@@ -1,6 +1,6 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
-import com.vayana.core.resources.R
+import com.folium.core.resources.R
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

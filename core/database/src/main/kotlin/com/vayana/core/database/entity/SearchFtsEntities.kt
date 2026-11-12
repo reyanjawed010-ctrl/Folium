@@ -1,4 +1,4 @@
-package com.vayana.core.database.entity
+package com.folium.core.database.entity
 
 import androidx.room.Entity
 import androidx.room.Fts4
@@ -6,7 +6,7 @@ import androidx.room.FtsOptions
 
 /**
  * Full-text index over [BookEntity]'s searchable text; row id = book id. A standalone copy kept current by
- * [com.vayana.core.database.search.BookSearchIndex]'s triggers, so only text changes re-index a book.
+ * [com.folium.core.database.search.BookSearchIndex]'s triggers, so only text changes re-index a book.
  */
 @Fts4(tokenizer = FtsOptions.TOKENIZER_UNICODE61)
 @Entity(tableName = "books_fts")

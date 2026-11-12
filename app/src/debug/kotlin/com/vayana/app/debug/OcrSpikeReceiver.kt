@@ -1,4 +1,4 @@
-package com.vayana.app.debug
+package com.folium.app.debug
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -8,9 +8,9 @@ import android.os.Debug
 import android.os.ParcelFileDescriptor
 import android.os.SystemClock
 import android.util.Log
-import com.vayana.format.ocr.BookRecognition
-import com.vayana.format.ocr.OcrModel
-import com.vayana.format.ocr.PageRecognizer
+import com.folium.format.ocr.BookRecognition
+import com.folium.format.ocr.OcrModel
+import com.folium.format.ocr.PageRecognizer
 import java.io.File
 import kotlin.concurrent.thread
 
@@ -18,7 +18,7 @@ import kotlin.concurrent.thread
  * Debug builds only: phase 1 of docs/SCANNED_PDF_TEXT_PLAN.md. Recognises pages of a PDF on the device and logs
  * time, memory and text under the tag "OcrSpike". Models go in files/ocr-models/tessdata/.
  *
- * adb shell am broadcast -n com.vayana.app/.debug.OcrSpikeReceiver --es pdf <path> --es pages 10,12,50
+ * adb shell am broadcast -n com.folium.app/.debug.OcrSpikeReceiver --es pdf <path> --es pages 10,12,50
  *     [--es lang mal] [--ei threads 1]
  */
 class OcrSpikeReceiver : BroadcastReceiver() {

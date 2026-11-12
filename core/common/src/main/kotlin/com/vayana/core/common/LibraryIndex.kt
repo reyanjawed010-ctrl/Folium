@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 import java.text.Normalizer
 import java.util.LinkedHashMap

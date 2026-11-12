@@ -1,13 +1,13 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.di.DatabaseModule
-import com.vayana.core.database.dao.EpubChapterText
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.AnnotationEntity
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.AnnotationRepositoryImpl
-import com.vayana.core.database.search.ftsSearchMatch
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.di.DatabaseModule
+import com.folium.core.database.dao.EpubChapterText
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.AnnotationEntity
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.AnnotationRepositoryImpl
+import com.folium.core.database.search.ftsSearchMatch
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.launch
@@ -60,8 +60,8 @@ class PhraseSearchTest {
     @Test fun scopesApplyBeforeLimitsToBooksNotesAndContent() = runBlocking {
         val outside = book("river boat outside", "EPUB")
         val target = book("river boat target", "EPUB")
-        val shelf = db.shelfDao().insert(com.vayana.core.database.entity.ShelfEntity(name = "Favorites", createdAt = 1, updatedAt = 1))
-        db.shelfDao().addBookToShelf(com.vayana.core.database.entity.BookShelfCrossRefEntity(target, shelf))
+        val shelf = db.shelfDao().insert(com.folium.core.database.entity.ShelfEntity(name = "Favorites", createdAt = 1, updatedAt = 1))
+        db.shelfDao().addBookToShelf(com.folium.core.database.entity.BookShelfCrossRefEntity(target, shelf))
         val targetNote = annotation(target, "river boat")
         repeat(5) { annotation(outside, "river boat") }
         for (id in listOf(outside, target)) {
@@ -78,7 +78,7 @@ class PhraseSearchTest {
         assertTrue(db.bookDao().observeSearchIds(match, 1, outside, shelf).first().isEmpty())
         assertTrue(db.annotationDao().observeSearch(match, 1, outside, shelf).first().isEmpty())
         assertTrue(db.epubPassageDao().search(match, 1, outside, shelf).first().isEmpty())
-        val updates = kotlinx.coroutines.channels.Channel<List<com.vayana.core.database.dao.EpubPassageHit>>()
+        val updates = kotlinx.coroutines.channels.Channel<List<com.folium.core.database.dao.EpubPassageHit>>()
         val collector = launch {
             db.epubPassageDao().search(match, 1, shelfId = shelf).collect { updates.send(it) }
         }

@@ -1,7 +1,7 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.shownReadingPercent
-import com.vayana.core.database.model.Book
+import com.folium.core.database.model.shownReadingPercent
+import com.folium.core.database.model.Book
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId

@@ -1,10 +1,10 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.Hashing
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.filesystem.StorageRoots
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.Hashing
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.filesystem.StorageRoots
 import java.io.File
 import java.io.Closeable
 import java.security.DigestInputStream

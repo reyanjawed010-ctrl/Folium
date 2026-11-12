@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -40,16 +40,16 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.OfflinePages
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.OfflinePages
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /** What the add dialog collects; the book is created from it as-is. */
 internal data class OfflineBookDraft(
@@ -398,7 +398,7 @@ internal fun OfflinePageFields(
 /** Book details' page editor for a book read outside the app. */
 @Composable
 internal fun OfflinePagesDialog(
-    book: com.vayana.core.database.model.Book,
+    book: com.folium.core.database.model.Book,
     onDismiss: () -> Unit,
     onSave: (pageCount: Int?, currentPage: Int?) -> Unit,
 ) {

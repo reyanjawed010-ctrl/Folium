@@ -1,4 +1,4 @@
-package com.vayana.baselineprofile
+package com.folium.baselineprofile
 
 import android.content.Intent
 import android.net.Uri
@@ -45,7 +45,7 @@ class BaselineProfileGenerator {
         if (findSampleBook() != null) return
         val context = InstrumentationRegistry.getInstrumentation().context
         val intent = Intent(Intent.ACTION_VIEW)
-            .setDataAndType(Uri.parse("content://com.vayana.baselineprofile.books/profile-sample.epub"), "application/epub+zip")
+            .setDataAndType(Uri.parse("content://com.folium.baselineprofile.books/profile-sample.epub"), "application/epub+zip")
             .setClassName(TargetPackage, "$TargetPackage.MainActivity")
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION)
         context.startActivity(intent)
@@ -94,7 +94,7 @@ class BaselineProfileGenerator {
     }
 
     private companion object {
-        const val TargetPackage = "com.vayana.app"
+        const val TargetPackage = "com.folium.app"
         const val SampleTitle = "Profile Sample"
         const val UiTimeoutMillis = 10_000L
         const val ImportTimeoutMillis = 30_000L

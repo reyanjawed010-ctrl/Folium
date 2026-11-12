@@ -1,4 +1,4 @@
-package com.vayana.feature.search
+package com.folium.feature.search
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel

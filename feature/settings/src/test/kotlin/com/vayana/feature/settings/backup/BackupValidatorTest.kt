@@ -1,8 +1,8 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import com.vayana.core.database.DATABASE_VERSION
+import com.folium.core.database.DATABASE_VERSION
 import java.io.File
 import kotlin.test.Test
 import kotlin.test.assertEquals

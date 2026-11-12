@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem
+package com.folium.core.designsystem
 
 import com.lemonappdev.konsist.api.Konsist
 import org.junit.jupiter.api.Assertions.assertTrue

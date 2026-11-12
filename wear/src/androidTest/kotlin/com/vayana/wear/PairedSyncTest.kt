@@ -1,8 +1,8 @@
-package com.vayana.wear
+package com.folium.wear
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 import java.util.UUID
 import org.junit.Assert.*
 import org.junit.Test

@@ -1,19 +1,19 @@
-package com.vayana.app
+package com.folium.app
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.datastore.settings.NavigationMode
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.app.widget.OpenBookRequest
-import com.vayana.app.widget.OpenBookRequests
-import com.vayana.app.widget.ShortcutDestination
-import com.vayana.app.widget.ShortcutRequests
-import com.vayana.core.common.IncomingBookFiles
-import com.vayana.feature.library.RecentlyDeletedAutoPurge
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.datastore.settings.NavigationMode
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.app.widget.OpenBookRequest
+import com.folium.app.widget.OpenBookRequests
+import com.folium.app.widget.ShortcutDestination
+import com.folium.app.widget.ShortcutRequests
+import com.folium.core.common.IncomingBookFiles
+import com.folium.feature.library.RecentlyDeletedAutoPurge
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
@@ -30,7 +30,7 @@ import kotlinx.coroutines.launch
 class AppSettingsViewModel @Inject constructor(
     private val settingsRepository: SettingsRepository,
     private val bookRepository: BookRepository,
-    private val annotationRepository: com.vayana.core.database.repository.AnnotationRepository,
+    private val annotationRepository: com.folium.core.database.repository.AnnotationRepository,
     private val recentlyDeletedAutoPurge: RecentlyDeletedAutoPurge,
     incomingBookFiles: IncomingBookFiles,
     private val openBookRequests: OpenBookRequests,

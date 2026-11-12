@@ -1,7 +1,7 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
-import com.vayana.core.database.dao.PendingCloudDeletionDao
-import com.vayana.core.database.entity.PendingCloudDeletionEntity
+import com.folium.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.database.entity.PendingCloudDeletionEntity
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlinx.coroutines.flow.Flow

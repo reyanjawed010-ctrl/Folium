@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 import kotlin.test.*
 import org.junit.Test

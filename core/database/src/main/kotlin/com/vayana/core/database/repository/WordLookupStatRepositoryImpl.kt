@@ -1,13 +1,13 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.dao.WordLookupStatDao
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.entity.LegacyWriterOrigin
-import com.vayana.core.database.entity.WordLookupStatEntity
-import com.vayana.core.database.model.WordLookupStat
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.dao.WordLookupStatDao
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.entity.LegacyWriterOrigin
+import com.folium.core.database.entity.WordLookupStatEntity
+import com.folium.core.database.model.WordLookupStat
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

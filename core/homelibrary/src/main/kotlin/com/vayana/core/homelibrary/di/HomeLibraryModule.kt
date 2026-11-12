@@ -1,14 +1,14 @@
-package com.vayana.core.homelibrary.di
+package com.folium.core.homelibrary.di
 
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.homelibrary.ContentResolverHomeLibrarySource
-import com.vayana.core.homelibrary.DataStoreHomeLibraryCheckpointStore
-import com.vayana.core.homelibrary.HomeLibraryCheckpointStore
-import com.vayana.core.homelibrary.HomeLibrarySource
-import com.vayana.core.homelibrary.HomeLibraryStore
-import com.vayana.core.homelibrary.HomeLibrarySyncEngine
-import com.vayana.core.homelibrary.RoomHomeLibraryStore
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.homelibrary.ContentResolverHomeLibrarySource
+import com.folium.core.homelibrary.DataStoreHomeLibraryCheckpointStore
+import com.folium.core.homelibrary.HomeLibraryCheckpointStore
+import com.folium.core.homelibrary.HomeLibrarySource
+import com.folium.core.homelibrary.HomeLibraryStore
+import com.folium.core.homelibrary.HomeLibrarySyncEngine
+import com.folium.core.homelibrary.RoomHomeLibraryStore
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

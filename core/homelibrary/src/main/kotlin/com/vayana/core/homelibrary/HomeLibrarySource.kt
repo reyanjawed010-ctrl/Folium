@@ -1,10 +1,10 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.net.Uri
-import com.vayana.core.common.DispatcherProvider
+import com.folium.core.common.DispatcherProvider
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.FileNotFoundException
 import java.io.InputStream

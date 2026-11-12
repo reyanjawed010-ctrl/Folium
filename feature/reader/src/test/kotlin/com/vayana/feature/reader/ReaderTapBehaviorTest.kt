@@ -1,8 +1,8 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.reader.api.Locator
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.reader.api.Locator
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

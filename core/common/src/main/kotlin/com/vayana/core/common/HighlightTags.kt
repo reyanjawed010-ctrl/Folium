@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 /**
  * Tags on highlights live in the note text as hashtags ("#idea", "#to-do"), so they sync, search and export

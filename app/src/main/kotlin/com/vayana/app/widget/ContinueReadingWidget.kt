@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -16,16 +16,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RemoteViews
 import androidx.annotation.LayoutRes
-import com.vayana.app.MainActivity
-import com.vayana.app.R
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.feature.reader.ReadAloudStatus
-import com.vayana.feature.reader.ReadAloudStatusHolder
+import com.folium.app.MainActivity
+import com.folium.app.R
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.database.model.Book
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.filesystem.StorageRoots
+import com.folium.feature.reader.ReadAloudStatus
+import com.folium.feature.reader.ReadAloudStatusHolder
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
@@ -40,7 +40,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.vayana.core.resources.R as Res
+import com.folium.core.resources.R as Res
 
 /** The home-screen widget: the book being read, its progress, and one tap back into it. */
 @AndroidEntryPoint
@@ -274,8 +274,8 @@ class ContinueReadingWidgetUpdater @Inject constructor(
     }.getOrNull()
 
     companion object {
-        const val ActionOpenBook = "com.vayana.app.OPEN_BOOK"
-        const val ExtraBookId = "com.vayana.app.extra.BOOK_ID"
+        const val ActionOpenBook = "com.folium.app.OPEN_BOOK"
+        const val ExtraBookId = "com.folium.app.extra.BOOK_ID"
         private const val OpenRequestCode = 0
         private const val CoverHeightPx = 640
         private const val CoverOversize = 1.25f

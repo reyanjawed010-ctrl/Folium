@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -45,15 +45,15 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import com.vayana.core.common.ShareImageFormat
-import com.vayana.core.common.shareBitmap
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.sharecard.ShareCardChoiceRow
-import com.vayana.core.designsystem.sharecard.ShareCardOptionChip
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.asAppDate
-import com.vayana.core.resources.R
+import com.folium.core.common.ShareImageFormat
+import com.folium.core.common.shareBitmap
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.sharecard.ShareCardChoiceRow
+import com.folium.core.designsystem.sharecard.ShareCardOptionChip
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.asAppDate
+import com.folium.core.resources.R
 import java.time.LocalDate
 import java.util.Locale
 import java.text.NumberFormat
@@ -94,9 +94,9 @@ internal fun LibraryStatsShareDialog(books: List<Book>, onDismiss: () -> Unit) {
     val palette = remember(theme, materialPalette) { paletteFor(theme, materialPalette) }
     val fonts = remember(context) {
         LibraryShareFonts(
-            serif = runCatching { ResourcesCompat.getFont(context, com.vayana.feature.library.R.font.literata_share) }.getOrNull()
+            serif = runCatching { ResourcesCompat.getFont(context, com.folium.feature.library.R.font.literata_share) }.getOrNull()
                 ?: Typeface.create("serif", Typeface.BOLD),
-            sans = runCatching { ResourcesCompat.getFont(context, com.vayana.feature.library.R.font.manrope_share) }.getOrNull()
+            sans = runCatching { ResourcesCompat.getFont(context, com.folium.feature.library.R.font.manrope_share) }.getOrNull()
                 ?: Typeface.create("sans-serif", Typeface.NORMAL),
         )
     }

@@ -1,8 +1,8 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.repository.AnnotationRepository
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.repository.AnnotationRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

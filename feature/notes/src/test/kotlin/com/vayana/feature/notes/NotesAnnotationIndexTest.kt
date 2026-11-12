@@ -1,7 +1,7 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

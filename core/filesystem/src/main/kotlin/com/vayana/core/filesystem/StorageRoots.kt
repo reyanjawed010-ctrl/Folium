@@ -1,4 +1,4 @@
-package com.vayana.core.filesystem
+package com.folium.core.filesystem
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext

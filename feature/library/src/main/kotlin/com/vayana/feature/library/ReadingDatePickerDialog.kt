@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -13,9 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.database.model.normalizeBorrowReturnAt
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.database.model.normalizeBorrowReturnAt
+import com.folium.core.resources.R
 
 /**
  * Material date picker for when reading started or finished. Future days, a start after [finishedAt] and a finish

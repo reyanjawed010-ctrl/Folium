@@ -1,18 +1,18 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
-import com.vayana.core.resources.failUnless
-import com.vayana.core.resources.uiText
-import com.vayana.core.resources.LocalizedException
-import com.vayana.core.resources.UiText
-import com.vayana.core.resources.R
+import com.folium.core.resources.failUnless
+import com.folium.core.resources.uiText
+import com.folium.core.resources.LocalizedException
+import com.folium.core.resources.UiText
+import com.folium.core.resources.R
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.vayana.core.database.ALL_MIGRATIONS
-import com.vayana.core.database.DATABASE_VERSION
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.BookFormat
+import com.folium.core.database.ALL_MIGRATIONS
+import com.folium.core.database.DATABASE_VERSION
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.BookFormat
 import java.io.File
 
 /** Validates and migrates only the staged copy, before any live data is closed or moved. */

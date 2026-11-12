@@ -1,6 +1,6 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.ReadingSession
+import com.folium.core.database.model.ReadingSession
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

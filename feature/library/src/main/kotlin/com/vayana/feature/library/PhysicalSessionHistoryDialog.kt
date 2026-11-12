@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,15 +39,15 @@ import androidx.compose.ui.platform.LocalLocale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.PhysicalReadingSessionSummary
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
-import com.vayana.core.designsystem.theme.asAppDateTime
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.PhysicalReadingSessionSummary
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
+import com.folium.core.designsystem.theme.asAppDateTime
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 

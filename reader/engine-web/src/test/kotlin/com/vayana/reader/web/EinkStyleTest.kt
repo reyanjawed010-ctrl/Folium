@@ -1,6 +1,6 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
-import com.vayana.reader.api.ReadTheme
+import com.folium.reader.api.ReadTheme
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

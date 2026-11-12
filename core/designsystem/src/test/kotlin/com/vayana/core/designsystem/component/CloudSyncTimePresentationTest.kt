@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.component
+package com.folium.core.designsystem.component
 
 import java.time.Instant
 import java.time.ZoneId

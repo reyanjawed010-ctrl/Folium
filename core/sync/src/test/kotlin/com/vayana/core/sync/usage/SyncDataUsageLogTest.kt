@@ -1,4 +1,4 @@
-package com.vayana.core.sync.usage
+package com.folium.core.sync.usage
 
 import java.io.File
 import java.nio.file.Files

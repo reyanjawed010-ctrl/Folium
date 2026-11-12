@@ -1,9 +1,9 @@
-package com.vayana.app.wear
+package com.folium.app.wear
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
-import com.vayana.core.wear.WearCover
+import com.folium.core.wear.WearCover
 import java.io.ByteArrayOutputStream
 import java.io.File
 

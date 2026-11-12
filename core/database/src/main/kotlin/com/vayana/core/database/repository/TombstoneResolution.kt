@@ -1,7 +1,7 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.TombstoneEntity
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.TombstoneEntity
 
 /**
  * Call from a `mergeCloudX(record)` function, before applying [incomingVersion] over local data that

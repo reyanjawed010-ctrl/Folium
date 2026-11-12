@@ -1,4 +1,4 @@
-package com.vayana.core.backup
+package com.folium.core.backup
 
 data class PortableSnapshot(
     val formatVersion: Int,

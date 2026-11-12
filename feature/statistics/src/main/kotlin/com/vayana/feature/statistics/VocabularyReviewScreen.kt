@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,8 +26,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.vayana.core.common.shareFile
-import com.vayana.core.database.repository.ReviewGrade
+import com.folium.core.common.shareFile
+import com.folium.core.database.repository.ReviewGrade
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -44,18 +44,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.vayana.core.database.model.VocabularyCard
-import com.vayana.core.designsystem.component.VayanaDropdownMenu
-import com.vayana.core.designsystem.component.VayanaMenuGroup
-import com.vayana.core.designsystem.component.VayanaMenuItem
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.theme.vayanaAnimateContentSize
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.database.model.VocabularyCard
+import com.folium.core.designsystem.component.VayanaDropdownMenu
+import com.folium.core.designsystem.component.VayanaMenuGroup
+import com.folium.core.designsystem.component.VayanaMenuItem
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.theme.vayanaAnimateContentSize
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import kotlinx.coroutines.launch
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)

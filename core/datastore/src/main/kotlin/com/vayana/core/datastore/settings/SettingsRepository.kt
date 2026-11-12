@@ -1,4 +1,4 @@
-package com.vayana.core.datastore.settings
+package com.folium.core.datastore.settings
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first

@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 /**
  * One tag as stored: control characters and whitespace runs collapse to single spaces, capped in length. The literal

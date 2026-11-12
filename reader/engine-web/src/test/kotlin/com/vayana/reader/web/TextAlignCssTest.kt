@@ -1,6 +1,6 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
-import com.vayana.reader.api.BookTextAlign
+import com.folium.reader.api.BookTextAlign
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

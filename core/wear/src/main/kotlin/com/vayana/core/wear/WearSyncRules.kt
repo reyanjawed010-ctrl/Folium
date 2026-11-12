@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 object WearSyncRules {
     const val PHONE = "vayana_phone"

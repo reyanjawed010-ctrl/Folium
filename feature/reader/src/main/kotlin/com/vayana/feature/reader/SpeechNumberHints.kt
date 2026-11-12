@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import android.text.SpannableString
 import android.text.Spanned

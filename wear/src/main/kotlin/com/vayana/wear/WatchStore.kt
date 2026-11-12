@@ -1,9 +1,9 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.content.Context
 import android.os.SystemClock
 import android.provider.Settings
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 
 class WatchStore(private val context: Context) {
     private val preferences = context.getSharedPreferences("reading", Context.MODE_PRIVATE)
@@ -19,7 +19,7 @@ class WatchStore(private val context: Context) {
             next = next.copy(timerRevision = previous.timerRevision + 1)
         if (next == previous) return@synchronized previous
         check(preferences.edit().putString("state", next.json()).commit()) { "Could not save reading data" }
-        if (com.vayana.core.wear.WatchTimerSurface.from(previous.active) != com.vayana.core.wear.WatchTimerSurface.from(next.active) || previous.books != next.books || previous.remoteTimer != next.remoteTimer || previous.timerCommands != next.timerCommands) {
+        if (com.folium.core.wear.WatchTimerSurface.from(previous.active) != com.folium.core.wear.WatchTimerSurface.from(next.active) || previous.books != next.books || previous.remoteTimer != next.remoteTimer || previous.timerCommands != next.timerCommands) {
             runCatching { WatchTimerSurfaces.refresh(context, next) }
                 .onFailure { android.util.Log.w("WatchStore", "Could not update timer surfaces", it) }
         }

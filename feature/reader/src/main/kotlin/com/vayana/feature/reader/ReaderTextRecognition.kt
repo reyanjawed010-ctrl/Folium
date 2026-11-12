@@ -1,4 +1,4 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import android.text.format.Formatter
 import androidx.compose.foundation.layout.Arrangement
@@ -37,9 +37,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.format.ocr.OcrModel
-import com.vayana.reader.api.PageTextSource
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.format.ocr.OcrModel
+import com.folium.reader.api.PageTextSource
 import java.util.Locale
 import kotlin.math.ceil
 

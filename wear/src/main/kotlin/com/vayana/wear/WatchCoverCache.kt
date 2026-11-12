@@ -1,10 +1,10 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
-import com.vayana.core.wear.WearCover
+import com.folium.core.wear.WearCover
 import java.io.File
 
 /** Private persistent files keep thumbnails available when the phone is offline. */

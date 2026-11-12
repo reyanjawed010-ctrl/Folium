@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 import java.io.File
 import java.util.zip.CRC32

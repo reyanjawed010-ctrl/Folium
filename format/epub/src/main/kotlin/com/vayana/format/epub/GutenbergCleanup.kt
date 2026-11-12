@@ -1,4 +1,4 @@
-package com.vayana.format.epub
+package com.folium.format.epub
 
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream

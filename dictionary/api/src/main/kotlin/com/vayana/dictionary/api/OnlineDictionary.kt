@@ -1,4 +1,4 @@
-package com.vayana.dictionary.api
+package com.folium.dictionary.api
 
 /** Where a word the offline dictionary lacks can be looked up on the web. */
 enum class OnlineDictionarySource { WIKTIONARY, WIKIPEDIA }

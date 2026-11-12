@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 import android.graphics.Bitmap
 import android.graphics.Color

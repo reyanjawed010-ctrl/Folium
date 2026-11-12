@@ -1,4 +1,4 @@
-package com.vayana.core.sync
+package com.folium.core.sync
 
 /**
  * Whether a sync failure only means the device had no usable network (no DNS, no route). Those are the normal

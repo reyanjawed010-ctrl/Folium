@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -13,8 +13,8 @@ import androidx.core.app.NotificationCompat
 import androidx.wear.ongoing.OngoingActivity
 import androidx.wear.ongoing.Status
 import androidx.wear.tiles.TileService
-import com.vayana.core.wear.*
-import com.vayana.core.wear.WatchTimerSurface
+import com.folium.core.wear.*
+import com.folium.core.wear.WatchTimerSurface
 
 object WatchTimerSurfaces {
     private const val CHANNEL = "reading-timer"

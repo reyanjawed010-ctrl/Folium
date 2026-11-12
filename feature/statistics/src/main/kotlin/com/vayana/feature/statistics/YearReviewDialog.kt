@@ -1,4 +1,4 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -26,12 +26,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLocale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import com.vayana.core.common.shareText
-import com.vayana.core.designsystem.sharecard.ShareCardDialog
-import com.vayana.core.designsystem.sharecard.ShareCardOptionChip
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.common.shareText
+import com.folium.core.designsystem.sharecard.ShareCardDialog
+import com.folium.core.designsystem.sharecard.ShareCardOptionChip
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import java.time.DayOfWeek
 import java.time.Month
 import java.time.format.TextStyle

@@ -1,32 +1,32 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
-import com.vayana.core.sync.setup.GitHubConnectionTestOutcome
-import com.vayana.core.sync.setup.GitHubConnectionTester
-import com.vayana.core.sync.setup.GitHubSyncSettingsTransfer
-import com.vayana.core.sync.setup.GitHubSyncSettingsTransferOutcome
-import com.vayana.core.resources.uiText
-import com.vayana.core.resources.LocalizedException
-import com.vayana.core.resources.UiText
-import com.vayana.core.resources.R
+import com.folium.core.sync.setup.GitHubConnectionTestOutcome
+import com.folium.core.sync.setup.GitHubConnectionTester
+import com.folium.core.sync.setup.GitHubSyncSettingsTransfer
+import com.folium.core.sync.setup.GitHubSyncSettingsTransferOutcome
+import com.folium.core.resources.uiText
+import com.folium.core.resources.LocalizedException
+import com.folium.core.resources.UiText
+import com.folium.core.resources.R
 import android.content.Context
 import android.net.Uri
 import android.provider.OpenableColumns
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.datastore.settings.ImportedFont
-import com.vayana.core.datastore.settings.Setting
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.feature.settings.backup.BackupInspection
-import com.vayana.feature.settings.backup.BackupManager
-import com.vayana.feature.settings.backup.AutomaticBackupSettings
-import com.vayana.feature.settings.backup.AutomaticBackupFrequency
-import com.vayana.feature.settings.backup.BackupFolderFile
-import com.vayana.feature.settings.backup.BackupOutcome
-import com.vayana.feature.settings.backup.InspectOutcome
-import com.vayana.feature.settings.backup.RestoreOutcome
+import com.folium.core.datastore.settings.ImportedFont
+import com.folium.core.datastore.settings.Setting
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.filesystem.StorageRoots
+import com.folium.feature.settings.backup.BackupInspection
+import com.folium.feature.settings.backup.BackupManager
+import com.folium.feature.settings.backup.AutomaticBackupSettings
+import com.folium.feature.settings.backup.AutomaticBackupFrequency
+import com.folium.feature.settings.backup.BackupFolderFile
+import com.folium.feature.settings.backup.BackupOutcome
+import com.folium.feature.settings.backup.InspectOutcome
+import com.folium.feature.settings.backup.RestoreOutcome
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
@@ -44,7 +44,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Locale
 import java.util.UUID
-import com.vayana.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.database.dao.PendingCloudDeletionDao
 
 sealed interface BackupUiState {
     data object Idle : BackupUiState

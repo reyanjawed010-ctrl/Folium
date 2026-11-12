@@ -1,6 +1,6 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.common.AppLanguage
+import com.folium.core.common.AppLanguage
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -176,8 +176,8 @@ class ReadAloudForegroundService : Service() {
         private const val NotificationId = 4_201
         private const val CommandRequestCodeBase = 4_210
         private const val MediaSessionTag = "VayanaReadAloud"
-        private const val ActionUpdate = "com.vayana.feature.reader.action.UPDATE_READ_ALOUD"
-        private const val ActionCommand = "com.vayana.feature.reader.action.READ_ALOUD_COMMAND"
+        private const val ActionUpdate = "com.folium.feature.reader.action.UPDATE_READ_ALOUD"
+        private const val ActionCommand = "com.folium.feature.reader.action.READ_ALOUD_COMMAND"
         private const val ExtraPlaying = "playing"
         private const val ExtraBookTitle = "book_title"
         private const val ExtraProgressPercent = "progress_percent"

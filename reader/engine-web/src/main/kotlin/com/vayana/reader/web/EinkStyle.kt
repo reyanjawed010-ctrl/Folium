@@ -1,6 +1,6 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
-import com.vayana.reader.api.ReadTheme
+import com.folium.reader.api.ReadTheme
 
 /** Keep slow-refresh rendering independent of whether the panel can display color. */
 internal fun einkStyleCss(theme: ReadTheme): String = buildString {

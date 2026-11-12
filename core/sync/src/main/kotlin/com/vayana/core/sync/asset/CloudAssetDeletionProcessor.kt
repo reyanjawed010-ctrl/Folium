@@ -1,9 +1,9 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.dao.PendingCloudDeletionDao
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
 import javax.inject.Inject
 
 data class CloudAssetDeletionSummary(

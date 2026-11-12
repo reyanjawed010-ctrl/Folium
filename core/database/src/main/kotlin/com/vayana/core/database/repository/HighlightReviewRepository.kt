@@ -1,10 +1,10 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.HighlightReviewDao
-import com.vayana.core.database.entity.HighlightReviewEntity
-import com.vayana.core.database.model.Annotation
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.HighlightReviewDao
+import com.folium.core.database.entity.HighlightReviewEntity
+import com.folium.core.database.model.Annotation
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

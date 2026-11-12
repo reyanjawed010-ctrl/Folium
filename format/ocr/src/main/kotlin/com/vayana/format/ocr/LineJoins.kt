@@ -1,4 +1,4 @@
-package com.vayana.format.ocr
+package com.folium.format.ocr
 
 /**
  * Which line ends of a recognised book fall inside a word. Malayalam books break words at the end of a line without

@@ -1,4 +1,4 @@
-package com.vayana.core.diagnostics
+package com.folium.core.diagnostics
 
 enum class DiagnosticCategory {
     CRASH,

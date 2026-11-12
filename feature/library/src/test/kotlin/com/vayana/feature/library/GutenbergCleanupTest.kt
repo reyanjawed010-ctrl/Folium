@@ -1,6 +1,6 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.format.epub.GutenbergCleanup
+import com.folium.format.epub.GutenbergCleanup
 import java.io.File
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile

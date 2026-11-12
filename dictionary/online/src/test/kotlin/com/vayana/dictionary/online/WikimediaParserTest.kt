@@ -1,6 +1,6 @@
-package com.vayana.dictionary.online
+package com.folium.dictionary.online
 
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.PartOfSpeech
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

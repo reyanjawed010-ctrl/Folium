@@ -1,4 +1,4 @@
-package com.vayana.core.diagnostics
+package com.folium.core.diagnostics
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext

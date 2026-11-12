@@ -1,7 +1,7 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
-import com.vayana.core.sync.usage.DayUsage
-import com.vayana.core.sync.usage.NetworkSplit
+import com.folium.core.sync.usage.DayUsage
+import com.folium.core.sync.usage.NetworkSplit
 import java.io.File
 import java.nio.file.Files
 import java.time.LocalDate

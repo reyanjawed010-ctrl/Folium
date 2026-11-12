@@ -1,13 +1,13 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.BookSource
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.CloudBookMergeResult
-import com.vayana.core.database.repository.CloudBookRecord
-import com.vayana.core.database.repository.CloudHomeLibraryOrigin
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.BookSource
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.CloudBookMergeResult
+import com.folium.core.database.repository.CloudBookRecord
+import com.folium.core.database.repository.CloudHomeLibraryOrigin
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test

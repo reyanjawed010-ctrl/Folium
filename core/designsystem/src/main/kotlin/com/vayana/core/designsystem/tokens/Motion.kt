@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.tokens
+package com.folium.core.designsystem.tokens
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.SpringSpec
@@ -6,7 +6,7 @@ import androidx.compose.animation.core.spring
 import androidx.compose.ui.unit.dp
 
 /**
- * Spring-based, emphasized motion (Design/DESIGN_SPEC.md §1). In [com.vayana.core.designsystem.theme.DisplayProfile.E_INK]
+ * Spring-based, emphasized motion (Design/DESIGN_SPEC.md §1). In [com.folium.core.designsystem.theme.DisplayProfile.E_INK]
  * every duration in [Durations] collapses to zero and every spring in [Springs] becomes a snap —
  * not merely "fast": a fast animation still ghosts on E-Ink hardware (docs/PRODUCT_SPEC.md §6).
  */

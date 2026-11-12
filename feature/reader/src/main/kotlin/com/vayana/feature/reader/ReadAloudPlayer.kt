@@ -1,8 +1,8 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.reader.api.BookEngine
-import com.vayana.reader.api.SpeechChunk
-import com.vayana.reader.api.SpeechSentence
+import com.folium.reader.api.BookEngine
+import com.folium.reader.api.SpeechChunk
+import com.folium.reader.api.SpeechSentence
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Job

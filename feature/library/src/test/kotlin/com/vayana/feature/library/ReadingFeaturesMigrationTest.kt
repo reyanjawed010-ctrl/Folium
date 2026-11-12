@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.database.sqlite.SQLiteDatabase
 import androidx.room.Room
-import com.vayana.core.database.ALL_MIGRATIONS
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.sync.FullSyncChangeTrackerCallback
+import com.folium.core.database.ALL_MIGRATIONS
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.sync.FullSyncChangeTrackerCallback
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.flow.first
 import org.json.JSONObject
@@ -62,7 +62,7 @@ class ReadingFeaturesMigrationTest {
             sql.execSQL("UPDATE books SET readingDisposition='PAUSED', dispositionUpdatedAt=200 WHERE id=$id")
             sql.query("SELECT required FROM full_sync_state WHERE id=0").use { it.moveToFirst(); assertEquals(1, it.getInt(0)) }
             val dao = db.epubPassageDao()
-            dao.replace(id, "hash", sequenceOf(com.vayana.core.database.dao.EpubChapterText("a", "A", "migration moonlight", listOf(0..18))))
+            dao.replace(id, "hash", sequenceOf(com.folium.core.database.dao.EpubChapterText("a", "A", "migration moonlight", listOf(0..18))))
             assertEquals(1, dao.search("moon*",10).first().size)
         } finally {
             db.close()

@@ -1,16 +1,16 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
 import android.content.Context
 import android.net.Uri
-import com.vayana.core.resources.LocalizedException
-import com.vayana.core.resources.R
-import com.vayana.core.resources.failUnless
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.DictionaryKind
-import com.vayana.dictionary.api.DictionaryPackState
-import com.vayana.dictionary.api.DictionaryRepository
-import com.vayana.dictionary.api.DictionaryStatus
-import com.vayana.dictionary.api.FreeDictOffer
+import com.folium.core.resources.LocalizedException
+import com.folium.core.resources.R
+import com.folium.core.resources.failUnless
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.DictionaryKind
+import com.folium.dictionary.api.DictionaryPackState
+import com.folium.dictionary.api.DictionaryRepository
+import com.folium.dictionary.api.DictionaryStatus
+import com.folium.dictionary.api.FreeDictOffer
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

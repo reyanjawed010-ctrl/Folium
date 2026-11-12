@@ -1,4 +1,4 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse

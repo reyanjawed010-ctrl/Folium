@@ -1,69 +1,69 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.resources.R
-import com.vayana.core.resources.uiText
-import com.vayana.core.resources.UiText
+import com.folium.core.resources.R
+import com.folium.core.resources.uiText
+import com.folium.core.resources.UiText
 import androidx.compose.ui.graphics.toArgb
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.core.content.edit
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.database.repository.AnnotationRepository
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.database.repository.ReadingSessionRepository
-import com.vayana.core.database.repository.VocabularyCardRepository
-import com.vayana.core.database.repository.WordLookupStatRepository
-import com.vayana.core.datastore.settings.ReaderFontFamily
-import com.vayana.core.datastore.settings.ReaderHyphenation
-import com.vayana.core.datastore.settings.ReaderTextAlign
-import com.vayana.core.datastore.settings.ReaderTheme
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsRepository
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.designsystem.tokens.Palette
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.isMonochrome
-import com.vayana.core.designsystem.theme.ThemeMode
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.core.sync.progress.ReadingProgressOnlySyncer
-import com.vayana.core.sync.progress.ReadingProgressSyncResult
-import com.vayana.core.sync.progress.ReadingProgressSyncStatus
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.DictionaryPackState
-import com.vayana.dictionary.api.DictionaryRepository
-import com.vayana.dictionary.api.OnlineDictionary
-import com.vayana.dictionary.api.OnlineDictionarySource
-import com.vayana.reader.api.BookEngine
-import com.vayana.reader.api.BookHyphenation
-import com.vayana.reader.api.BookStyle
-import com.vayana.reader.api.BookSource
-import com.vayana.reader.api.BookTextAlign
-import com.vayana.reader.api.Locator
-import com.vayana.reader.api.NavTarget
-import com.vayana.reader.api.OpenBook
-import com.vayana.reader.api.ReadTheme
-import com.vayana.reader.api.ReaderAnnotation
-import com.vayana.reader.api.ReaderAnnotationType
-import com.vayana.reader.api.ReaderSelection
-import com.vayana.reader.api.Footnote
-import com.vayana.reader.api.FootnoteOpened
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.model.VocabularyCard
-import com.vayana.core.database.model.isCommunityQuote
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.database.repository.AnnotationRepository
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.database.repository.ReadingSessionRepository
+import com.folium.core.database.repository.VocabularyCardRepository
+import com.folium.core.database.repository.WordLookupStatRepository
+import com.folium.core.datastore.settings.ReaderFontFamily
+import com.folium.core.datastore.settings.ReaderHyphenation
+import com.folium.core.datastore.settings.ReaderTextAlign
+import com.folium.core.datastore.settings.ReaderTheme
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsRepository
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.isMonochrome
+import com.folium.core.designsystem.theme.ThemeMode
+import com.folium.core.filesystem.StorageRoots
+import com.folium.core.sync.progress.ReadingProgressOnlySyncer
+import com.folium.core.sync.progress.ReadingProgressSyncResult
+import com.folium.core.sync.progress.ReadingProgressSyncStatus
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.DictionaryPackState
+import com.folium.dictionary.api.DictionaryRepository
+import com.folium.dictionary.api.OnlineDictionary
+import com.folium.dictionary.api.OnlineDictionarySource
+import com.folium.reader.api.BookEngine
+import com.folium.reader.api.BookHyphenation
+import com.folium.reader.api.BookStyle
+import com.folium.reader.api.BookSource
+import com.folium.reader.api.BookTextAlign
+import com.folium.reader.api.Locator
+import com.folium.reader.api.NavTarget
+import com.folium.reader.api.OpenBook
+import com.folium.reader.api.ReadTheme
+import com.folium.reader.api.ReaderAnnotation
+import com.folium.reader.api.ReaderAnnotationType
+import com.folium.reader.api.ReaderSelection
+import com.folium.reader.api.Footnote
+import com.folium.reader.api.FootnoteOpened
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.model.VocabularyCard
+import com.folium.core.database.model.isCommunityQuote
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
-import com.vayana.format.ocr.BookRecognition
-import com.vayana.format.ocr.OcrModel
+import com.folium.format.ocr.BookRecognition
+import com.folium.format.ocr.OcrModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
@@ -113,7 +113,7 @@ sealed interface ReaderUiState {
         val bookCoverPath: String? = null,
         val bookSeries: String? = null,
         val bookSeriesNumber: String? = null,
-        val toc: List<com.vayana.reader.api.TocEntry>,
+        val toc: List<com.folium.reader.api.TocEntry>,
         val currentLocator: Locator?,
         val annotations: List<Annotation> = emptyList(),
         val selection: ReaderSelection? = null,
@@ -127,7 +127,7 @@ sealed interface ReaderUiState {
         /** The page is larger than the screen (zoomed or fit-width PDF): drags scroll it instead of edge swipes. */
         val pageScrollable: Boolean = false,
         /** Where the PDF page on screen gets its text; null for EPUBs and until the page reports it. */
-        val pageText: com.vayana.reader.api.PageTextSource? = null,
+        val pageText: com.folium.reader.api.PageTextSource? = null,
         /** The book's declared language, so web lookups use that language's Wikipedia and Wiktionary entries. */
         val bookLanguage: String? = null,
     ) : ReaderUiState
@@ -557,7 +557,7 @@ class ReaderViewModel @Inject constructor(
         engineJobs += viewModelScope.launch {
             engine.events().collect { event ->
                 when (event) {
-                    is com.vayana.reader.api.EngineEvent.SelectionChanged -> {
+                    is com.folium.reader.api.EngineEvent.SelectionChanged -> {
                         _uiState.update { current ->
                             if (current is ReaderUiState.Loaded) {
                                 current.copy(
@@ -573,7 +573,7 @@ class ReaderViewModel @Inject constructor(
                         if (event.selection?.isWordLookup == true) countLookupNow()
                         maybeAutoMarkSelection(event.selection)
                     }
-                    is com.vayana.reader.api.EngineEvent.AnnotationTapped -> {
+                    is com.folium.reader.api.EngineEvent.AnnotationTapped -> {
                         _uiState.update { current ->
                             if (current !is ReaderUiState.Loaded) return@update current
                             val annotationId = event.annotationId?.toLongOrNull()
@@ -602,27 +602,27 @@ class ReaderViewModel @Inject constructor(
                             _dictionaryLookup.value = DictionaryLookupState.Hidden
                         }
                     }
-                    is com.vayana.reader.api.EngineEvent.FontSizeStepRequested -> {
+                    is com.folium.reader.api.EngineEvent.FontSizeStepRequested -> {
                         stepFontSize(event.direction)
                     }
-                    is com.vayana.reader.api.EngineEvent.SearchCompleted -> {
+                    is com.folium.reader.api.EngineEvent.SearchCompleted -> {
                         if (event.query == lastSearchQuery) _searchResults.value = event.results
                     }
                     is FootnoteOpened -> _footnote.value = event.footnote
-                    com.vayana.reader.api.EngineEvent.StoryEndReached -> offerBookFinishedPrompt()
-                    com.vayana.reader.api.EngineEvent.RendererGone -> onRendererGone()
-                    is com.vayana.reader.api.EngineEvent.PageScrollableChanged -> _uiState.update { current ->
+                    com.folium.reader.api.EngineEvent.StoryEndReached -> offerBookFinishedPrompt()
+                    com.folium.reader.api.EngineEvent.RendererGone -> onRendererGone()
+                    is com.folium.reader.api.EngineEvent.PageScrollableChanged -> _uiState.update { current ->
                         if (current is ReaderUiState.Loaded) current.copy(pageScrollable = event.scrollable) else current
                     }
-                    is com.vayana.reader.api.EngineEvent.PageTextChanged -> _uiState.update { current ->
+                    is com.folium.reader.api.EngineEvent.PageTextChanged -> _uiState.update { current ->
                         if (current is ReaderUiState.Loaded) current.copy(pageText = event.source) else current
                     }
-                    is com.vayana.reader.api.EngineEvent.PdfPasswordRequired -> {
+                    is com.folium.reader.api.EngineEvent.PdfPasswordRequired -> {
                         _pdfPasswordPrompt.value = PdfPasswordPrompt(event.incorrect)
                     }
-                    com.vayana.reader.api.EngineEvent.ControlsRequested -> _readerControlsRequest.update { it + 1L }
-                    com.vayana.reader.api.EngineEvent.ReadingInfoRequested -> _readingInfoRequest.update { it + 1L }
-                    is com.vayana.reader.api.EngineEvent.Relocated -> {
+                    com.folium.reader.api.EngineEvent.ControlsRequested -> _readerControlsRequest.update { it + 1L }
+                    com.folium.reader.api.EngineEvent.ReadingInfoRequested -> _readingInfoRequest.update { it + 1L }
+                    is com.folium.reader.api.EngineEvent.Relocated -> {
                         learnPace(event.locator.bookMinutesLeftExact)
                         _uiState.update { current ->
                             if (current is ReaderUiState.Loaded &&
@@ -634,7 +634,7 @@ class ReaderViewModel @Inject constructor(
                             }
                         }
                     }
-                    is com.vayana.reader.api.EngineEvent.Error -> Unit
+                    is com.folium.reader.api.EngineEvent.Error -> Unit
                 }
             }
         }
@@ -684,8 +684,8 @@ class ReaderViewModel @Inject constructor(
         engine.close()
     }
 
-    private val _searchResults = MutableStateFlow<List<com.vayana.reader.api.SearchResult>>(emptyList())
-    val searchResults: StateFlow<List<com.vayana.reader.api.SearchResult>> = _searchResults
+    private val _searchResults = MutableStateFlow<List<com.folium.reader.api.SearchResult>>(emptyList())
+    val searchResults: StateFlow<List<com.folium.reader.api.SearchResult>> = _searchResults
     private var lastSearchQuery: String = ""
     private var searchJob: Job? = null
 
@@ -711,7 +711,7 @@ class ReaderViewModel @Inject constructor(
         viewModelScope.launch { boundEngine?.clearSearch() }
     }
 
-    fun openSearchResult(result: com.vayana.reader.api.SearchResult) {
+    fun openSearchResult(result: com.folium.reader.api.SearchResult) {
         pushReturnLocator()
         dispatch(
             NavTarget.ToLocator(

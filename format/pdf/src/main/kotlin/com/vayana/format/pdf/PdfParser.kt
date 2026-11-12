@@ -1,4 +1,4 @@
-package com.vayana.format.pdf
+package com.folium.format.pdf
 
 import android.graphics.Bitmap
 import android.graphics.Color

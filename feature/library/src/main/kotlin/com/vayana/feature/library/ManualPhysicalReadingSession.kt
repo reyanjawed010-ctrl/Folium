@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import java.time.Instant
 import java.time.ZoneId

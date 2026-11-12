@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.component
+package com.folium.core.designsystem.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
@@ -17,7 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.vayana.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Sizes
 
 /** One entry of a [VayanaDropdownMenu]. */
 class VayanaMenuItem(

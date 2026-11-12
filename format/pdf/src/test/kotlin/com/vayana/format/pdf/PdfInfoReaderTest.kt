@@ -1,4 +1,4 @@
-package com.vayana.format.pdf
+package com.folium.format.pdf
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

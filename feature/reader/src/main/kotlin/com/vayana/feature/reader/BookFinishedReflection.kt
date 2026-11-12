@@ -1,11 +1,11 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.repository.AnnotationRepository
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.reader.api.Locator
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.repository.AnnotationRepository
+import com.folium.core.database.repository.BookRepository
+import com.folium.reader.api.Locator
 
 /** Save completion, the optional rating and an ordinary journal note as one operation, safe to retry on failure. */
 internal suspend fun finishBookWithReflection(

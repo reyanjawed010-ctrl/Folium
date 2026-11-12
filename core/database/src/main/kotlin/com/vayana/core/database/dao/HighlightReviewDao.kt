@@ -1,10 +1,10 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
-import com.vayana.core.database.entity.HighlightReviewEntity
-import com.vayana.core.database.entity.AnnotationEntity
+import com.folium.core.database.entity.HighlightReviewEntity
+import com.folium.core.database.entity.AnnotationEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

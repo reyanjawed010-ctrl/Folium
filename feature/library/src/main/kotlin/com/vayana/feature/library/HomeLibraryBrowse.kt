@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.HomeLibraryDetails
-import com.vayana.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.HomeLibraryDetails
+import com.folium.core.database.model.PhysicalBookOwnership
 import java.text.Normalizer
 import java.util.Locale
 

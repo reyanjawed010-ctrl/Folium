@@ -1,29 +1,29 @@
-package com.vayana.core.database.di
+package com.folium.core.database.di
 
 import android.content.Context
 import androidx.room.Room
-import com.vayana.core.database.ALL_MIGRATIONS
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.AnnotationDao
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.ReadingSessionDao
-import com.vayana.core.database.dao.ShelfDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.dao.VocabularyCardDao
-import com.vayana.core.database.dao.WordLookupStatDao
+import com.folium.core.database.ALL_MIGRATIONS
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.AnnotationDao
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.ReadingSessionDao
+import com.folium.core.database.dao.ShelfDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.dao.VocabularyCardDao
+import com.folium.core.database.dao.WordLookupStatDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
-import com.vayana.core.database.search.BookSearchIndexCallback
-import com.vayana.core.database.dao.HighlightReviewDao
-import com.vayana.core.database.dao.FullSyncStateDao
-import com.vayana.core.database.dao.SyncedSnapshotSliceDao
-import com.vayana.core.database.dao.PendingCloudDeletionDao
-import com.vayana.core.database.sync.FullSyncChangeTrackerCallback
+import com.folium.core.database.search.BookSearchIndexCallback
+import com.folium.core.database.dao.HighlightReviewDao
+import com.folium.core.database.dao.FullSyncStateDao
+import com.folium.core.database.dao.SyncedSnapshotSliceDao
+import com.folium.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.database.sync.FullSyncChangeTrackerCallback
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -35,12 +35,12 @@ object DatabaseModule {
         Room.databaseBuilder(context, VayanaDatabase::class.java, "vayana.db")
             .addMigrations(*ALL_MIGRATIONS)
             .addCallback(BookSearchIndexCallback)
-            .addCallback(com.vayana.core.database.search.EpubPassageIndexCallback)
+            .addCallback(com.folium.core.database.search.EpubPassageIndexCallback)
             .addCallback(FullSyncChangeTrackerCallback)
             .build()
 
     @Provides
-    fun provideEpubPassageDao(database: VayanaDatabase): com.vayana.core.database.dao.EpubPassageDao = database.epubPassageDao()
+    fun provideEpubPassageDao(database: VayanaDatabase): com.folium.core.database.dao.EpubPassageDao = database.epubPassageDao()
 
     @Provides
     fun provideBookDao(database: VayanaDatabase): BookDao = database.bookDao()

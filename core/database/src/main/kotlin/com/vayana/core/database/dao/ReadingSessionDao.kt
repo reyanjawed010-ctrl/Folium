@@ -1,12 +1,12 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.model.PhysicalReadingSessionSummary
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.model.PhysicalReadingSessionSummary
 import kotlinx.coroutines.flow.Flow
 
 @Dao

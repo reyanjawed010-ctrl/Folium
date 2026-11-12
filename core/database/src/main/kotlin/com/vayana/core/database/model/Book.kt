@@ -1,4 +1,4 @@
-package com.vayana.core.database.model
+package com.folium.core.database.model
 
 import java.time.DayOfWeek
 import java.time.Instant
@@ -65,7 +65,7 @@ fun normalizeBorrowReturnAt(returnAt: Long?, zone: ZoneId = ZoneId.systemDefault
 
 /**
  * Domain-facing book model — the public surface of `:core:database`. Callers never see
- * [com.vayana.core.database.entity.BookEntity] directly, keeping Room out of feature/UI code (§0.5).
+ * [com.folium.core.database.entity.BookEntity] directly, keeping Room out of feature/UI code (§0.5).
  */
 data class Book(
     val id: Long,

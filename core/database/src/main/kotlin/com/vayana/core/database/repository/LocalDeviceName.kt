@@ -1,4 +1,4 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import javax.inject.Inject
 import javax.inject.Singleton

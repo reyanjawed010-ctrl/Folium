@@ -1,9 +1,9 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.designsystem.theme.isMonochromeEink
-import com.vayana.core.resources.UiText
+import com.folium.core.designsystem.theme.isMonochromeEink
+import com.folium.core.resources.UiText
 import android.widget.Toast
-import com.vayana.core.designsystem.component.asString
+import com.folium.core.designsystem.component.asString
 import android.Manifest
 import android.app.Activity
 import android.graphics.BitmapFactory
@@ -113,7 +113,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
-import com.vayana.core.designsystem.component.cloudSyncStatusText
+import com.folium.core.designsystem.component.cloudSyncStatusText
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -172,51 +172,51 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import kotlinx.coroutines.flow.StateFlow
-import com.vayana.core.common.QuoteCitation
-import com.vayana.core.designsystem.sharecard.QuoteShareDialog
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.datastore.settings.FloatSetting
-import com.vayana.core.datastore.settings.IntSetting
-import com.vayana.core.datastore.settings.ReaderTextAlign
+import com.folium.core.common.QuoteCitation
+import com.folium.core.designsystem.sharecard.QuoteShareDialog
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.datastore.settings.FloatSetting
+import com.folium.core.datastore.settings.IntSetting
+import com.folium.core.datastore.settings.ReaderTextAlign
 import androidx.compose.material.icons.outlined.FormatAlignLeft
 import androidx.compose.material.icons.outlined.FormatAlignCenter
 import androidx.compose.material.icons.outlined.FormatAlignRight
 import androidx.compose.material.icons.outlined.FormatAlignJustify
-import com.vayana.core.datastore.settings.ReaderFontFamily
-import com.vayana.core.datastore.settings.ReaderTheme
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.datastore.settings.TapZoneMode
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.LocalEinkPalette
-import com.vayana.core.designsystem.theme.isMonochrome
-import com.vayana.core.designsystem.theme.PageKeyDirection
-import com.vayana.core.designsystem.theme.pageKeyDirection
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.ThemeMode
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.designsystem.theme.vayanaFadeIn
-import com.vayana.core.designsystem.theme.vayanaFadeOut
-import com.vayana.core.designsystem.theme.vayanaScaleIn
-import com.vayana.core.designsystem.theme.vayanaScaleOut
-import com.vayana.core.designsystem.theme.vayanaSlideInVertically
-import com.vayana.core.designsystem.theme.vayanaSlideOutVertically
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Palette
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
-import com.vayana.dictionary.api.DictionaryEntry
-import com.vayana.dictionary.api.OnlineDictionarySource
-import com.vayana.reader.api.BookEngine
-import com.vayana.reader.api.Locator
-import com.vayana.reader.api.TocEntry
-import com.vayana.reader.web.FoliateBookEngine
+import com.folium.core.datastore.settings.ReaderFontFamily
+import com.folium.core.datastore.settings.ReaderTheme
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.datastore.settings.TapZoneMode
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.LocalEinkPalette
+import com.folium.core.designsystem.theme.isMonochrome
+import com.folium.core.designsystem.theme.PageKeyDirection
+import com.folium.core.designsystem.theme.pageKeyDirection
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.ThemeMode
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.designsystem.theme.vayanaFadeIn
+import com.folium.core.designsystem.theme.vayanaFadeOut
+import com.folium.core.designsystem.theme.vayanaScaleIn
+import com.folium.core.designsystem.theme.vayanaScaleOut
+import com.folium.core.designsystem.theme.vayanaSlideInVertically
+import com.folium.core.designsystem.theme.vayanaSlideOutVertically
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
+import com.folium.dictionary.api.DictionaryEntry
+import com.folium.dictionary.api.OnlineDictionarySource
+import com.folium.reader.api.BookEngine
+import com.folium.reader.api.Locator
+import com.folium.reader.api.TocEntry
+import com.folium.reader.web.FoliateBookEngine
 import kotlin.math.abs
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
@@ -227,7 +227,7 @@ import androidx.compose.runtime.produceState
 import android.view.WindowManager
 import androidx.compose.material.icons.outlined.Headphones
 import androidx.compose.material.icons.outlined.Translate
-import com.vayana.reader.api.Footnote
+import com.folium.reader.api.Footnote
 
 @Composable
 fun ReaderRoute(onBack: () -> Unit, modifier: Modifier = Modifier, onReviewVocabulary: () -> Unit = {}) {
@@ -832,9 +832,9 @@ private fun ReaderScreen(
     onSaveJournal: suspend (String) -> Unit,
     dictionaryLookup: DictionaryLookupState,
     recentLookups: List<String>,
-    searchResults: List<com.vayana.reader.api.SearchResult>,
+    searchResults: List<com.folium.reader.api.SearchResult>,
     onSearchQueryChange: (String) -> Unit,
-    onSearchResultClick: (com.vayana.reader.api.SearchResult) -> Unit,
+    onSearchResultClick: (com.folium.reader.api.SearchResult) -> Unit,
     onClearSearch: () -> Unit,
     onLookupWord: (String) -> Unit,
     onLookupOnline: (OnlineDictionarySource) -> Unit,
@@ -2279,9 +2279,9 @@ private fun ReaderChrome(
     readAloudVoiceControls: ReadAloudVoiceControls,
     onCreateBookmark: () -> Unit,
     onRefreshScreen: () -> Unit,
-    searchResults: List<com.vayana.reader.api.SearchResult>,
+    searchResults: List<com.folium.reader.api.SearchResult>,
     onSearchQueryChange: (String) -> Unit,
-    onSearchResultClick: (com.vayana.reader.api.SearchResult) -> Unit,
+    onSearchResultClick: (com.folium.reader.api.SearchResult) -> Unit,
     onClearSearch: () -> Unit,
     onStartReadAloud: () -> Unit,
     chapterWords: ChapterWordsState,
@@ -2840,9 +2840,9 @@ private fun NotesSidePanel(
 
 @Composable
 private fun SearchPanel(
-    results: List<com.vayana.reader.api.SearchResult>,
+    results: List<com.folium.reader.api.SearchResult>,
     onQueryChange: (String) -> Unit,
-    onResultClick: (com.vayana.reader.api.SearchResult) -> Unit,
+    onResultClick: (com.folium.reader.api.SearchResult) -> Unit,
     onClear: () -> Unit,
 ) {
     var query by remember { mutableStateOf("") }

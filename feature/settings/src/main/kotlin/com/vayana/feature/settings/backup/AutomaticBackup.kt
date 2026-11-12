@@ -1,9 +1,9 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
-import com.vayana.core.resources.uiText
-import com.vayana.core.resources.LocalizedException
-import com.vayana.core.resources.UiText
-import com.vayana.core.resources.R
+import com.folium.core.resources.uiText
+import com.folium.core.resources.LocalizedException
+import com.folium.core.resources.UiText
+import com.folium.core.resources.R
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -18,7 +18,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import com.vayana.core.common.runCatchingCancellable
+import com.folium.core.common.runCatchingCancellable
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton

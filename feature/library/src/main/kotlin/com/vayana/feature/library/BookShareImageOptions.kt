@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -13,22 +13,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.edit
-import com.vayana.core.designsystem.sharecard.BookCardStyle
-import com.vayana.core.designsystem.sharecard.BookShareCardLayout
-import com.vayana.core.designsystem.sharecard.MaxTitleScale
-import com.vayana.core.designsystem.sharecard.MinTitleScale
-import com.vayana.core.designsystem.sharecard.ShareCardChoiceRow
-import com.vayana.core.designsystem.sharecard.ShareCardFontRow
-import com.vayana.core.designsystem.sharecard.ShareCardOptionChip
-import com.vayana.core.designsystem.sharecard.ShareCardOptionsLabel
-import com.vayana.core.designsystem.sharecard.ShareCardPalettePicker
-import com.vayana.core.designsystem.sharecard.ShareCardSealControls
-import com.vayana.core.designsystem.sharecard.ShareCardShapeRow
-import com.vayana.core.designsystem.sharecard.ShareCardSliderRow
-import com.vayana.core.designsystem.sharecard.ShareCardWeightRow
-import com.vayana.core.designsystem.sharecard.hasShareProfileName
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.sharecard.BookCardStyle
+import com.folium.core.designsystem.sharecard.BookShareCardLayout
+import com.folium.core.designsystem.sharecard.MaxTitleScale
+import com.folium.core.designsystem.sharecard.MinTitleScale
+import com.folium.core.designsystem.sharecard.ShareCardChoiceRow
+import com.folium.core.designsystem.sharecard.ShareCardFontRow
+import com.folium.core.designsystem.sharecard.ShareCardOptionChip
+import com.folium.core.designsystem.sharecard.ShareCardOptionsLabel
+import com.folium.core.designsystem.sharecard.ShareCardPalettePicker
+import com.folium.core.designsystem.sharecard.ShareCardSealControls
+import com.folium.core.designsystem.sharecard.ShareCardShapeRow
+import com.folium.core.designsystem.sharecard.ShareCardSliderRow
+import com.folium.core.designsystem.sharecard.ShareCardWeightRow
+import com.folium.core.designsystem.sharecard.hasShareProfileName
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 
 /** The book card editor's tabs, in order; [BookShareTab] draws each. */
 internal val BookShareTabs = listOf(

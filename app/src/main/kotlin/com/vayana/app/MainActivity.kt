@@ -1,4 +1,4 @@
-package com.vayana.app
+package com.folium.app
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -15,23 +15,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.vayana.app.widget.AppShortcuts
-import com.vayana.app.widget.ContinueReadingWidgetUpdater
-import com.vayana.app.widget.OpenBookRequest
-import com.vayana.app.widget.OpenBookRequests
-import com.vayana.app.widget.ShortcutDestination
-import com.vayana.app.widget.ShortcutRequests
-import com.vayana.core.common.AppLanguage
-import com.vayana.core.designsystem.theme.EinkPageKeys
-import com.vayana.core.homelibrary.HomeLibrarySync
-import com.vayana.core.designsystem.theme.pageKeyDirection
-import com.vayana.core.common.IncomingBookFiles
-import com.vayana.core.common.incomingBookUris
-import com.vayana.feature.gutenberg.GutenbergCacheWarmer
-import com.vayana.feature.library.PhysicalReadingTimerNotification
-import com.vayana.feature.library.PhysicalReadingTimerController
-import com.vayana.feature.library.PhysicalReadingTimerService
-import com.vayana.feature.library.PhysicalTimerPhase
+import com.folium.app.widget.AppShortcuts
+import com.folium.app.widget.ContinueReadingWidgetUpdater
+import com.folium.app.widget.OpenBookRequest
+import com.folium.app.widget.OpenBookRequests
+import com.folium.app.widget.ShortcutDestination
+import com.folium.app.widget.ShortcutRequests
+import com.folium.core.common.AppLanguage
+import com.folium.core.designsystem.theme.EinkPageKeys
+import com.folium.core.homelibrary.HomeLibrarySync
+import com.folium.core.designsystem.theme.pageKeyDirection
+import com.folium.core.common.IncomingBookFiles
+import com.folium.core.common.incomingBookUris
+import com.folium.feature.gutenberg.GutenbergCacheWarmer
+import com.folium.feature.library.PhysicalReadingTimerNotification
+import com.folium.feature.library.PhysicalReadingTimerController
+import com.folium.feature.library.PhysicalReadingTimerService
+import com.folium.feature.library.PhysicalTimerPhase
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import kotlinx.coroutines.launch
@@ -116,7 +116,7 @@ class MainActivity : ComponentActivity() {
             lifecycleScope.launch { physicalReadingTimer.stop() }
             return
         }
-        val passage = intent.data?.toString()?.let { com.vayana.core.common.parsePassageLink(it) }
+        val passage = intent.data?.toString()?.let { com.folium.core.common.parsePassageLink(it) }
         if (intent.action == Intent.ACTION_VIEW && passage != null) {
             openBookRequests.offer(OpenBookRequest(bookSyncId = passage.bookSyncId, annotationSyncId = passage.annotationSyncId))
             return

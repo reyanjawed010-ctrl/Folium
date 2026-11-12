@@ -1,4 +1,4 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import java.util.concurrent.TimeUnit
 import org.junit.jupiter.api.Assertions.assertEquals

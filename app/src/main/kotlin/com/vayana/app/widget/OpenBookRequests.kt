@@ -1,4 +1,4 @@
-package com.vayana.app.widget
+package com.folium.app.widget
 
 import javax.inject.Inject
 import javax.inject.Singleton

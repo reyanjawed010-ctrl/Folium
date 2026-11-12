@@ -1,4 +1,4 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
 import kotlin.test.Test
 import kotlin.test.assertFailsWith

@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 data class ReadingInterval(val start: Long, val end: Long)
 

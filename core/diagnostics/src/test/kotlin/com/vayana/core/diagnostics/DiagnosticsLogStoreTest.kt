@@ -1,4 +1,4 @@
-package com.vayana.core.diagnostics
+package com.folium.core.diagnostics
 
 import java.io.File
 import kotlin.io.path.createTempDirectory

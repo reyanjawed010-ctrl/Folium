@@ -1,10 +1,10 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.graphics.BitmapFactory
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.common.ParsedQuote
-import com.vayana.core.common.quoteMatchKey
-import com.vayana.core.common.runCatchingCancellable
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.common.ParsedQuote
+import com.folium.core.common.quoteMatchKey
+import com.folium.core.common.runCatchingCancellable
 import java.io.IOException
 import java.io.InputStream
 import java.net.HttpURLConnection

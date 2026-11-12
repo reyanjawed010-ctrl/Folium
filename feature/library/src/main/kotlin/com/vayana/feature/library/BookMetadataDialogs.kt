@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBar
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.imePadding
-import com.vayana.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Paddings
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.text.KeyboardActions
@@ -16,8 +16,8 @@ import androidx.compose.material3.SuggestionChipDefaults
 import androidx.compose.material3.TextButton
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import com.vayana.core.database.model.MaxBookTagChars
-import com.vayana.core.database.model.MaxBookTags
+import com.folium.core.database.model.MaxBookTagChars
+import com.folium.core.database.model.MaxBookTags
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
@@ -68,8 +68,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -80,15 +80,15 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.PopupProperties
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.theme.vayanaAnimateContentSize
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
-import com.vayana.core.database.model.normalizedBookTag
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.theme.vayanaAnimateContentSize
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
+import com.folium.core.database.model.normalizedBookTag
 
 @Composable
 internal fun CoverPreviewDialog(book: Book, onDismiss: () -> Unit) {

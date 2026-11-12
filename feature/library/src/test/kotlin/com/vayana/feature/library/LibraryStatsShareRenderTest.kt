@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.graphics.Bitmap
 import kotlin.test.Test

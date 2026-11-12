@@ -1,14 +1,14 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.sync.usage.DayUsage
-import com.vayana.core.sync.usage.NetworkSplit
-import com.vayana.core.sync.usage.SyncDataUsageEntry
-import com.vayana.core.sync.usage.SyncDataUsageLog
-import com.vayana.core.sync.usage.dailyUsage
-import com.vayana.core.sync.usage.since
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.sync.usage.DayUsage
+import com.folium.core.sync.usage.NetworkSplit
+import com.folium.core.sync.usage.SyncDataUsageEntry
+import com.folium.core.sync.usage.SyncDataUsageLog
+import com.folium.core.sync.usage.dailyUsage
+import com.folium.core.sync.usage.since
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.time.LocalDate
 import java.time.ZoneId

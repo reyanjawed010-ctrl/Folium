@@ -1,8 +1,8 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.entity.BookEntity
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.entity.BookEntity
 
 internal suspend fun BookDao.findActiveBySyncIdOrAlias(
     syncId: String,

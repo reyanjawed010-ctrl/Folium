@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem.tokens
+package com.folium.core.designsystem.tokens
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -8,7 +8,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.vayana.core.designsystem.R
+import com.folium.core.designsystem.R
 
 /**
  * Type scale ported from the UI reference (section 01, "Type scale — M3 Expressive, emphasized").

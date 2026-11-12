@@ -1,12 +1,12 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
 import android.app.usage.NetworkStats
 import android.app.usage.NetworkStatsManager
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.Process
-import com.vayana.core.sync.usage.DayUsage
-import com.vayana.core.sync.usage.NetworkSplit
+import com.folium.core.sync.usage.DayUsage
+import com.folium.core.sync.usage.NetworkSplit
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.time.LocalDate

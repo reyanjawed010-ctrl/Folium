@@ -1,15 +1,15 @@
-package com.vayana.feature.opds
+package com.folium.feature.opds
 
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vayana.core.common.IncomingBookFiles
-import com.vayana.core.common.LibraryBook
-import com.vayana.core.common.LibraryIndex
-import com.vayana.core.database.repository.BookRepository
-import com.vayana.core.common.runCatchingCancellable
+import com.folium.core.common.IncomingBookFiles
+import com.folium.core.common.LibraryBook
+import com.folium.core.common.LibraryIndex
+import com.folium.core.database.repository.BookRepository
+import com.folium.core.common.runCatchingCancellable
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.Job

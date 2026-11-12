@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.designsystem.sharecard.BookCardStyle
-import com.vayana.core.designsystem.sharecard.ShareCardEditor
+import com.folium.core.designsystem.sharecard.BookCardStyle
+import com.folium.core.designsystem.sharecard.ShareCardEditor
 import androidx.compose.foundation.BorderStroke
-import com.vayana.core.designsystem.tokens.Strokes
+import com.folium.core.designsystem.tokens.Strokes
 import androidx.compose.material3.AssistChipDefaults
-import com.vayana.core.database.model.hasStartedReading
+import com.folium.core.database.model.hasStartedReading
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
@@ -88,22 +88,22 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import com.vayana.core.common.shareText as shareTextWithChooser
-import com.vayana.core.designsystem.sharecard.BookShareCard
-import com.vayana.core.designsystem.sharecard.BookShareCardLayout
-import com.vayana.core.designsystem.sharecard.DefaultBackdropCoverAlpha
-import com.vayana.core.designsystem.sharecard.ShareCardDialog
-import com.vayana.core.designsystem.sharecard.ShareCardTheme
-import com.vayana.core.designsystem.dialog.ConfirmActionDialog
-import com.vayana.core.designsystem.dialog.ExpressiveDialogHeader
-import com.vayana.core.designsystem.dialog.ExpressiveDialogSurface
+import com.folium.core.common.shareText as shareTextWithChooser
+import com.folium.core.designsystem.sharecard.BookShareCard
+import com.folium.core.designsystem.sharecard.BookShareCardLayout
+import com.folium.core.designsystem.sharecard.DefaultBackdropCoverAlpha
+import com.folium.core.designsystem.sharecard.ShareCardDialog
+import com.folium.core.designsystem.sharecard.ShareCardTheme
+import com.folium.core.designsystem.dialog.ConfirmActionDialog
+import com.folium.core.designsystem.dialog.ExpressiveDialogHeader
+import com.folium.core.designsystem.dialog.ExpressiveDialogSurface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.vayana.core.designsystem.theme.LocalDisplayProfile
-import com.vayana.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.LocalDisplayProfile
+import com.folium.core.designsystem.theme.DisplayProfile
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.Color
@@ -122,25 +122,25 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.material.icons.automirrored.outlined.Notes
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.theme.VayanaLinearProgressIndicator
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Palette
-import com.vayana.core.designsystem.component.VayanaDropdownMenu
-import com.vayana.core.designsystem.component.VayanaMenuGroup
-import com.vayana.core.designsystem.component.VayanaMenuItem
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.VayanaSnackbarHost
-import com.vayana.core.homelibrary.HomeLibraryLauncher
-import com.vayana.core.common.ParsedQuote
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.theme.VayanaLinearProgressIndicator
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.component.VayanaDropdownMenu
+import com.folium.core.designsystem.component.VayanaMenuGroup
+import com.folium.core.designsystem.component.VayanaMenuItem
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.VayanaSnackbarHost
+import com.folium.core.homelibrary.HomeLibraryLauncher
+import com.folium.core.common.ParsedQuote
+import com.folium.core.resources.R
 import kotlin.math.roundToInt
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.Flow
@@ -354,8 +354,8 @@ private fun BookDetailScreen(
     detailMessage: BookDetailMessage?,
     cleanupProgress: BookCleanupProgress?,
     coverImageDownloadInProgress: Boolean,
-    allShelves: List<com.vayana.core.database.model.Shelf>,
-    shelvesForBook: List<com.vayana.core.database.model.Shelf>,
+    allShelves: List<com.folium.core.database.model.Shelf>,
+    shelvesForBook: List<com.folium.core.database.model.Shelf>,
     onCreateShelf: (String) -> Unit,
     onAddToShelf: (Long) -> Unit,
     onRemoveFromShelf: (Long) -> Unit,
@@ -1790,8 +1790,8 @@ private fun HalfStepStar(
 
 @Composable
 private fun BookShelvesSection(
-    shelvesForBook: List<com.vayana.core.database.model.Shelf>,
-    allShelves: List<com.vayana.core.database.model.Shelf>,
+    shelvesForBook: List<com.folium.core.database.model.Shelf>,
+    allShelves: List<com.folium.core.database.model.Shelf>,
     onCreateShelf: (String) -> Unit,
     onAddToShelf: (Long) -> Unit,
     onRemoveFromShelf: (Long) -> Unit,

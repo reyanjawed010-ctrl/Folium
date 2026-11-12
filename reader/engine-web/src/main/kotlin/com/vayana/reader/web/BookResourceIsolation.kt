@@ -1,4 +1,4 @@
-package com.vayana.reader.web
+package com.folium.reader.web
 
 import org.json.JSONException
 import org.json.JSONObject

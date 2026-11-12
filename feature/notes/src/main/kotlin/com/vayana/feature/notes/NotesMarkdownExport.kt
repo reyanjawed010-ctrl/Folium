@@ -1,14 +1,14 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.FileProvider
-import com.vayana.core.common.HighlightTags
-import com.vayana.core.common.passageLink
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
+import com.folium.core.common.HighlightTags
+import com.folium.core.common.passageLink
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
 import java.io.File
 import java.io.FilterOutputStream
 import java.util.UUID
@@ -105,7 +105,7 @@ suspend fun Context.shareMarkdownNotebooks(items: List<BookNotesItem>) {
         clipData = ClipData.newRawUri(fileName, uri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     }
-    startActivity(Intent.createChooser(intent, getString(com.vayana.core.resources.R.string.notes_export_markdown_content_description)))
+    startActivity(Intent.createChooser(intent, getString(com.folium.core.resources.R.string.notes_export_markdown_content_description)))
 }
 
 /** Format and release one notebook at a time instead of retaining the whole export. */

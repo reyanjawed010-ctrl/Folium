@@ -1,4 +1,4 @@
-package com.vayana.app
+package com.folium.app
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column
@@ -29,24 +29,24 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import androidx.window.core.layout.WindowSizeClass
-import com.vayana.app.navigation.GutenbergRoute
-import com.vayana.app.navigation.NavigationPresentation
-import com.vayana.app.navigation.ReaderRoute
-import com.vayana.app.navigation.SearchRoute
-import com.vayana.app.navigation.TopLevelRoute
-import com.vayana.app.navigation.VayanaBottomBar
-import com.vayana.app.navigation.VayanaFloatingBar
-import com.vayana.app.navigation.VayanaNavHost
-import com.vayana.app.navigation.VayanaNavigationRail
-import com.vayana.app.navigation.navigateToTopLevel
-import com.vayana.app.navigation.resolveNavigationPresentation
-import com.vayana.app.widget.ShortcutDestination
-import com.vayana.core.datastore.settings.StartScreen
-import com.vayana.core.designsystem.theme.VayanaTheme
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.feature.onboarding.OnboardingRoute
+import com.folium.app.navigation.GutenbergRoute
+import com.folium.app.navigation.NavigationPresentation
+import com.folium.app.navigation.ReaderRoute
+import com.folium.app.navigation.SearchRoute
+import com.folium.app.navigation.TopLevelRoute
+import com.folium.app.navigation.VayanaBottomBar
+import com.folium.app.navigation.VayanaFloatingBar
+import com.folium.app.navigation.VayanaNavHost
+import com.folium.app.navigation.VayanaNavigationRail
+import com.folium.app.navigation.navigateToTopLevel
+import com.folium.app.navigation.resolveNavigationPresentation
+import com.folium.app.widget.ShortcutDestination
+import com.folium.core.datastore.settings.StartScreen
+import com.folium.core.designsystem.theme.VayanaTheme
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.feature.onboarding.OnboardingRoute
 
 @Composable
 fun VayanaAppRoot() {
@@ -94,7 +94,7 @@ fun VayanaAppRoot() {
             val request = settingsViewModel.resolveOpenBookRequest(pending)
             if (request == null) { settingsViewModel.consumeOpenBookRequest(pending); return@LaunchedEffect }
             if (request.offline) {
-                navController.navigate(com.vayana.app.navigation.BookDetailRoute(request.bookId)) { launchSingleTop = true }
+                navController.navigate(com.folium.app.navigation.BookDetailRoute(request.bookId)) { launchSingleTop = true }
                 settingsViewModel.consumeOpenBookRequest(pending)
                 return@LaunchedEffect
             }

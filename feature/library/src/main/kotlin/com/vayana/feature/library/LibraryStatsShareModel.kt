@@ -1,7 +1,7 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.isFinished
-import com.vayana.core.database.model.Book
+import com.folium.core.database.model.isFinished
+import com.folium.core.database.model.Book
 import java.util.Locale
 import kotlin.math.floor
 import kotlin.math.roundToInt

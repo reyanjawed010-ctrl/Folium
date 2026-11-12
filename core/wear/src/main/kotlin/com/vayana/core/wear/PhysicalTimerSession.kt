@@ -1,7 +1,7 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
-import com.vayana.core.common.ReadingInterval
-import com.vayana.core.common.ReadingIntervals
+import com.folium.core.common.ReadingInterval
+import com.folium.core.common.ReadingIntervals
 
 enum class PhysicalTimerPhase { RUNNING, PAUSED, STOPPED }
 

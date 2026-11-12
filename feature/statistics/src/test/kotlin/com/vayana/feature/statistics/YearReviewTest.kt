@@ -1,12 +1,12 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.VocabularyCard
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.VocabularyCard
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.Month

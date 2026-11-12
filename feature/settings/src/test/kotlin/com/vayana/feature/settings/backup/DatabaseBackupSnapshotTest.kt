@@ -1,4 +1,4 @@
-package com.vayana.feature.settings.backup
+package com.folium.feature.settings.backup
 
 import android.database.sqlite.SQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
@@ -28,21 +28,21 @@ class DatabaseBackupSnapshotTest {
     @Test
     fun realRoomBackupOmitsIndexPreservesNotesAndCanRebuild() = kotlinx.coroutines.runBlocking {
         val context = RuntimeEnvironment.getApplication()
-        val db = com.vayana.core.database.di.DatabaseModule.provideVayanaDatabase(context)
+        val db = com.folium.core.database.di.DatabaseModule.provideVayanaDatabase(context)
         val snapshot = File(temp.newFolder(), "snapshot.db")
         try {
-            val bookId = db.bookDao().insert(com.vayana.core.database.entity.BookEntity(
+            val bookId = db.bookDao().insert(com.folium.core.database.entity.BookEntity(
                 title = "Backup book", author = null, series = null, seriesNumber = null, description = null, coverPath = null,
                 filePath = "books/book.epub", format = "EPUB", fileHash = "hash", lastLocator = "page:2",
                 readingPercent = 0.5f, rating = 4f, groupId = null, isDeleted = false, wordCount = null,
                 pageEstimate = null, createdAt = 1, updatedAt = 1, lastReadAt = 1,
             ))
-            val noteId = db.annotationDao().insert(com.vayana.core.database.entity.AnnotationEntity(
+            val noteId = db.annotationDao().insert(com.folium.core.database.entity.AnnotationEntity(
                 bookId = bookId, type = "NOTE", colorKey = "yellow", locator = "page:2", chapterTitle = null,
                 chapterHref = null, selectedText = "", readerNote = "My reflection", createdAt = 1, updatedAt = 1,
             ))
-            val shelfId = db.shelfDao().insert(com.vayana.core.database.entity.ShelfEntity(name = "Keep", createdAt = 1, updatedAt = 1))
-            db.shelfDao().addBookToShelf(com.vayana.core.database.entity.BookShelfCrossRefEntity(bookId, shelfId))
+            val shelfId = db.shelfDao().insert(com.folium.core.database.entity.ShelfEntity(name = "Keep", createdAt = 1, updatedAt = 1))
+            db.shelfDao().addBookToShelf(com.folium.core.database.entity.BookShelfCrossRefEntity(bookId, shelfId))
             val source = db.openHelper.writableDatabase
             source.execSQL("INSERT INTO epub_chapters (id, bookId, fileHash, href, title, compressedText) VALUES (1, $bookId, 'hash', 'one.xhtml', 'One', zeroblob(262144))")
             source.execSQL("INSERT INTO epub_passages VALUES (1, 1, 0, 5)")
@@ -57,7 +57,7 @@ class DatabaseBackupSnapshotTest {
             assertFalse(File(snapshot.path + "-wal").exists())
             assertFalse(File(snapshot.path + "-shm").exists())
             assertEquals(1, source.query("SELECT count(*) FROM epub_chapters").use { it.moveToFirst(); it.getInt(0) })
-            val restored = androidx.room.Room.databaseBuilder(context, com.vayana.core.database.VayanaDatabase::class.java, snapshot.path).build()
+            val restored = androidx.room.Room.databaseBuilder(context, com.folium.core.database.VayanaDatabase::class.java, snapshot.path).build()
             try {
                 val copy = restored.openHelper.writableDatabase
                 assertEquals(identity, copy.query("SELECT identity_hash FROM room_master_table").use { it.moveToFirst(); it.getString(0) })
@@ -69,7 +69,7 @@ class DatabaseBackupSnapshotTest {
                     assertEquals(0, copy.query("SELECT count(*) FROM $table").use { it.moveToFirst(); it.getInt(0) })
                 }
                 assertEquals(0, copy.query("SELECT count(*) FROM epub_passages_fts WHERE epub_passages_fts MATCH 'river'").use { it.moveToFirst(); it.getInt(0) })
-                restored.epubPassageDao().replace(bookId, "hash", sequenceOf(com.vayana.core.database.dao.EpubChapterText("one.xhtml", "One", "river boat", listOf(0..9))))
+                restored.epubPassageDao().replace(bookId, "hash", sequenceOf(com.folium.core.database.dao.EpubChapterText("one.xhtml", "One", "river boat", listOf(0..9))))
                 assertEquals(1, restored.epubPassageDao().search("river*", 10).first().size)
                 assertEquals("ok", copy.query("PRAGMA integrity_check").use { it.moveToFirst(); it.getString(0) })
             } finally { restored.close() }

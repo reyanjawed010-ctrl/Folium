@@ -1,6 +1,6 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
-import com.vayana.core.database.model.Book
+import com.folium.core.database.model.Book
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId

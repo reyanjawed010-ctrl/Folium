@@ -1,11 +1,11 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.repository.CloudWordLookupCounter
-import com.vayana.core.database.repository.WordLookupCounterMergeResult
-import com.vayana.core.database.repository.WordLookupStatRepositoryImpl
-import com.vayana.core.database.repository.wordLookupTombstoneId
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.repository.CloudWordLookupCounter
+import com.folium.core.database.repository.WordLookupCounterMergeResult
+import com.folium.core.database.repository.WordLookupStatRepositoryImpl
+import com.folium.core.database.repository.wordLookupTombstoneId
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test

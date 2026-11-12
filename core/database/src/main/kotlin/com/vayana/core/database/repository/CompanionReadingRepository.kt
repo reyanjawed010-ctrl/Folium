@@ -1,15 +1,15 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.ReadingSessionDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.ReadingSessionDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.ReadingSessionEntity
 import javax.inject.Inject
 import kotlin.math.roundToInt
-import com.vayana.core.common.ReadingInterval
-import com.vayana.core.common.ReadingIntervals
+import com.folium.core.common.ReadingInterval
+import com.folium.core.common.ReadingIntervals
 
 /** Import and progress conflict detection run in the same transaction as deduplication. */
 class CompanionReadingRepository @Inject constructor(

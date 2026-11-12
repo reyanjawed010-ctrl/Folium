@@ -1,14 +1,14 @@
-package com.vayana.feature.settings
+package com.folium.feature.settings
 
-import com.vayana.core.designsystem.sharecard.ShareProfileNameCard
-import com.vayana.core.designsystem.sharecard.ShareSealCard
+import com.folium.core.designsystem.sharecard.ShareProfileNameCard
+import com.folium.core.designsystem.sharecard.ShareSealCard
 import androidx.compose.material.icons.outlined.AccountCircle
 import androidx.core.content.ContextCompat
 import androidx.compose.runtime.LaunchedEffect
 import android.os.Build
 import android.content.pm.PackageManager
 import android.Manifest
-import com.vayana.core.designsystem.component.asString
+import com.folium.core.designsystem.component.asString
 import androidx.compose.ui.platform.LocalContext
 import android.content.res.Resources
 import android.net.Uri
@@ -94,24 +94,24 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.datastore.settings.ImportedFont
-import com.vayana.core.datastore.settings.Setting
-import com.vayana.core.datastore.settings.SettingsGroup
-import com.vayana.core.datastore.settings.SettingsRegistry
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.designsystem.theme.DisplayProfile
-import com.vayana.core.designsystem.theme.VayanaCircularProgressIndicator
-import com.vayana.core.designsystem.theme.LocalFloatingNavigationInset
-import com.vayana.core.designsystem.theme.vayanaAnimateContentSize
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.tokens.Strokes
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.datastore.settings.ImportedFont
+import com.folium.core.datastore.settings.Setting
+import com.folium.core.datastore.settings.SettingsGroup
+import com.folium.core.datastore.settings.SettingsRegistry
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.designsystem.theme.DisplayProfile
+import com.folium.core.designsystem.theme.VayanaCircularProgressIndicator
+import com.folium.core.designsystem.theme.LocalFloatingNavigationInset
+import com.folium.core.designsystem.theme.vayanaAnimateContentSize
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.tokens.Strokes
+import com.folium.core.resources.R
 
 internal val SettingsPagePadding = Paddings.page
 private val SettingsContentMaxWidth = Sizes.settingsContentMaxWidth
@@ -204,7 +204,7 @@ private fun SettingsScreen(
     modifier: Modifier = Modifier,
     settings: SettingsSnapshot,
     backupState: BackupUiState,
-    automaticBackup: com.vayana.feature.settings.backup.AutomaticBackupState,
+    automaticBackup: com.folium.feature.settings.backup.AutomaticBackupState,
     backupFolderFiles: BackupFolderFilesState,
     restorePreview: RestorePreviewState,
     githubSyncSettingsTransferState: GitHubSyncSettingsTransferState,
@@ -223,7 +223,7 @@ private fun SettingsScreen(
     onCreateBackup: (Uri) -> Unit,
     onChooseAutomaticBackupFolder: (Uri) -> Unit,
     onSetAutomaticBackupKeepCount: (Int) -> Unit,
-    onSetAutomaticBackupFrequency: (com.vayana.feature.settings.backup.AutomaticBackupFrequency) -> Unit,
+    onSetAutomaticBackupFrequency: (com.folium.feature.settings.backup.AutomaticBackupFrequency) -> Unit,
     onDisableAutomaticBackup: () -> Unit,
     onRefreshBackupFolderFiles: () -> Unit,
     onPickRestoreFile: (Uri) -> Unit,
@@ -708,14 +708,14 @@ private fun SettingsGroupDetail(
     pendingCloudDeletions: Int,
     readerFontImportState: ReaderFontImportState,
     backupState: BackupUiState,
-    automaticBackup: com.vayana.feature.settings.backup.AutomaticBackupState,
+    automaticBackup: com.folium.feature.settings.backup.AutomaticBackupState,
     backupFolderFiles: BackupFolderFilesState,
     onUpdate: (Setting<Any>, Any) -> Unit,
     onReset: (Setting<out Any>) -> Unit,
     onCreateBackup: (Uri) -> Unit,
     onChooseAutomaticBackupFolder: (Uri) -> Unit,
     onSetAutomaticBackupKeepCount: (Int) -> Unit,
-    onSetAutomaticBackupFrequency: (com.vayana.feature.settings.backup.AutomaticBackupFrequency) -> Unit,
+    onSetAutomaticBackupFrequency: (com.folium.feature.settings.backup.AutomaticBackupFrequency) -> Unit,
     onDisableAutomaticBackup: () -> Unit,
     onRefreshBackupFolderFiles: () -> Unit,
     onPickRestoreFile: (Uri) -> Unit,

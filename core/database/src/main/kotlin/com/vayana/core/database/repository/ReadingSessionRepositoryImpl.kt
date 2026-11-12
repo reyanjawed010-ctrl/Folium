@@ -1,16 +1,16 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.ReadingSessionDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.ReadingSession
-import com.vayana.core.database.model.StartedReadingSeconds
-import com.vayana.core.database.model.PhysicalReadingSessionSummary
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.ReadingSessionDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.ReadingSession
+import com.folium.core.database.model.StartedReadingSeconds
+import com.folium.core.database.model.PhysicalReadingSessionSummary
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -113,7 +113,7 @@ class ReadingSessionRepositoryImpl @Inject constructor(
         val book = bookDao.getById(bookId) ?: return@withTransaction false
         require(book.format == "PHYSICAL") { "Book is no longer physical" }
         val now = System.currentTimeMillis()
-        tombstoneDao.upsert(com.vayana.core.database.entity.TombstoneEntity(
+        tombstoneDao.upsert(com.folium.core.database.entity.TombstoneEntity(
             syncId = syncId, entityType = TombstoneEntityType.READING_SESSION.value, deletedAt = now))
         readingSessionDao.deleteBySyncId(syncId)
         bookDao.update(book.copy(
@@ -143,10 +143,10 @@ class ReadingSessionRepositoryImpl @Inject constructor(
             return ReadingSessionMergeResult.SKIPPED
         }
         if (record.activeIntervals != null && !runCatching {
-            val intervals = com.vayana.core.common.ReadingIntervals.decode(record.activeIntervals)
+            val intervals = com.folium.core.common.ReadingIntervals.decode(record.activeIntervals)
             intervals.all { it.start >= record.startedAt && it.end <= record.endedAt } &&
                 (if (intervals.isEmpty()) record.durationSeconds == 0L || record.durationSeconds == 1L
-                else (com.vayana.core.common.ReadingIntervals.millis(intervals) / 1000).coerceAtLeast(1) == record.durationSeconds)
+                else (com.folium.core.common.ReadingIntervals.millis(intervals) / 1000).coerceAtLeast(1) == record.durationSeconds)
         }.getOrDefault(false)) return ReadingSessionMergeResult.SKIPPED
         return database.withTransaction {
             // Cleared by a reading-stats reset: the cloud copy mustn't bring it back.

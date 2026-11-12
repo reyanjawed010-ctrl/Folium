@@ -1,4 +1,4 @@
-package com.vayana.app.navigation
+package com.folium.app.navigation
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -11,7 +11,7 @@ import androidx.compose.material.icons.outlined.EditNote
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
-import com.vayana.core.resources.R
+import com.folium.core.resources.R
 import kotlin.reflect.KClass
 import kotlinx.serialization.Serializable
 

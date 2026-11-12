@@ -1,4 +1,4 @@
-package com.vayana.wear
+package com.folium.wear
 
 import android.app.Activity
 import android.content.Intent
@@ -42,7 +42,7 @@ import android.view.MotionEvent
 
 import android.widget.*
 
-import com.vayana.core.wear.*
+import com.folium.core.wear.*
 
 import java.util.UUID
 import kotlinx.coroutines.CoroutineScope
@@ -478,8 +478,8 @@ class WatchActivity : androidx.activity.ComponentActivity(), SharedPreferences.O
             val old = entry.session
             val delta = time - old.startedAt
             val session = old.copy(startedAt = time, endedAt = old.endedAt + delta,
-                activeIntervals = old.activeIntervals?.let { encoded -> com.vayana.core.common.ReadingIntervals.encode(
-                    com.vayana.core.common.ReadingIntervals.decode(encoded).map { it.copy(start = it.start + delta, end = it.end + delta) }) }, clockChanged = false)
+                activeIntervals = old.activeIntervals?.let { encoded -> com.folium.core.common.ReadingIntervals.encode(
+                    com.folium.core.common.ReadingIntervals.decode(encoded).map { it.copy(start = it.start + delta, end = it.end + delta) }) }, clockChanged = false)
             session.validate()
             store.update { state -> state.copy(entries = state.entries.map { if (it.session.id == old.id) it.copy(session = session, receipt = null) else it }) }
             WatchSync.enqueue(this); dialog.dismiss(); render()

@@ -1,15 +1,15 @@
-package com.vayana.core.homelibrary
+package com.folium.core.homelibrary
 
 import androidx.room.withTransaction
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.BookSource
-import com.vayana.core.database.model.HomeLibraryDetails
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.model.normalizedBookTagsCsv
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.BookSource
+import com.folium.core.database.model.HomeLibraryDetails
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.normalizedBookTagsCsv
 import javax.inject.Inject
 import javax.inject.Singleton
 

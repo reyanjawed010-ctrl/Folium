@@ -1,6 +1,6 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.reader.api.Locator
+import com.folium.reader.api.Locator
 import kotlin.math.roundToInt
 
 data class ReadingPositionPrompt(

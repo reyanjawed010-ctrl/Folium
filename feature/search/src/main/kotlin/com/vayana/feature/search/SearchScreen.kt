@@ -1,4 +1,4 @@
-package com.vayana.feature.search
+package com.folium.feature.search
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.clickable
@@ -54,20 +54,20 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import com.vayana.core.designsystem.theme.PagedLazyColumn
-import com.vayana.core.designsystem.theme.rememberCoverColorFilter
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.designsystem.theme.vayanaContentTransform
-import com.vayana.core.designsystem.theme.vayanaPressScale
-import com.vayana.core.designsystem.tokens.Elevations
-import com.vayana.core.designsystem.tokens.Paddings
-import com.vayana.core.designsystem.tokens.Palette
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Sizes
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.resources.R
+import com.folium.core.designsystem.theme.PagedLazyColumn
+import com.folium.core.designsystem.theme.rememberCoverColorFilter
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.designsystem.theme.vayanaContentTransform
+import com.folium.core.designsystem.theme.vayanaPressScale
+import com.folium.core.designsystem.tokens.Elevations
+import com.folium.core.designsystem.tokens.Paddings
+import com.folium.core.designsystem.tokens.Palette
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Sizes
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.resources.R
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.TextButton
@@ -76,7 +76,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import com.vayana.core.database.search.wordPrefixMatchRanges
+import com.folium.core.database.search.wordPrefixMatchRanges
 
 @Composable
 fun SearchRoute(

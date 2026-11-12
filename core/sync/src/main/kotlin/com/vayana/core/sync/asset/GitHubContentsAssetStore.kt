@@ -1,6 +1,6 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
-import com.vayana.core.sync.usage.GitHubTransferStats
+import com.folium.core.sync.usage.GitHubTransferStats
 import java.io.IOException
 import java.io.File
 import java.io.FilterOutputStream

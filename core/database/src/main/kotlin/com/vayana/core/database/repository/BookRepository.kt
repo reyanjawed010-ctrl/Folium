@@ -1,10 +1,10 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
-import com.vayana.core.database.dao.BookNotebookFields
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.model.normalizedBookTagsCsv
+import com.folium.core.database.dao.BookNotebookFields
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.model.normalizedBookTagsCsv
 import kotlinx.coroutines.flow.Flow
 
 sealed interface ReadingProgressMergeResult {

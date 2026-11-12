@@ -1,4 +1,4 @@
-package com.vayana.feature.opds
+package com.folium.feature.opds
 
 import java.io.StringReader
 import java.net.URI

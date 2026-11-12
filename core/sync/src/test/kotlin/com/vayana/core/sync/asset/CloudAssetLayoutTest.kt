@@ -1,4 +1,4 @@
-package com.vayana.core.sync.asset
+package com.folium.core.sync.asset
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

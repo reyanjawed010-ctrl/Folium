@@ -1,4 +1,4 @@
-package com.vayana.core.wear
+package com.folium.core.wear
 
 import kotlin.test.*
 import org.json.JSONObject
@@ -72,6 +72,6 @@ class WatchStateTest {
         val log = saved.recoverBoot(2, 500, 100).resume(1000).stop(11000,71500)
         assertTrue(log.clockChanged)
         assertEquals(70000L, log.accumulatedMillis)
-        assertEquals(70000L, com.vayana.core.common.ReadingIntervals.millis(com.vayana.core.common.ReadingIntervals.decode(log.activeIntervals!!)))
+        assertEquals(70000L, com.folium.core.common.ReadingIntervals.millis(com.folium.core.common.ReadingIntervals.decode(log.activeIntervals!!)))
     }
 }

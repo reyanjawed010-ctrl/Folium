@@ -1,34 +1,34 @@
-package com.vayana.core.database
+package com.folium.core.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.vayana.core.database.dao.AnnotationDao
-import com.vayana.core.database.dao.BookAliasDao
-import com.vayana.core.database.dao.BookDao
-import com.vayana.core.database.dao.HighlightReviewDao
-import com.vayana.core.database.dao.FullSyncStateDao
-import com.vayana.core.database.dao.SyncedSnapshotSliceDao
-import com.vayana.core.database.dao.ReadingSessionDao
-import com.vayana.core.database.dao.ShelfDao
-import com.vayana.core.database.dao.TombstoneDao
-import com.vayana.core.database.dao.VocabularyCardDao
-import com.vayana.core.database.dao.WordLookupStatDao
-import com.vayana.core.database.entity.AnnotationEntity
-import com.vayana.core.database.entity.AnnotationFtsEntity
-import com.vayana.core.database.entity.BookAliasEntity
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.entity.BookFtsEntity
-import com.vayana.core.database.entity.BookShelfCrossRefEntity
-import com.vayana.core.database.entity.HighlightReviewEntity
-import com.vayana.core.database.entity.FullSyncStateEntity
-import com.vayana.core.database.entity.SyncedSnapshotSliceEntity
-import com.vayana.core.database.entity.ReadingSessionEntity
-import com.vayana.core.database.entity.ShelfEntity
-import com.vayana.core.database.entity.TombstoneEntity
-import com.vayana.core.database.entity.VocabularyCardEntity
-import com.vayana.core.database.entity.WordLookupStatEntity
-import com.vayana.core.database.dao.PendingCloudDeletionDao
-import com.vayana.core.database.entity.PendingCloudDeletionEntity
+import com.folium.core.database.dao.AnnotationDao
+import com.folium.core.database.dao.BookAliasDao
+import com.folium.core.database.dao.BookDao
+import com.folium.core.database.dao.HighlightReviewDao
+import com.folium.core.database.dao.FullSyncStateDao
+import com.folium.core.database.dao.SyncedSnapshotSliceDao
+import com.folium.core.database.dao.ReadingSessionDao
+import com.folium.core.database.dao.ShelfDao
+import com.folium.core.database.dao.TombstoneDao
+import com.folium.core.database.dao.VocabularyCardDao
+import com.folium.core.database.dao.WordLookupStatDao
+import com.folium.core.database.entity.AnnotationEntity
+import com.folium.core.database.entity.AnnotationFtsEntity
+import com.folium.core.database.entity.BookAliasEntity
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.entity.BookFtsEntity
+import com.folium.core.database.entity.BookShelfCrossRefEntity
+import com.folium.core.database.entity.HighlightReviewEntity
+import com.folium.core.database.entity.FullSyncStateEntity
+import com.folium.core.database.entity.SyncedSnapshotSliceEntity
+import com.folium.core.database.entity.ReadingSessionEntity
+import com.folium.core.database.entity.ShelfEntity
+import com.folium.core.database.entity.TombstoneEntity
+import com.folium.core.database.entity.VocabularyCardEntity
+import com.folium.core.database.entity.WordLookupStatEntity
+import com.folium.core.database.dao.PendingCloudDeletionDao
+import com.folium.core.database.entity.PendingCloudDeletionEntity
 
 /** Bumping this is a real Room migration + a docs/DATABASE_CHANGELOG.md entry, from day one (docs/PRODUCT_SPEC.md §2). */
 const val DATABASE_VERSION = 41
@@ -40,11 +40,11 @@ const val DATABASE_VERSION = 41
         BookAliasEntity::class, TombstoneEntity::class, BookFtsEntity::class, AnnotationFtsEntity::class,
         PendingCloudDeletionEntity::class, HighlightReviewEntity::class,
         FullSyncStateEntity::class,
-        com.vayana.core.database.entity.EpubChapterEntity::class,
-        com.vayana.core.database.entity.EpubPassageEntity::class,
-        com.vayana.core.database.entity.EpubPassageTextEntity::class,
+        com.folium.core.database.entity.EpubChapterEntity::class,
+        com.folium.core.database.entity.EpubPassageEntity::class,
+        com.folium.core.database.entity.EpubPassageTextEntity::class,
         SyncedSnapshotSliceEntity::class,
-        com.vayana.core.database.entity.SyncSliceVersionEntity::class,
+        com.folium.core.database.entity.SyncSliceVersionEntity::class,
     ],
     version = DATABASE_VERSION,
     exportSchema = true,
@@ -60,7 +60,7 @@ abstract class VayanaDatabase : RoomDatabase() {
     abstract fun tombstoneDao(): TombstoneDao
     abstract fun pendingCloudDeletionDao(): PendingCloudDeletionDao
     abstract fun highlightReviewDao(): HighlightReviewDao
-    abstract fun epubPassageDao(): com.vayana.core.database.dao.EpubPassageDao
+    abstract fun epubPassageDao(): com.folium.core.database.dao.EpubPassageDao
     abstract fun fullSyncStateDao(): FullSyncStateDao
     abstract fun syncedSnapshotSliceDao(): SyncedSnapshotSliceDao
 }

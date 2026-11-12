@@ -1,4 +1,4 @@
-package com.vayana.format.epub
+package com.folium.format.epub
 
 import java.io.File
 import java.io.StringReader

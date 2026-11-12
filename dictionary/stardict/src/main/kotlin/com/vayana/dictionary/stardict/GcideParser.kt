@@ -1,6 +1,6 @@
-package com.vayana.dictionary.stardict
+package com.folium.dictionary.stardict
 
-import com.vayana.dictionary.api.PartOfSpeech
+import com.folium.dictionary.api.PartOfSpeech
 import java.text.Normalizer
 import java.util.Locale
 

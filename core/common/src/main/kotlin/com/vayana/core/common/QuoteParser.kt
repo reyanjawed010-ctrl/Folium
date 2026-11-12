@@ -1,4 +1,4 @@
-﻿package com.vayana.core.common
+﻿package com.folium.core.common
 
 data class ParsedQuote(
     val quoteText: String,

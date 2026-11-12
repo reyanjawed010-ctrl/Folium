@@ -1,6 +1,6 @@
-package com.vayana.feature.statistics
+package com.folium.feature.statistics
 
-import com.vayana.core.database.model.BookFormat
+import com.folium.core.database.model.BookFormat
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

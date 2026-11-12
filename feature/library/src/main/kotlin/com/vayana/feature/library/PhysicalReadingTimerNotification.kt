@@ -1,4 +1,4 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -12,11 +12,11 @@ import android.os.IBinder
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.DispatcherProvider
-import com.vayana.core.diagnostics.DiagnosticCategory
-import com.vayana.core.diagnostics.DiagnosticsLogStore
-import com.vayana.core.resources.R
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.DispatcherProvider
+import com.folium.core.diagnostics.DiagnosticCategory
+import com.folium.core.diagnostics.DiagnosticsLogStore
+import com.folium.core.resources.R
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.concurrent.atomic.AtomicBoolean
@@ -296,10 +296,10 @@ private const val OpenRequestCode = 52_002
 private const val PauseRequestCode = 52_003
 private const val ResumeRequestCode = 52_004
 private const val StopRequestCode = 52_005
-private const val ActionShow = "com.vayana.feature.library.action.SHOW_PHYSICAL_TIMER"
-private const val ActionPause = "com.vayana.feature.library.action.PAUSE_PHYSICAL_TIMER"
-private const val ActionResume = "com.vayana.feature.library.action.RESUME_PHYSICAL_TIMER"
-private const val ActionFinish = "com.vayana.feature.library.action.FINISH_PHYSICAL_TIMER"
+private const val ActionShow = "com.folium.feature.library.action.SHOW_PHYSICAL_TIMER"
+private const val ActionPause = "com.folium.feature.library.action.PAUSE_PHYSICAL_TIMER"
+private const val ActionResume = "com.folium.feature.library.action.RESUME_PHYSICAL_TIMER"
+private const val ActionFinish = "com.folium.feature.library.action.FINISH_PHYSICAL_TIMER"
 private const val NotificationCoordinatorSource = "PhysicalReadingTimerNotification"
 private const val NotificationServiceSource = "PhysicalReadingTimerService"
 private const val NotificationPauseSource = "PhysicalReadingTimerPause"

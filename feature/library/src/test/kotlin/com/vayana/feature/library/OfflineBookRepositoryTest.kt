@@ -1,13 +1,13 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.room.Room
-import com.vayana.core.database.VayanaDatabase
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.PhysicalBookOwnership
-import com.vayana.core.database.repository.BookRepositoryImpl
-import com.vayana.core.database.repository.CloudBookMergeResult
-import com.vayana.core.database.repository.CloudBookRecord
+import com.folium.core.database.VayanaDatabase
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.PhysicalBookOwnership
+import com.folium.core.database.repository.BookRepositoryImpl
+import com.folium.core.database.repository.CloudBookMergeResult
+import com.folium.core.database.repository.CloudBookRecord
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZoneId
@@ -56,17 +56,17 @@ class OfflineBookRepositoryTest {
     fun physicalTimerQueriesKeepSummaryCompleteAndSamplesBoundedAndBookSpecific() = runBlocking {
         val book = repository.insertOfflineBook("Paper", null, BookFormat.PHYSICAL, null, null)
         val other = repository.insertOfflineBook("Other", null, BookFormat.PHYSICAL, null, null)
-        val sessions = com.vayana.core.database.repository.ReadingSessionRepositoryImpl(
+        val sessions = com.folium.core.database.repository.ReadingSessionRepositoryImpl(
             database, database.readingSessionDao(), database.bookDao(), database.bookAliasDao(), database.tombstoneDao())
         assertEquals(0L, sessions.observePhysicalSummary(book.id).first().sessionCount)
         assertEquals(0L, sessions.observePhysicalSummary(book.id).first().averageSeconds)
         val dao = database.readingSessionDao()
-        for (index in 1..100) dao.insert(com.vayana.core.database.entity.ReadingSessionEntity(
+        for (index in 1..100) dao.insert(com.folium.core.database.entity.ReadingSessionEntity(
             syncId = "paper-$index", bookId = book.id, startedAt = 1000L + index, endedAt = 200000L,
             durationSeconds = index.toLong(), startPage = 0, endPage = if (index > 90) 0 else 10))
-        dao.insert(com.vayana.core.database.entity.ReadingSessionEntity(syncId = "untimed-pages", bookId = book.id,
+        dao.insert(com.folium.core.database.entity.ReadingSessionEntity(syncId = "untimed-pages", bookId = book.id,
             startedAt = 9999L, endedAt = 200000L, durationSeconds = 999L))
-        dao.insert(com.vayana.core.database.entity.ReadingSessionEntity(syncId = "other", bookId = other.id,
+        dao.insert(com.folium.core.database.entity.ReadingSessionEntity(syncId = "other", bookId = other.id,
             startedAt = 9999L, endedAt = 200000L, durationSeconds = 999L, startPage = 0, endPage = 10))
         val summary = sessions.observePhysicalSummary(book.id).first()
         assertEquals(100L, summary.sessionCount)
@@ -291,9 +291,9 @@ class OfflineBookRepositoryTest {
 
     @Test
     fun projectedNoteMembershipMatchesFullAnnotationsIncludingWhitespaceAndDeletion() = runBlocking {
-        val notes = com.vayana.core.database.repository.AnnotationRepositoryImpl(database, database.annotationDao(),
+        val notes = com.folium.core.database.repository.AnnotationRepositoryImpl(database, database.annotationDao(),
             database.bookDao(), database.bookAliasDao(), database.tombstoneDao())
-        val types = com.vayana.core.database.model.AnnotationType.entries
+        val types = com.folium.core.database.model.AnnotationType.entries
         val blanks = listOf<String?>(null, "", " \t\n\u00a0\u2003\u202f\u3000", "personal note")
         val locators = listOf("quote:1", "goodreads-quote:1", "Quote:1", "epubcfi(/6/2)")
         for (type in types) for (note in blanks) for (locator in locators) {
@@ -303,22 +303,22 @@ class OfflineBookRepositoryTest {
         val entries = notes.observeAll().first()
         entries.take(5).forEach { notes.softDelete(it.id) }
         val expected = notes.observeAll().first().filter {
-            !com.vayana.core.database.model.isCommunityQuoteLocator(it.locator) ||
-                it.type != com.vayana.core.database.model.AnnotationType.UNDERLINE || it.colorKey != "popular"
-        }.filter { it.type != com.vayana.core.database.model.AnnotationType.BOOKMARK || !it.readerNote.isNullOrBlank() }
+            !com.folium.core.database.model.isCommunityQuoteLocator(it.locator) ||
+                it.type != com.folium.core.database.model.AnnotationType.UNDERLINE || it.colorKey != "popular"
+        }.filter { it.type != com.folium.core.database.model.AnnotationType.BOOKMARK || !it.readerNote.isNullOrBlank() }
             .map { it.bookId }.toSet()
         assertEquals(expected, notes.observePersonalNotesBookIds().first())
         val first = entries.last()
-        notes.create(first.bookId, com.vayana.core.database.model.AnnotationType.NOTE, "journal", "cfi", null, null, "", "entry")
+        notes.create(first.bookId, com.folium.core.database.model.AnnotationType.NOTE, "journal", "cfi", null, null, "", "entry")
         assertEquals(expected + first.bookId, notes.observePersonalNotesBookIds().first())
     }
 
     @Test
     fun journalNotesPersistWithoutSelectedTextAndKeepStableSyncIdentity() = runBlocking {
         val book = repository.insertOfflineBook("Dune", null, BookFormat.PHYSICAL, null, null)
-        val notes = com.vayana.core.database.repository.AnnotationRepositoryImpl(database, database.annotationDao(),
+        val notes = com.folium.core.database.repository.AnnotationRepositoryImpl(database, database.annotationDao(),
             database.bookDao(), database.bookAliasDao(), database.tombstoneDao())
-        val entry = notes.create(book.id, com.vayana.core.database.model.AnnotationType.NOTE, "journal",
+        val entry = notes.create(book.id, com.folium.core.database.model.AnnotationType.NOTE, "journal",
             "epubcfi(/6/2)", "Chapter one", "chapter.xhtml", "", "Stopped after the revelation. #reflection")
         assertEquals(entry, notes.observeForBook(book.id).first().single())
         assertTrue(entry.syncId.isNotBlank())
@@ -625,7 +625,7 @@ class OfflineBookRepositoryTest {
     fun cleanupKeepsReadingHistoryAndRejectsStaleSource() = runBlocking {
         val book = repository.insertOfflineBook("Book", null, BookFormat.PHYSICAL, 1000, null)
         repository.replaceSource(book.id, "Book", null, null, null, null, null, "books/a.epub", BookFormat.EPUB, "original")
-        val sessions = com.vayana.core.database.repository.ReadingSessionRepositoryImpl(
+        val sessions = com.folium.core.database.repository.ReadingSessionRepositoryImpl(
             database, database.readingSessionDao(), database.bookDao(), database.bookAliasDao(), database.tombstoneDao())
         sessions.recordCheckpoint(book.id, "reading", 1000, 61000, 60)
         assertTrue(repository.attachCleanedSource(book.id, "original", "books/clean.epub", "clean"))
@@ -729,7 +729,7 @@ class OfflineBookRepositoryTest {
         timer.start(book.id, book.title, 10, 100)
         val snapshot = timer.ownSnapshot()
         org.robolectric.shadows.ShadowSystemClock.advanceBy(java.time.Duration.ofSeconds(10))
-        val pause = com.vayana.core.wear.SharedTimerCommand("cmd-12345678-1234-1234-1234-123456789abc", "phone",
+        val pause = com.folium.core.wear.SharedTimerCommand("cmd-12345678-1234-1234-1234-123456789abc", "phone",
             snapshot.sessionId!!, snapshot.revision, "pause")
         assertEquals("applied", timer.applyCompanionCommand(pause))
         assertEquals(PhysicalTimerPhase.PAUSED, timer.session.value!!.phase)
@@ -754,8 +754,8 @@ class OfflineBookRepositoryTest {
         preferences.edit().clear().commit()
         val book = repository.insertOfflineBook("Watch owned", null, BookFormat.PHYSICAL, null, null)
         val now = System.currentTimeMillis()
-        val snapshot = com.vayana.core.wear.SharedTimerSnapshot("watch", 5, now,
-            com.vayana.core.wear.WearBook(book.syncId, book.title, 10, 100, book.updatedAt),
+        val snapshot = com.folium.core.wear.SharedTimerSnapshot("watch", 5, now,
+            com.folium.core.wear.WearBook(book.syncId, book.title, 10, 100, book.updatedAt),
             "wear-12345678-1234-1234-1234-123456789abc", now - 60000, 10, 10, 60000,
             PhysicalTimerPhase.RUNNING)
         val timer = PhysicalReadingTimerController(context, repository)

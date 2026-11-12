@@ -1,12 +1,12 @@
-package com.vayana.core.database.dao
+package com.folium.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.vayana.core.database.entity.BookEntity
-import com.vayana.core.database.model.StartedReadingSeconds
+import com.folium.core.database.entity.BookEntity
+import com.folium.core.database.model.StartedReadingSeconds
 import kotlinx.coroutines.flow.Flow
 
 /** What an exported notebook shows about its book. */

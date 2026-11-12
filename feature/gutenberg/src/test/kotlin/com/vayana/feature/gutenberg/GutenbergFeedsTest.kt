@@ -1,4 +1,4 @@
-package com.vayana.feature.gutenberg
+package com.folium.feature.gutenberg
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

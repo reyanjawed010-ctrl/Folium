@@ -1,4 +1,4 @@
-package com.vayana.core.sync
+package com.folium.core.sync
 
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.test.Test

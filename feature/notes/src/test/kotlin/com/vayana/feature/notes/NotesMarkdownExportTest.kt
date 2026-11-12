@@ -1,10 +1,10 @@
-package com.vayana.feature.notes
+package com.folium.feature.notes
 
-import com.vayana.core.database.model.Annotation
-import com.vayana.core.database.model.AnnotationType
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFileAvailability
-import com.vayana.core.database.model.BookFormat
+import com.folium.core.database.model.Annotation
+import com.folium.core.database.model.AnnotationType
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFileAvailability
+import com.folium.core.database.model.BookFormat
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -54,7 +54,7 @@ class NotesMarkdownExportTest {
         val note = annotation("Answer", null, "Chapter").copy(syncId = "note & café", reviewQuestion = "What happened?")
         val exported = highlightsMarkdown(book(), listOf(note))
         assertTrue(exported.contains("What happened?"))
-        assertTrue(exported.contains(com.vayana.core.common.passageLink("book", "note & café")))
+        assertTrue(exported.contains(com.folium.core.common.passageLink("book", "note & café")))
         assertTrue(exported.contains("> Answer"))
         assertFalse(automaticNotebookFileName("../unsafe").contains("/"))
         assertNotEquals(automaticNotebookFileName("book"), automaticNotebookFileName("other"))

@@ -1,12 +1,12 @@
-package com.vayana.feature.search
+package com.folium.feature.search
 
-import com.vayana.core.common.ApplicationScope
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.database.dao.EpubPassageDao
-import com.vayana.core.database.dao.IndexedEpubFile
-import com.vayana.core.database.dao.EpubChapterText
-import com.vayana.core.filesystem.StorageRoots
-import com.vayana.format.epub.EpubTextExtractor
+import com.folium.core.common.ApplicationScope
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.database.dao.EpubPassageDao
+import com.folium.core.database.dao.IndexedEpubFile
+import com.folium.core.database.dao.EpubChapterText
+import com.folium.core.filesystem.StorageRoots
+import com.folium.format.epub.EpubTextExtractor
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton

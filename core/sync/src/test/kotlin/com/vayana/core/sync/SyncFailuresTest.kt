@@ -1,4 +1,4 @@
-package com.vayana.core.sync
+package com.folium.core.sync
 
 import kotlin.test.Test
 import kotlin.test.assertFalse

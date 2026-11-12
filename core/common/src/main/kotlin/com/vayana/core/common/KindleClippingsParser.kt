@@ -1,4 +1,4 @@
-package com.vayana.core.common
+package com.folium.core.common
 
 /** One highlight from a Kindle "My Clippings.txt", with the note typed at its end, if any. */
 data class KindleHighlight(

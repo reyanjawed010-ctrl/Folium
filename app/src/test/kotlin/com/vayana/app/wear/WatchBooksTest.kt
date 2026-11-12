@@ -1,8 +1,8 @@
-package com.vayana.app.wear
+package com.folium.app.wear
 
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.BookFormat
-import com.vayana.core.database.model.BookFileAvailability
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.BookFormat
+import com.folium.core.database.model.BookFileAvailability
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

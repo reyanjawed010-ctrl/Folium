@@ -1,9 +1,9 @@
-package com.vayana.core.sync.github
+package com.folium.core.sync.github
 
-import com.vayana.core.common.runCatchingCancellable
-import com.vayana.core.datastore.settings.SettingsSnapshot
-import com.vayana.core.sync.asset.GitHubContentsAssetStore
-import com.vayana.core.sync.asset.GitHubRepository
+import com.folium.core.common.runCatchingCancellable
+import com.folium.core.datastore.settings.SettingsSnapshot
+import com.folium.core.sync.asset.GitHubContentsAssetStore
+import com.folium.core.sync.asset.GitHubRepository
 
 data class GitHubSyncConfig(
     val owner: String,

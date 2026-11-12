@@ -1,4 +1,4 @@
-package com.vayana.core.database.repository
+package com.folium.core.database.repository
 
 /**
  * [value] is the wire/storage form (Room column, portable-snapshot JSON) and must stay stable across app

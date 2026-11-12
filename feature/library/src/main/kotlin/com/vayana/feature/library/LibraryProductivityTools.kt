@@ -1,9 +1,9 @@
-package com.vayana.feature.library
+package com.folium.feature.library
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
-import com.vayana.core.designsystem.theme.PagedLazyColumn as LazyColumn
+import com.folium.core.designsystem.theme.PagedLazyColumn as LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -17,14 +17,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.vayana.core.database.model.Book
-import com.vayana.core.database.model.Shelf
-import com.vayana.core.datastore.settings.SmartShelf
-import com.vayana.core.datastore.settings.SmartShelfStatus
-import com.vayana.core.designsystem.tokens.Radii
-import com.vayana.core.designsystem.tokens.Spacing
-import com.vayana.core.designsystem.theme.asAppDate
-import com.vayana.core.resources.R
+import com.folium.core.database.model.Book
+import com.folium.core.database.model.Shelf
+import com.folium.core.datastore.settings.SmartShelf
+import com.folium.core.datastore.settings.SmartShelfStatus
+import com.folium.core.designsystem.tokens.Radii
+import com.folium.core.designsystem.tokens.Spacing
+import com.folium.core.designsystem.theme.asAppDate
+import com.folium.core.resources.R
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneOffset

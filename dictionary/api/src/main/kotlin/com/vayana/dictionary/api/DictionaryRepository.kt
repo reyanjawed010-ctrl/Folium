@@ -1,4 +1,4 @@
-package com.vayana.dictionary.api
+package com.folium.dictionary.api
 
 import kotlinx.coroutines.flow.StateFlow
 

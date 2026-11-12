@@ -1,7 +1,7 @@
-package com.vayana.feature.reader
+package com.folium.feature.reader
 
-import com.vayana.core.sync.progress.ReadingProgressSyncResult
-import com.vayana.core.sync.progress.ReadingProgressSyncStatus
+import com.folium.core.sync.progress.ReadingProgressSyncResult
+import com.folium.core.sync.progress.ReadingProgressSyncStatus
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertNotNull

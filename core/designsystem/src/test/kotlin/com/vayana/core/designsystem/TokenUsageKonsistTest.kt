@@ -1,4 +1,4 @@
-package com.vayana.core.designsystem
+package com.folium.core.designsystem
 
 import com.lemonappdev.konsist.api.Konsist
 import com.lemonappdev.konsist.api.ext.list.withTextMatching
