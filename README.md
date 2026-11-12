@@ -1,8 +1,8 @@
-# Folium - A fork of Vayana
+# Vayana - A fork of Vayana
 
-<h1>Folium - Personal Fork</h1>
+<h1>Vayana - Personal Fork</h1>
 
-<p><strong>A personal fork of <a href="https://github.com/rjwarrier/Folium">Folium</a> by Ranjith Jayadevan.</strong></p>
+<p><strong>A personal fork of <a href="https://github.com/rjwarrier/Vayana">Vayana</a> by Ranjith Jayadevan.</strong></p>
 <p>A calm, local-first <a href="docs/USER_GUIDE.md#reading-epub-books">EPUB</a> and <a href="docs/USER_GUIDE.md#reading-pdf-books">PDF</a> reader for Android, built for regular screens and <a href="docs/USER_GUIDE.md#e-ink-and-accessibility">E‑Ink devices</a>.</p>
 
 <p>
@@ -17,11 +17,11 @@
 
 ## About this fork
 
-This is a personal fork of [Folium](https://github.com/rjwarrier/Folium), an open-source EPUB and PDF reader for Android.
+This is a personal fork of [Vayana](https://github.com/rjwarrier/Vayana), an open-source EPUB and PDF reader for Android.
 
-A huge thanks to [Ranjith Jayadevan](https://github.com/rjwarrier) for building such a genuinely great e-book reader. Folium is one of those rare apps that is calm, thoughtful, and actually does what it promises — no accounts, no ads, no nonsense. If you find this useful, please consider [supporting the original project](https://www.buymeacoffee.com/ranjithj).
+A huge thanks to [Ranjith Jayadevan](https://github.com/rjwarrier) for building such a genuinely great e-book reader. Vayana is one of those rare apps that is calm, thoughtful, and actually does what it promises — no accounts, no ads, no nonsense. If you find this useful, please consider [supporting the original project](https://www.buymeacoffee.com/ranjithj).
 
-> **This fork tracks the upstream Folium project.** For general usage questions, bug reports unrelated to this fork's changes, and the full documentation, refer to the [original repository](https://github.com/rjwarrier/Folium).
+> **This fork tracks the upstream Vayana project.** For general usage questions, bug reports unrelated to this fork's changes, and the full documentation, refer to the [original repository](https://github.com/rjwarrier/Vayana).
 
 ---
 
@@ -29,24 +29,24 @@ A huge thanks to [Ranjith Jayadevan](https://github.com/rjwarrier) for building 
 
 ### PDF support fixes
 
-The original Folium had issues with PDF support that affected reading experience. This fork addresses those issues:
+The original Vayana had issues with PDF support that affected reading experience. This fork addresses those issues:
 
 - Fixed PDF page rendering and navigation behaviour.
 - Improved PDF byte-range serving so pages load correctly in the WebView reader.
 - Fixed the reader reopening a PDF on the correct page after closing.
 - Improved PDF page preview generation and caching.
 
-These fixes are present in the commit history of this fork. If you use Folium primarily for PDF reading, this fork may work better for you.
+These fixes are present in the commit history of this fork. If you use Vayana primarily for PDF reading, this fork may work better for you.
 
 ### Debug build label
 
-The debug APK is labelled **Folium** in the launcher, so it can coexist alongside a standard Folium install during testing.
+The debug APK is labelled **Vayana** in the launcher, so it can coexist alongside a standard Vayana install during testing.
 
 ---
 
 ## Attribution
 
-**Original project:** [Folium](https://github.com/rjwarrier/Folium)  
+**Original project:** [Vayana](https://github.com/rjwarrier/Vayana)  
 **Original author:** [Ranjith Jayadevan](https://github.com/rjwarrier)  
 **Original licence:** [GNU General Public License v3.0](LICENSE)
 
@@ -59,7 +59,7 @@ This fork is released under the same licence. All original copyright notices are
 Copyright (C) 2026 Ranjith Jayadevan  
 Modifications copyright (C) 2026 Rey
 
-Folium and this fork are free software: you can redistribute and/or modify them under the terms of the [GNU General Public License](LICENSE) as published by the Free Software Foundation, either version 3 of the Licence, or (at your option) any later version.
+Vayana and this fork are free software: you can redistribute and/or modify them under the terms of the [GNU General Public License](LICENSE) as published by the Free Software Foundation, either version 3 of the Licence, or (at your option) any later version.
 
 Distributed in the hope that it will be useful, but **without any warranty**. See the [LICENSE](LICENSE) file for details.
 
@@ -76,8 +76,8 @@ In short: you are free to use, study, modify and share this. If you distribute a
 - Git
 
 ```bash
-git clone https://github.com/reyanjawed010-ctrl/My-Folium-Fork.git
-cd My-Folium-Fork
+git clone https://github.com/reyanjawed010-ctrl/My-Vayana-Fork.git
+cd My-Vayana-Fork
 ./gradlew :app:assembleDebug
 ```
 
@@ -87,7 +87,7 @@ On Windows:
 .\gradlew.bat :app:assembleDebug
 ```
 
-The debug APK (labelled **Folium** in the launcher) is written to `app/build/outputs/apk/debug/`.
+The debug APK (labelled **Vayana** in the launcher) is written to `app/build/outputs/apk/debug/`.
 
 ---
 
@@ -110,9 +110,9 @@ build-logic/            Shared Android and Kotlin build conventions
 
 ## Documentation
 
-For full documentation, refer to the original Folium repository:
+For full documentation, refer to the original Vayana repository:
 
-- [Folium website](https://ranjithj.in/vayana/)
+- [Vayana website](https://ranjithj.in/vayana/)
 - [User guide](docs/USER_GUIDE.md)
 - [Documentation index](docs/README.md)
 - [Wear OS companion](docs/WEAR_OS.md)
